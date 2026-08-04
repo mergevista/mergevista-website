@@ -1,3 +1,7 @@
+
+"engines": {
+  "node": "22.x"
+}
 {
   "name": "site-creator-vinext-starter",
   "version": "0.1.0",
