@@ -1,3 +1,6 @@
+"scripts": {
+  "build": "your-framework-build-command-here"
+},
 
 "engines": {
   "node": "22.x"
