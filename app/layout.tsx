@@ -13,11 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Starter Project",
-  description: "A clean starting point for building your site.",
+  title: "MergeVista | AI-Powered IT M&A Execution Platform",
+  description: "Run the complete IT M&A journey with clarity and control.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/brand/mergevista-favicon.svg",
+    shortcut: "/brand/mergevista-favicon.svg",
+    apple: "/brand/mergevista-apple-icon-v6.png",
   },
 };
 
