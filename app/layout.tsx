@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const siteUrl = "https://www.mergevista.com";
+const title = "MergeVista | AI-Powered IT M&A Execution Platform";
+const description =
+  "MergeVista is an AI-powered IT M&A execution platform for acquisitions, divestitures, Day 1 readiness, TSA operations, migration, and TSA exit.";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -13,13 +18,61 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MergeVista | AI-Powered IT M&A Execution Platform",
-  description: "Run the complete IT M&A journey with clarity and control.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "MergeVista",
+    title,
+    description,
+    images: [
+      {
+        url: "/brand/mergevista-primary-dark.png",
+        width: 714,
+        height: 233,
+        alt: "MergeVista — AI-Powered IT M&A Execution Platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/brand/mergevista-primary-dark.png"],
+  },
   icons: {
     icon: "/brand/mergevista-favicon.svg",
     shortcut: "/brand/mergevista-favicon.svg",
     apple: "/brand/mergevista-apple-icon-v6.png",
   },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "MergeVista",
+      url: siteUrl,
+      logo: `${siteUrl}/brand/mergevista-favicon-512.png`,
+      description,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "MergeVista",
+      description,
+      publisher: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "en-US",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -29,6 +82,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
