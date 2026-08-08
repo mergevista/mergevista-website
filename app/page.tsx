@@ -37,7 +37,7 @@ export default function MarketingHome() {
     <section className={styles.hero}>
       <div className={styles.heroGlow}/>
       <div className={styles.heroCopy}>
-        <div className={styles.eyebrow}><span/>Purpose-built for acquisitions and divestitures</div>
+        <div className={styles.eyebrow}><span/>The AI-powered execution platform for IT M&amp;A</div>
         <h1>Run the complete IT M&amp;A journey with <em>clarity and control.</em></h1>
         <p>MergeVista connects sellers and buyers across discovery, separation, Day 1, TSA operations, migration and TSA exit—all in one AI-powered execution platform.</p>
         <div className={styles.heroActions}><a className={styles.primary} href="mailto:hello@mergevista.com?subject=MergeVista%20demo">Book a demo <b>→</b></a><a className={styles.secondary} href="#platform">See how it works</a></div>
@@ -59,12 +59,25 @@ export default function MarketingHome() {
       </div>
     </section>
 
+    <section className={styles.proof} aria-label="MergeVista platform principles">
+      <p>Purpose-built for complex acquisitions and divestitures</p>
+      <div><span><b>01</b>Buyer + seller collaboration</span><span><b>02</b>End-to-end traceability</span><span><b>03</b>Enterprise controls</span><span><b>04</b>Human-governed AI</span></div>
+    </section>
+
     <section className={styles.signal}><span>DISCOVERY</span><i/><span>ASSESSMENT</span><i/><span>SEPARATION</span><i/><span>DAY 1</span><i/><span>TSA OPERATIONS</span><i/><span>MIGRATION</span><i/><span>TSA EXIT</span></section>
 
     <section className={styles.ownership} aria-label="Seller and buyer participation across the transaction lifecycle">
       <div className={styles.sectionIntro}><div className={styles.eyebrow}><span/>One shared transaction workspace</div><h2>Continuous execution across both sides of the deal.</h2><p>The seller establishes the baseline and leads separation. The buyer joins planning, assumes operational responsibility at Day 1 and leads migration through TSA exit.</p></div>
       <div className={styles.ownershipTrack}><div className={styles.ownerSeller}><small>SELLER-LED</small><b>Discovery · Assessment · Separation</b></div><div className={styles.ownerJoint}><small>JOINT TRANSITION</small><b>Day 1</b></div><div className={styles.ownerTsa}><small>JOINT TSA GOVERNANCE</small><b>Seller delivers · Buyer consumes</b></div><div className={styles.ownerBuyer}><small>BUYER-LED</small><b>Migration · TSA Exit</b></div></div>
       <div className={styles.planningLayer}><strong>CONTINUOUS PLANNING</strong><span>Seller-led separation &amp; Day 1</span><i/><span>Joint TSA service &amp; exit</span><i/><span>Buyer-led migration</span></div>
+    </section>
+
+    <section className={styles.executiveOutcomes}>
+      <div className={styles.nodeField} aria-hidden="true"><i/><i/><i/><i/><i/></div>
+      <div className={styles.eyebrowLight}><span/>Executive clarity throughout the deal</div>
+      <h2>One trusted baseline.<br/>Every workstream aligned.<br/><em>Every decision evidenced.</em></h2>
+      <p>MergeVista connects the operational detail of execution to the outcomes leadership needs to govern—readiness, risk, cost, accountability and exit.</p>
+      <div><span>Trusted inventory</span><span>Visible dependencies</span><span>Governed decisions</span><span>Provable exit</span></div>
     </section>
 
     <section className={styles.value} id="outcomes">
@@ -83,6 +96,16 @@ export default function MarketingHome() {
     </section>
 
     <section className={styles.ai} id="ai"><div><div className={styles.eyebrowLight}><span/>MergeVista Intelligence</div><h2>AI grounded in your transaction evidence.</h2><p>Turn inventory data and deal documents into structured intelligence—with source evidence, confidence and human review built into every recommendation.</p><ul><li>Normalize inventories and identify data gaps</li><li>Extract contracts, licenses, obligations and consent requirements</li><li>Discover cross-inventory dependencies and Day 1 risks</li><li>Generate separation, migration and TSA exit actions</li></ul></div><aside><small>AI ASSESSMENT</small><h3>Orion Software Subscription Agreement</h3><div><span>Assignment requirement</span><b>Consent Required</b></div><div><span>Recommended action</span><b>Split agreement</b></div><div><span>Affected inventory</span><b>Applications · Users</b></div><blockquote>“Prior written consent is required before assignment…”</blockquote><footer><span>89% confidence</span><b>Review recommendation →</b></footer></aside></section>
+
+    <section className={styles.audiences}>
+      <div className={styles.sectionIntro}><div className={styles.eyebrow}><span/>Built around the transaction team</div><h2>One execution environment. Every deal stakeholder.</h2><p>Give each leader the context they need while keeping plans, dependencies, decisions and evidence connected in one operating model.</p></div>
+      <div className={styles.audienceGrid}>
+        <article><small>01</small><h3>CIO &amp; technology leadership</h3><p>See readiness, risk, cost and critical decisions across the complete transaction.</p><b>Executive control →</b></article>
+        <article><small>02</small><h3>Integration &amp; separation leaders</h3><p>Coordinate execution across workstreams, companies, milestones and dependencies.</p><b>Connected execution →</b></article>
+        <article><small>03</small><h3>Corporate development</h3><p>Connect transaction commitments with operational delivery and business outcomes.</p><b>Deal visibility →</b></article>
+        <article><small>04</small><h3>Private equity operating teams</h3><p>Apply a repeatable IT M&amp;A operating model across portfolio transactions.</p><b>Portfolio repeatability →</b></article>
+      </div>
+    </section>
 
     <section className={styles.security} id="security"><div><div className={styles.eyebrow}><span/>Enterprise by design</div><h2>Sensitive transaction data deserves uncompromising control.</h2></div><div className={styles.securityList}><span>Deal-level access controls</span><span>Tenant data isolation</span><span>Evidence and audit history</span><span>Customer-controlled AI processing</span></div></section>
 
