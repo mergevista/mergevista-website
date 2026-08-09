@@ -31,7 +31,7 @@ export default function MarketingHome() {
       <div className={styles.links}>
         <a href="#platform">Platform</a><a href="#outcomes">Outcomes</a><a href="#ai">AI Capabilities</a><a href="#security">Security</a>
       </div>
-      <div className={styles.navActions}>{showSignInLinks && <Link className={styles.signIn} href="/organizations">Sign in</Link>}<a className={styles.primarySmall} href="mailto:hello@mergevista.com?subject=MergeVista%20demo">Book a demo</a></div>
+      <div className={styles.navActions}>{showSignInLinks && <Link className={styles.signIn} href="/organizations">Sign in</Link>}<Link className={styles.contactLink} href="/contact">Contact</Link><Link className={styles.primarySmall} href="/book-a-demo">Book a demo</Link></div>
     </nav>
 
     <section className={styles.hero}>
@@ -40,7 +40,7 @@ export default function MarketingHome() {
         <div className={styles.eyebrow}><span/>The AI-powered execution platform for IT M&amp;A</div>
         <h1>Run the complete IT M&amp;A journey with <em>clarity and control.</em></h1>
         <p>MergeVista connects sellers and buyers across discovery, separation, Day 1, TSA operations, migration and TSA exit—all in one AI-powered execution platform.</p>
-        <div className={styles.heroActions}><a className={styles.primary} href="mailto:hello@mergevista.com?subject=MergeVista%20demo">Book a demo <b>→</b></a><a className={styles.secondary} href="#platform">See how it works</a></div>
+        <div className={styles.heroActions}><Link className={styles.primary} href="/book-a-demo">Book a demo <b>→</b></Link><a className={styles.secondary} href="#platform">See how it works</a></div>
         <div className={styles.trust}><span>✓ Deal-ready operating model</span><span>✓ Unlimited collaboration</span><span>✓ Evidence-backed AI</span></div>
       </div>
 
@@ -109,8 +109,8 @@ export default function MarketingHome() {
 
     <section className={styles.security} id="security"><div><div className={styles.eyebrow}><span/>Enterprise by design</div><h2>Sensitive transaction data deserves uncompromising control.</h2></div><div className={styles.securityList}><span>Deal-level access controls</span><span>Tenant data isolation</span><span>Evidence and audit history</span><span>Customer-controlled AI processing</span></div></section>
 
-    <section className={styles.cta}><Image className={styles.ctaLogo} src="/brand/mergevista-icon-white-transparent.png" alt="" width={128} height={124} aria-hidden="true"/><div><h2>One platform from discovery to TSA exit.</h2><p>Give sellers and buyers a shared operating model for separation, Day 1 continuity, TSA operations and migration.</p></div><div><a className={styles.primaryLight} href="mailto:hello@mergevista.com?subject=MergeVista%20demo">Book a demo →</a><a href="#platform">Explore the lifecycle</a></div></section>
+    <section className={styles.cta}><Image className={styles.ctaLogo} src="/brand/mergevista-icon-white-transparent.png" alt="" width={128} height={124} aria-hidden="true"/><div><h2>One platform from discovery to TSA exit.</h2><p>Give sellers and buyers a shared operating model for separation, Day 1 continuity, TSA operations and migration.</p></div><div><Link className={styles.primaryLight} href="/book-a-demo">Book a demo →</Link><a href="#platform">Explore the lifecycle</a></div></section>
 
-    <footer className={styles.footer}><div className={styles.brand}><Image className={styles.brandLogo} src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212}/><small>AI-Powered IT M&amp;A Execution Platform</small></div><p>© 2026 MergeVista. Built for complex transactions.</p><div><a href="#security">Security</a><a href="mailto:hello@mergevista.com">Contact</a>{showSignInLinks && <Link href="/organizations">Sign in</Link>}</div></footer>
+    <footer className={styles.footer}><div className={styles.brand}><Image className={styles.brandLogo} src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212}/><small>AI-Powered IT M&amp;A Execution Platform</small></div><p>© 2026 MergeVista. Built for complex transactions.</p><div><a href="#security">Security</a><Link href="/privacy">Privacy</Link><Link href="/contact">Contact</Link>{showSignInLinks && <Link href="/organizations">Sign in</Link>}</div></footer>
   </main>;
 }

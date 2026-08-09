@@ -42,7 +42,7 @@ export default function LoginPage() {
           <button className={styles.microsoft} type="button"><i aria-hidden="true"><b/><b/><b/><b/></i>Microsoft work account</button>
           <p className={styles.help}>Need access? <a href="mailto:support@mergevista.com">Contact your workspace administrator</a></p>
         </div>
-        <footer><a href="#">Privacy</a><a href="#">Security</a><a href="mailto:support@mergevista.com">Support</a></footer>
+        <footer><Link href="/privacy">Privacy</Link><a href="#">Security</a><a href="mailto:support@mergevista.com">Support</a></footer>
       </section>
     </main>
   );
