@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./privacy.module.css";
+import SiteFooter from "../components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Privacy Notice | MergeVista",
@@ -93,6 +94,6 @@ export default function PrivacyPage() {
       </article>
     </div>
 
-    <footer><p>© 2026 MergeVista. Built for complex transactions.</p><div><Link href="/">Home</Link><Link href="/contact">Contact</Link><Link href="/book-a-demo">Book a demo</Link></div></footer>
+    <SiteFooter theme="dark" />
   </main>;
 }

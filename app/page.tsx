@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./home.module.css";
+import SiteFooter from "./components/SiteFooter";
 
 const showSignInLinks = false;
 
@@ -29,7 +30,7 @@ export default function MarketingHome() {
         <small>AI-Powered IT M&amp;A Execution Platform</small>
       </Link>
       <div className={styles.links}>
-        <a href="#platform">Platform</a><a href="#outcomes">Outcomes</a><a href="#ai">AI Capabilities</a><a href="#security">Security</a>
+        <a href="#platform">Platform</a><a href="#outcomes">Outcomes</a><a href="#ai">AI Capabilities</a><a href="#security">Security</a><Link href="/about">About</Link>
       </div>
       <div className={styles.navActions}>{showSignInLinks && <Link className={styles.signIn} href="/organizations">Sign in</Link>}<Link className={styles.contactLink} href="/contact">Contact</Link><Link className={styles.primarySmall} href="/book-a-demo">Book a demo</Link></div>
     </nav>
@@ -111,6 +112,6 @@ export default function MarketingHome() {
 
     <section className={styles.cta}><Image className={styles.ctaLogo} src="/brand/mergevista-icon-white-transparent.png" alt="" width={128} height={124} aria-hidden="true"/><div><h2>One platform from discovery to TSA exit.</h2><p>Give sellers and buyers a shared operating model for separation, Day 1 continuity, TSA operations and migration.</p></div><div><Link className={styles.primaryLight} href="/book-a-demo">Book a demo →</Link><a href="#platform">Explore the lifecycle</a></div></section>
 
-    <footer className={styles.footer}><div className={styles.brand}><Image className={styles.brandLogo} src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212}/><small>AI-Powered IT M&amp;A Execution Platform</small></div><p>© 2026 MergeVista. Built for complex transactions.</p><div><a href="#security">Security</a><Link href="/privacy">Privacy</Link><Link href="/contact">Contact</Link>{showSignInLinks && <Link href="/organizations">Sign in</Link>}</div></footer>
+    <SiteFooter />
   </main>;
 }

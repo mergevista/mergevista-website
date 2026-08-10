@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BookDemoForm from "./BookDemoForm";
 import styles from "./book-a-demo.module.css";
+import SiteFooter from "../components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Book a Demo | MergeVista",
@@ -23,5 +24,6 @@ export default function BookDemoPage() {
       </div>
       <div className={styles.formPanel}><BookDemoForm /></div>
     </section>
+    <SiteFooter />
   </main>;
 }
