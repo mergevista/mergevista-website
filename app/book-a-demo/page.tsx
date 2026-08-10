@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import BookDemoForm from "./BookDemoForm";
 import styles from "./book-a-demo.module.css";
 import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Book a Demo | MergeVista",
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function BookDemoPage() {
   return <main className={styles.page}>
-    <nav className={styles.nav}><Link href="/"><Image src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212} priority /></Link><Link href="/contact">Contact</Link></nav>
+    <SiteHeader />
     <section className={styles.content}>
       <div className={styles.intro}>
         <div className={styles.eyebrow}><span/>A focused product conversation</div>

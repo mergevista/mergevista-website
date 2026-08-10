@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./contact.module.css";
 import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Contact | MergeVista",
@@ -18,8 +18,8 @@ const routes = [
 
 export default function ContactPage() {
   return <main className={styles.page}>
-    <nav className={styles.nav}><Link href="/"><Image src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212} priority /></Link><Link className={styles.demo} href="/book-a-demo">Book a demo</Link></nav>
-    <header><div className={styles.eyebrow}><span/>Start a conversation</div><h1>How can we help?</h1><p>Choose the path that best fits what you need. We will make sure your message reaches the right person.</p></header>
+    <SiteHeader />
+    <section className={styles.hero}><div className={styles.eyebrow}><span/>Start a conversation</div><h1>How can we help?</h1><p>Choose the path that best fits what you need. We will make sure your message reaches the right person.</p></section>
     <section className={styles.routes}>{routes.map(route=><article key={route.number}><small>{route.number}</small><h2>{route.title}</h2><p>{route.text}</p><Link href={route.href}>{route.action} <b>→</b></Link></article>)}</section>
     <section className={styles.response}><div><span>✓</span><p><b>A thoughtful response—not an automated sales sequence.</b><br/>We typically respond to inquiries within one business day.</p></div><Link href="/">Return to homepage</Link></section>
     <SiteFooter />

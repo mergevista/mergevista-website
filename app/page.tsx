@@ -2,8 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./home.module.css";
 import SiteFooter from "./components/SiteFooter";
-
-const showSignInLinks = false;
+import SiteHeader from "./components/SiteHeader";
 
 const portfolio = [
   ["Applications", "148", "12 at risk"],
@@ -24,16 +23,7 @@ const stages = [
 
 export default function MarketingHome() {
   return <main className={styles.page}>
-    <nav className={styles.nav} aria-label="Primary navigation">
-      <Link className={styles.brand} href="/">
-        <Image className={styles.brandLogo} src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212} priority />
-        <small>AI-Powered IT M&amp;A Execution Platform</small>
-      </Link>
-      <div className={styles.links}>
-        <a href="#platform">Platform</a><a href="#outcomes">Outcomes</a><a href="#ai">AI Capabilities</a><a href="#security">Security</a><Link href="/about">About</Link>
-      </div>
-      <div className={styles.navActions}>{showSignInLinks && <Link className={styles.signIn} href="/organizations">Sign in</Link>}<Link className={styles.contactLink} href="/contact">Contact</Link><Link className={styles.primarySmall} href="/book-a-demo">Book a demo</Link></div>
-    </nav>
+    <SiteHeader />
 
     <section className={styles.hero}>
       <div className={styles.heroGlow}/>

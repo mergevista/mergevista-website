@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import styles from "./privacy.module.css";
 import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Privacy Notice | MergeVista",
@@ -22,10 +21,7 @@ const sections = [
 
 export default function PrivacyPage() {
   return <main className={styles.page}>
-    <nav className={styles.nav}>
-      <Link href="/" aria-label="MergeVista home"><Image src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212} priority /></Link>
-      <div><Link href="/contact">Contact</Link><Link className={styles.demo} href="/book-a-demo">Book a demo</Link></div>
-    </nav>
+    <SiteHeader />
 
     <header className={styles.hero}>
       <div className={styles.eyebrow}><span/>Trust and transparency</div>
