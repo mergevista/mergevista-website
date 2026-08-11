@@ -47,8 +47,11 @@ export const metadata: Metadata = {
     images: ["/brand/mergevista-primary-dark.png"],
   },
   icons: {
-    icon: "/brand/mergevista-favicon.svg",
-    shortcut: "/brand/mergevista-favicon.svg",
+    icon: [
+      { url: "/favicon.svg?v=7", type: "image/svg+xml" },
+      { url: "/brand/mergevista-tab-icon-v6-32.png?v=7", type: "image/png", sizes: "32x32" },
+    ],
+    shortcut: "/favicon.svg?v=7",
     apple: "/brand/mergevista-apple-icon-v6.png",
   },
 };
