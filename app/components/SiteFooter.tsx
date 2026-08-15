@@ -13,7 +13,7 @@ export default function SiteFooter({ theme = "light" }: SiteFooterProps) {
         <small>AI-Powered IT M&amp;A Execution Platform</small>
       </Link>
       <p>© 2026 MergeVista. Built for complex transactions.</p>
-      <nav aria-label="Footer navigation"><Link href="/#security">Security</Link><Link href="/about">About</Link><Link href="/privacy">Privacy</Link><Link href="/contact">Contact</Link></nav>
+      <nav aria-label="Footer navigation"><Link href="/security">Security</Link><Link href="/about">About</Link><Link href="/privacy">Privacy</Link><Link href="/contact">Contact</Link></nav>
     </footer>
   </div>;
 }

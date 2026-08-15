@@ -29,6 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: "https://www.mergevista.com/security",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: "https://www.mergevista.com/about",
       lastModified: new Date(),
       changeFrequency: "monthly",

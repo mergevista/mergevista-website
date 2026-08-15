@@ -98,7 +98,7 @@ export default function MarketingHome() {
       </div>
     </section>
 
-    <section className={styles.security} id="security"><div><div className={styles.eyebrow}><span/>Enterprise by design</div><h2>Sensitive transaction data deserves uncompromising control.</h2></div><div className={styles.securityList}><span>Deal-level access controls</span><span>Tenant data isolation</span><span>Evidence and audit history</span><span>Customer-controlled AI processing</span></div></section>
+    <section className={styles.security} id="security"><div><div className={styles.eyebrow}><span/>Enterprise by design</div><h2>Sensitive transaction data deserves uncompromising control.</h2><Link href="/security">Explore Security &amp; Trust →</Link></div><div className={styles.securityList}><span>Deal-level access controls</span><span>Tenant data isolation</span><span>Evidence and audit history</span><span>Customer-controlled AI processing</span></div></section>
 
     <section className={styles.cta}><Image className={styles.ctaLogo} src="/brand/mergevista-icon-white-transparent.png" alt="" width={128} height={124} aria-hidden="true"/><div><h2>One platform from discovery to TSA exit.</h2><p>Give sellers and buyers a shared operating model for separation, Day 1 continuity, TSA operations and migration.</p></div><div><Link className={styles.primaryLight} href="/book-a-demo">Book a demo →</Link><a href="#platform">Explore the lifecycle</a></div></section>
 
