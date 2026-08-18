@@ -3,11 +3,12 @@ import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import BackToTop from "../components/BackToTop";
 import styles from "../privacy/privacy.module.css";
+import { brand, canonicalUrl, supportMailto } from "../lib/brand";
 
 export const metadata: Metadata = {
   title: "Security & Trust | MergeVista",
   description: "Learn about the security controls MergeVista uses to protect transaction workspaces and customer data.",
-  alternates: { canonical: "https://www.mergevista.com/security" },
+  alternates: { canonical: canonicalUrl(brand.legalPaths.security) },
 };
 
 const sections = [
@@ -28,7 +29,7 @@ export default function SecurityPage() {
       <div className={styles.eyebrow}><span/>Security by design</div>
       <h1>Security &amp; Trust</h1>
       <p>MergeVista is designed to protect sensitive IT M&amp;A information through controlled identity, scoped authorization, workspace separation and accountable activity.</p>
-      <small>Last reviewed August 15, 2026</small>
+      <small>Last reviewed {brand.securityReviewDate}</small>
     </header>
 
     <div className={styles.layout}>
@@ -73,7 +74,7 @@ export default function SecurityPage() {
 
         <section id="report" className={styles.contact}>
           <span>07</span><h2>Report a security concern</h2>
-          <p>To report a suspected vulnerability, unauthorized access or other security concern, email <a href="mailto:support@mergevista.com?subject=Security%20concern">support@mergevista.com</a> with “Security concern” in the subject line. Do not include passwords, authentication tokens or sensitive transaction data in the initial message.</p>
+          <p>To report a suspected vulnerability, unauthorized access or other security concern, email <a href={supportMailto("Security concern")}>{brand.supportEmail}</a> with “Security concern” in the subject line. Do not include passwords, authentication tokens or sensitive transaction data in the initial message.</p>
         </section>
         <BackToTop />
       </article>

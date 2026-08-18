@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./login.module.css";
+import { brand, supportMailto } from "../lib/brand";
 
 export default function LoginPage() {
   return (
@@ -17,7 +18,7 @@ export default function LoginPage() {
           <p>One governed execution environment for discovery, separation, Day 1, TSA operations, migration and exit.</p>
           <div className={styles.signals}><span>Deal-level access</span><span>Evidence and audit history</span><span>Human-governed AI</span></div>
         </div>
-        <small>© 2026 MergeVista LLC. All rights reserved.</small>
+        <small>© {brand.copyrightYear} {brand.legalName}. All rights reserved.</small>
       </section>
 
       <section className={styles.access}>
@@ -40,9 +41,9 @@ export default function LoginPage() {
 
           <div className={styles.divider}><span>or continue with</span></div>
           <button className={styles.microsoft} type="button"><i aria-hidden="true"><b/><b/><b/><b/></i>Microsoft work account</button>
-          <p className={styles.help}>Need access? <a href="mailto:support@mergevista.com">Contact your workspace administrator</a></p>
+          <p className={styles.help}>Need access? <a href={supportMailto()}>Contact your workspace administrator</a></p>
         </div>
-        <footer><Link href="/privacy">Privacy</Link><a href="#">Security</a><a href="mailto:support@mergevista.com">Support</a></footer>
+        <footer><Link href={brand.legalPaths.privacy}>Privacy</Link><Link href={brand.legalPaths.terms}>Terms</Link><Link href={brand.legalPaths.security}>Security</Link><Link href={brand.legalPaths.support}>Support</Link></footer>
       </section>
     </main>
   );

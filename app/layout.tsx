@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { brand } from "./lib/brand";
 
-const siteUrl = "https://www.mergevista.com";
+const siteUrl = brand.websiteUrl;
 const title = "MergeVista | AI-Powered IT M&A Execution Platform";
 const description =
   "MergeVista is an AI-powered IT M&A execution platform for acquisitions, divestitures, Day 1 readiness, TSA operations, migration, and TSA exit.";
@@ -62,7 +63,7 @@ const structuredData = {
     {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
-      name: "MergeVista",
+      name: brand.legalName,
       url: siteUrl,
       logo: `${siteUrl}/brand/mergevista-favicon-512.png`,
       description,

@@ -3,11 +3,12 @@ import styles from "./privacy.module.css";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import BackToTop from "../components/BackToTop";
+import { brand, canonicalUrl, supportMailto } from "../lib/brand";
 
 export const metadata: Metadata = {
   title: "Privacy Notice | MergeVista",
   description: "Learn how MergeVista collects, uses, protects and shares information through its website and platform.",
-  alternates: { canonical: "https://www.mergevista.com/privacy" },
+  alternates: { canonical: canonicalUrl(brand.legalPaths.privacy) },
 };
 
 const sections = [
@@ -29,7 +30,7 @@ export default function PrivacyPage() {
       <div className={styles.eyebrow}><span/>Trust and transparency</div>
       <h1>Privacy Notice</h1>
       <p>This notice explains how MergeVista LLC collects and uses personal information when you visit our website, contact us, request a product demonstration or use the MergeVista platform.</p>
-      <small>Effective August 17, 2026</small>
+      <small>Effective {brand.privacyEffectiveDate}</small>
     </header>
 
     <div className={styles.layout}>
@@ -38,7 +39,7 @@ export default function PrivacyPage() {
       <article className={styles.notice}>
         <section>
           <h2>About this notice</h2>
-          <p>MergeVista LLC ("MergeVista," "we," "us," or "our") provides an AI-powered IT M&amp;A execution platform and is responsible for the personal information described in this notice. This notice applies to our public website at mergevista.com and to personal information we handle to provide and secure the platform. A customer’s use of the platform may also be governed by its agreement with MergeVista LLC, including any applicable data-processing terms.</p>
+          <p>MergeVista LLC (&quot;MergeVista,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) provides an AI-powered IT M&amp;A execution platform and is responsible for the personal information described in this notice. This notice applies to our public website at mergevista.com and to personal information we handle to provide and secure the platform. A customer’s use of the platform may also be governed by its agreement with MergeVista LLC, including any applicable data-processing terms.</p>
           <p>For information a customer uploads to or manages in its workspace, the customer generally determines why and how that information is processed and MergeVista processes it to provide the service on the customer’s behalf. Users should direct workspace-data requests to their organization in the first instance.</p>
         </section>
 
@@ -99,7 +100,7 @@ export default function PrivacyPage() {
 
         <section id="contact" className={styles.contact}>
           <span>08</span><h2>Contact us</h2>
-          <p>For a privacy question or request, email <a href="mailto:support@mergevista.com?subject=Privacy%20request">support@mergevista.com</a> with “Privacy request” in the subject line. To help protect your information, we may need to verify your identity before completing a request.</p>
+          <p>For a privacy question or request, email <a href={supportMailto("Privacy request")}>{brand.supportEmail}</a> with “Privacy request” in the subject line. To help protect your information, we may need to verify your identity before completing a request.</p>
         </section>
         <BackToTop />
       </article>
