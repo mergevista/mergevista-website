@@ -28,8 +28,8 @@ export default function PrivacyPage() {
     <header className={styles.hero}>
       <div className={styles.eyebrow}><span/>Trust and transparency</div>
       <h1>Privacy Notice</h1>
-      <p>This notice explains how MergeVista collects and uses personal information when you visit our website, contact us, request a product demonstration or use the MergeVista platform.</p>
-      <small>Effective August 15, 2026</small>
+      <p>This notice explains how MergeVista LLC collects and uses personal information when you visit our website, contact us, request a product demonstration or use the MergeVista platform.</p>
+      <small>Effective August 17, 2026</small>
     </header>
 
     <div className={styles.layout}>
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
       <article className={styles.notice}>
         <section>
           <h2>About this notice</h2>
-          <p>MergeVista provides an AI-powered IT M&amp;A execution platform. This notice applies to our public website at mergevista.com and to personal information MergeVista handles to provide and secure the platform. A customer’s use of the platform may also be governed by its agreement with MergeVista, including any applicable data-processing terms.</p>
+          <p>MergeVista LLC ("MergeVista," "we," "us," or "our") provides an AI-powered IT M&amp;A execution platform and is responsible for the personal information described in this notice. This notice applies to our public website at mergevista.com and to personal information we handle to provide and secure the platform. A customer’s use of the platform may also be governed by its agreement with MergeVista LLC, including any applicable data-processing terms.</p>
           <p>For information a customer uploads to or manages in its workspace, the customer generally determines why and how that information is processed and MergeVista processes it to provide the service on the customer’s behalf. Users should direct workspace-data requests to their organization in the first instance.</p>
         </section>
 

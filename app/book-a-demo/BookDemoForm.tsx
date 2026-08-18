@@ -51,7 +51,7 @@ export default function BookDemoForm() {
     </div>
     <label>Transaction type<select name="transactionType" defaultValue="" required><option value="" disabled>Select an area</option><option>Acquisition</option><option>Divestiture</option><option>Integration</option><option>Separation</option><option>General platform evaluation</option></select></label>
     <label>How can we help? <small>Optional</small><textarea name="message" rows={5} placeholder="Tell us about your priorities, transaction or evaluation." /></label>
-    <label className={styles.consent}><input name="consent" type="checkbox" required/><span>I agree that MergeVista may use this information to respond to my request. See our <Link href="/privacy">Privacy Notice</Link>.</span></label>
+    <label className={styles.consent}><input name="consent" type="checkbox" required/><span>By submitting this form, I agree that MergeVista LLC may use the information provided to respond to my request, as described in our <Link href="/privacy">Privacy Notice</Link>.</span></label>
     {error && <p className={styles.formError} role="alert">{error}</p>}
     <button className={styles.submit} type="submit" disabled={submitting}>{submitting ? "Sending…" : "Request a demo"} <span>→</span></button>
     <p className={styles.response}>We typically respond within one business day.</p>

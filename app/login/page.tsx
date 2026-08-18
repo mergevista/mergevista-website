@@ -17,7 +17,7 @@ export default function LoginPage() {
           <p>One governed execution environment for discovery, separation, Day 1, TSA operations, migration and exit.</p>
           <div className={styles.signals}><span>Deal-level access</span><span>Evidence and audit history</span><span>Human-governed AI</span></div>
         </div>
-        <small>© 2026 MergeVista · Built for complex transactions</small>
+        <small>© 2026 MergeVista LLC. All rights reserved.</small>
       </section>
 
       <section className={styles.access}>

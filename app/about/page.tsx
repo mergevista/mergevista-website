@@ -46,7 +46,7 @@ export default function AboutPage() {
 
     <section className={styles.building}>
       <div><div className={styles.eyebrow}><span/>How we are building</div><h2>Shaped by the people doing the work.</h2></div>
-      <blockquote>MergeVista is building a new generation of IT M&amp;A execution platform, shaped by the real-world needs of design partners and early customers.</blockquote>
+      <blockquote>MergeVista LLC is building the next generation of IT M&amp;A execution platforms, shaped by the real-world needs of design partners and early customers.</blockquote>
     </section>
 
     <section className={styles.cta}><div><small>START A CONVERSATION</small><h2>Help shape a better way to execute IT M&amp;A.</h2><p>Explore the platform and tell us what your transaction teams need most.</p></div><Link href="/book-a-demo">Talk with our team <span>→</span></Link></section>
