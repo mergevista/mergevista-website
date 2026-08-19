@@ -21,6 +21,13 @@ export default function ContactPage() {
     <SiteHeader />
     <section className={styles.hero}><div className={styles.eyebrow}><span/>Start a conversation</div><h1>How can we help?</h1><p>Choose the path that best fits what you need. We will make sure your message reaches the right person.</p></section>
     <section className={styles.routes}>{routes.map(route=><article key={route.number}><small>{route.number}</small><h2>{route.title}</h2><p>{route.text}</p><Link href={route.href}>{route.action} <b>→</b></Link></article>)}</section>
+    <section className={styles.address} aria-labelledby="business-address-heading">
+      <div className={styles.eyebrow}><span/>Business address</div>
+      <div className={styles.addressDetails}>
+        <h2 id="business-address-heading">MergeVista LLC</h2>
+        <address>9355 John W. Elliott Drive, Suite 25<br/>Frisco, TX 75033<br/>United States</address>
+      </div>
+    </section>
     <section className={styles.response}><div><span>✓</span><p><b>A thoughtful response—not an automated sales sequence.</b><br/>We typically respond to inquiries within one business day.</p></div><Link href="/">Return to homepage</Link></section>
     <SiteFooter />
   </main>;
