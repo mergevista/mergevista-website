@@ -1,15 +1,11 @@
-import type { Metadata } from "next";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import BackToTop from "../components/BackToTop";
-import { brand, canonicalUrl, supportMailto } from "../lib/brand";
+import { brand, supportMailto } from "../lib/brand";
+import { pageMetadata } from "../lib/seo";
 import styles from "../privacy/privacy.module.css";
 
-export const metadata: Metadata = {
-  title: "Support | MergeVista",
-  description: "Contact MergeVista support for access, product, security and privacy assistance.",
-  alternates: { canonical: canonicalUrl(brand.legalPaths.support) },
-};
+export const metadata = pageMetadata("Support | MergeVista", "Contact MergeVista support for access, product, security and privacy assistance.", brand.legalPaths.support);
 
 const sections = [
   ["access", "Workspace access"],

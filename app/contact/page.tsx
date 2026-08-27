@@ -1,14 +1,10 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./contact.module.css";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact | MergeVista",
-  description: "Contact MergeVista for product demonstrations, customer support and general inquiries.",
-  alternates: { canonical: "https://www.mergevista.com/contact" },
-};
+export const metadata = pageMetadata("Contact | MergeVista", "Contact MergeVista for product demonstrations, customer support and general inquiries.", "/contact");
 
 const routes = [
   { number: "01", title: "Sales and demos", text: "Explore how MergeVista can support your acquisition, divestiture, integration or separation.", action: "Request a product conversation", href: "/book-a-demo" },

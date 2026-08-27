@@ -1,14 +1,10 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./about.module.css";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "About MergeVista | IT M&A Execution Platform",
-  description: "Learn why MergeVista is building a new generation of IT M&A execution platform for acquisitions, divestitures, integrations and separations.",
-  alternates: { canonical: "https://www.mergevista.com/about" },
-};
+export const metadata = pageMetadata("About MergeVista | IT M&A Execution Platform", "Learn why MergeVista is building a new generation of IT M&A execution platform for acquisitions, divestitures, integrations and separations.", "/about");
 
 const principles = [
   ["01", "Connected execution", "Keep inventories, plans, dependencies, decisions and evidence connected across the complete transaction."],

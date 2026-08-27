@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./login.module.css";
 import { brand, supportMailto } from "../lib/brand";
+
+export const metadata: Metadata = {
+  title: "Sign in | MergeVista",
+  description: "Sign in to your secure MergeVista transaction workspace.",
+  alternates: { canonical: "https://www.mergevista.com/login" },
+  robots: { index: false, follow: false },
+};
 
 export default function LoginPage() {
   return (

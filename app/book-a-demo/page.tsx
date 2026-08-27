@@ -1,14 +1,10 @@
-import type { Metadata } from "next";
 import BookDemoForm from "./BookDemoForm";
 import styles from "./book-a-demo.module.css";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Book a Demo | MergeVista",
-  description: "Book a focused demonstration of the MergeVista AI-powered IT M&A execution platform.",
-  alternates: { canonical: "https://www.mergevista.com/book-a-demo" },
-};
+export const metadata = pageMetadata("Book a Demo | MergeVista", "Book a focused demonstration of the MergeVista AI-powered IT M&A execution platform.", "/book-a-demo");
 
 export default function BookDemoPage() {
   return <main className={styles.page}>

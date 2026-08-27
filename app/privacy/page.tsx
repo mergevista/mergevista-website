@@ -1,15 +1,11 @@
-import type { Metadata } from "next";
 import styles from "./privacy.module.css";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import BackToTop from "../components/BackToTop";
-import { brand, canonicalUrl, supportMailto } from "../lib/brand";
+import { brand, supportMailto } from "../lib/brand";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Notice | MergeVista",
-  description: "Learn how MergeVista collects, uses, protects and shares information through its website and platform.",
-  alternates: { canonical: canonicalUrl(brand.legalPaths.privacy) },
-};
+export const metadata = pageMetadata("Privacy Notice | MergeVista", "Learn how MergeVista collects, uses, protects and shares information through its website and platform.", brand.legalPaths.privacy);
 
 const sections = [
   ["information", "Information we collect"],

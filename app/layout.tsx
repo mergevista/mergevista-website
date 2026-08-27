@@ -67,6 +67,14 @@ const structuredData = {
       url: siteUrl,
       logo: `${siteUrl}/brand/mergevista-favicon-512.png`,
       description,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "9355 John W. Elliott Drive, Suite 25",
+        addressLocality: "Frisco",
+        addressRegion: "TX",
+        postalCode: "75033",
+        addressCountry: "US",
+      },
     },
     {
       "@type": "WebSite",

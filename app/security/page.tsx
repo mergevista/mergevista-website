@@ -1,15 +1,11 @@
-import type { Metadata } from "next";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import BackToTop from "../components/BackToTop";
 import styles from "../privacy/privacy.module.css";
-import { brand, canonicalUrl, supportMailto } from "../lib/brand";
+import { brand, supportMailto } from "../lib/brand";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Security & Trust | MergeVista",
-  description: "Learn about the security controls MergeVista uses to protect transaction workspaces and customer data.",
-  alternates: { canonical: canonicalUrl(brand.legalPaths.security) },
-};
+export const metadata = pageMetadata("Security & Trust | MergeVista", "Learn about the security controls MergeVista uses to protect transaction workspaces and customer data.", brand.legalPaths.security);
 
 const sections = [
   ["identity", "Identity and access"],
