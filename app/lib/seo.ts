@@ -16,9 +16,9 @@ export function pageMetadata(title: string, description: string, path: string): 
       siteName: "MergeVista",
       images: [
         {
-          url: "/brand/mergevista-primary-dark.png",
-          width: 714,
-          height: 233,
+          url: "/og.png",
+          width: 1200,
+          height: 630,
           alt: "MergeVista — AI-Powered IT M&A Execution Platform",
         },
       ],
@@ -27,7 +27,7 @@ export function pageMetadata(title: string, description: string, path: string): 
       card: "summary_large_image",
       title,
       description,
-      images: ["/brand/mergevista-primary-dark.png"],
+      images: ["/og.png"],
     },
   };
 }

@@ -14,7 +14,7 @@ export default function SiteFooter({ theme = "light" }: SiteFooterProps) {
         <small>AI-Powered IT M&amp;A Execution Platform</small>
       </Link>
       <p>© {brand.copyrightYear} {brand.legalName}. All rights reserved.</p>
-      <nav aria-label="Footer navigation"><Link href="/insights">Insights</Link><Link href={brand.legalPaths.privacy}>Privacy</Link><Link href={brand.legalPaths.terms}>Terms</Link><Link href={brand.legalPaths.security}>Security</Link><Link href={brand.legalPaths.support}>Support</Link><Link href="/about">About</Link></nav>
+      <nav aria-label="Footer navigation"><Link href="/platform">Platform</Link><Link href="/solutions">Solutions</Link><Link href="/ai-capabilities">AI Capabilities</Link><Link href="/insights">Insights</Link><Link href="/about">About</Link><Link href={brand.legalPaths.security}>Security</Link><Link href={brand.legalPaths.support}>Support</Link><Link href={brand.legalPaths.privacy}>Privacy</Link><Link href={brand.legalPaths.terms}>Terms</Link></nav>
     </footer>
   </div>;
 }

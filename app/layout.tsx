@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: "/brand/mergevista-primary-dark.png",
-        width: 714,
-        height: 233,
+        url: "/og.png",
+        width: 1200,
+        height: 630,
         alt: "MergeVista — AI-Powered IT M&A Execution Platform",
       },
     ],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/brand/mergevista-primary-dark.png"],
+    images: ["/og.png"],
   },
   icons: {
     icon: [
