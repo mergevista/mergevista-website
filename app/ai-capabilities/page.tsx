@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import { pageMetadata } from "../lib/seo";
@@ -38,16 +39,7 @@ export default function AiCapabilitiesPage() {
           <p>Move from an uploaded agreement to governed products, license entitlements, inventory relationships and readiness action—without separating the AI output from its source or the people accountable for approving it.</p>
           <div className={styles.actions}><Link className={styles.primary} href="/book-a-demo">See it in action →</Link><Link className={styles.secondary} href="/platform">Explore the platform</Link></div>
         </div>
-        <div className={styles.aiFlow} aria-label="Contract evidence to execution workflow">
-          <div className={styles.aiFlowHead}><span>CONTRACT-TO-INVENTORY INTELLIGENCE</span><b>HUMAN GOVERNED</b></div>
-          <div className={styles.aiFlowTrack}>
-            <div><small>01</small><strong>Contract</strong><span>Source evidence</span></div>
-            <i>→</i><div><small>02</small><strong>Products</strong><span>Normalized catalog</span></div>
-            <i>→</i><div><small>03</small><strong>Licenses</strong><span>Entitlements</span></div>
-            <i>→</i><div><small>04</small><strong>Inventory</strong><span>Approved links</span></div>
-          </div>
-          <div className={styles.aiFlowResult}><span>Confidence</span><span>Rationale</span><span>Evidence</span><span>Approval</span></div>
-        </div>
+        <div className={`${styles.productFrame} ${styles.productFrameDark}`} aria-label="MergeVista AI evidence review" data-product-reveal><div className={styles.productFrameTop}><span>LIVE PRODUCT VIEW <i>Illustrative sample data</i></span><b>SOURCE-GROUNDED REVIEW</b></div><Image src="/product/ai-evidence-review.png" alt="MergeVista AI contract review comparing extracted values with confidence, decisions and source evidence" width={1280} height={720} priority/></div>
       </div>
     </header>
 
