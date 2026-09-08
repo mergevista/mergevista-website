@@ -41,7 +41,7 @@
 
 /* Product-led design evolution: disciplined palette, unified product frames and focal mobile crops. */
 .page{--ink:#071a35;--muted:#53647d;--blue:#1769e8;--cyan:#2a9eae;--line:#dce5f0;background:#fff}
-.hero{background:radial-gradient(circle at 88% 18%,#dbeafe 0,transparent 28%),linear-gradient(135deg,#fff 44%,#f4f8fc)}
+.hero{padding-right:4.5vw;background:radial-gradient(circle at 88% 18%,#dbeafe 0,transparent 28%),linear-gradient(135deg,#fff 44%,#f4f8fc)}
 .ownershipTrack>div{background:#f4f7fb;color:#173655;border-left:1px solid #dce5f0}
 .ownershipTrack>div:first-child{border-left:0}
 .ownershipTrack .ownerJoint,.ownershipTrack .ownerTsa{background:#eef4f8;color:#174b61}
@@ -52,6 +52,7 @@
 .primary,.primarySmall{background:#1769e8}
 
 .productWrap,.inlineProduct,.wideProduct{position:relative;border:1px solid #c8d6e5;border-radius:16px;box-shadow:0 28px 70px rgba(13,44,83,.16)}
+.productWrap{max-width:880px}
 .browserBar,.inlineProductTop{min-height:42px;background:#071a35;color:#fff}
 .browserBar b{color:#dbe7f3}
 .browserBar small{margin-left:10px;padding:4px 7px;border:1px solid rgba(255,255,255,.22);border-radius:999px;color:#9fb4c9;font-size:7px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;white-space:nowrap}
@@ -65,7 +66,10 @@
 .calloutRisk{right:3%;bottom:7%}
 .productWrap:hover .productCallout{transform:translateX(-4px)}
 
+@media(max-width:1100px){.hero{padding-right:5vw}}
+
 @media(max-width:700px){
+  .hero{padding-right:18px}
   .ownershipTrack>div{border-left:0;border-top:1px solid #dce5f0}.ownershipTrack>div:first-child{border-top:0}
   .browserBar small,.productCallout{display:none}
   .productWrap,.inlineProduct,.wideProduct{overflow:hidden}
