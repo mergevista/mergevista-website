@@ -4,7 +4,7 @@ import SiteHeader from "../components/SiteHeader";
 import { pageMetadata } from "../lib/seo";
 import styles from "../product-pages.module.css";
 
-export const metadata = pageMetadata("Solutions | MergeVista", "Explore MergeVista solutions for divestitures, acquisitions, Day 1 readiness, TSA management, migration and TSA exit.", "/solutions");
+export const metadata = pageMetadata("IT Separation & Integration Solutions | MergeVista", "Explore MergeVista solutions for divestitures, acquisitions, Day 1 readiness, TSA management, migration and TSA exit.", "/solutions");
 
 const solutions = [
   ["01", "Divestitures and separations", "Create a trusted carve-out baseline, expose shared dependencies and coordinate logical and physical separation across seller and buyer teams.", ["Connected separation inventories", "Site and workstream planning", "Contract, license and consent visibility"]],

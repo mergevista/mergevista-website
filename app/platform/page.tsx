@@ -5,7 +5,7 @@ import SiteHeader from "../components/SiteHeader";
 import { pageMetadata } from "../lib/seo";
 import styles from "../product-pages.module.css";
 
-export const metadata = pageMetadata("Platform | MergeVista", "Explore the MergeVista AI-powered platform for connected IT M&A inventories, governance, separation, Day 1 readiness, TSA operations, migration and exit.", "/platform");
+export const metadata = pageMetadata("IT M&A Software Platform | MergeVista", "Explore the MergeVista AI-powered platform for connected IT M&A inventories, governance, separation, Day 1 readiness, TSA operations, migration and exit.", "/platform");
 
 const capabilities = [
   { number: "01", label: "Baseline & governance", title: "Establish one governed source of truth", text: "Bring applications, infrastructure, sites, users, contracts and licenses into a deal-specific model—then govern the baseline through accountable review.", points: ["Configurable import, mapping and validation", "Submit, review, approve, freeze and control exceptions"], outcome: "Stop reconciling competing inventories" },

@@ -5,7 +5,7 @@ import SiteHeader from "../components/SiteHeader";
 import styles from "./insights.module.css";
 import heroStyles from "./insights-hero.module.css";
 
-const pageTitle = "Insights | MergeVista";
+const pageTitle = "IT M&A Insights, Readiness & TSA Exit | MergeVista";
 const pageDescription = "Practical perspectives on IT M&A execution, Day 1 readiness, TSA operations, separation and migration.";
 
 export const metadata: Metadata = {

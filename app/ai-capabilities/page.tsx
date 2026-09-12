@@ -6,7 +6,7 @@ import { pageMetadata } from "../lib/seo";
 import styles from "../product-pages.module.css";
 
 export const metadata = pageMetadata(
-  "AI Capabilities | MergeVista",
+  "AI for IT M&A | MergeVista Intelligence",
   "Explore MergeVista Intelligence for source-grounded contract extraction, product and license normalization, inventory reconciliation, exception detection and human-governed IT M&A decisions.",
   "/ai-capabilities",
 );

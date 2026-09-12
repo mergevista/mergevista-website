@@ -14,7 +14,7 @@ export default function SiteFooter({ theme = "light" }: SiteFooterProps) {
         <small>AI-Powered IT M&amp;A Execution Platform</small>
       </Link>
       <p>© {brand.copyrightYear} {brand.legalName}. All rights reserved.</p>
-      <nav aria-label="Footer navigation"><Link href="/platform">Platform</Link><Link href="/solutions">Solutions</Link><Link href="/ai-capabilities">AI Capabilities</Link><Link href="/insights">Insights</Link><Link href="/about">About</Link><Link href={brand.legalPaths.security}>Security</Link><Link href={brand.legalPaths.support}>Support</Link><Link href={brand.legalPaths.privacy}>Privacy</Link><Link href={brand.legalPaths.terms}>Terms</Link></nav>
+      <nav aria-label="Footer navigation"><Link href="/platform">Platform</Link><Link href="/solutions">Solutions</Link><Link href="/ai-capabilities">AI Capabilities</Link><Link href="/insights">Insights</Link><Link href="/about">About</Link><Link href={brand.legalPaths.security}>Security</Link><Link href={brand.legalPaths.support}>Support</Link><Link href={brand.legalPaths.privacy}>Privacy</Link><Link href={brand.legalPaths.terms}>Terms</Link><a className={styles.linkedin} href="https://www.linkedin.com/company/mergevista/" target="_blank" rel="noopener noreferrer" aria-label="MergeVista on LinkedIn (opens in a new tab)" title="MergeVista on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.5 8.3H3.2V19h3.3V8.3ZM4.9 3A1.9 1.9 0 1 0 4.9 6.8 1.9 1.9 0 0 0 4.9 3ZM19.8 12.9c0-3.2-1.7-4.8-4.1-4.8-1.9 0-2.8 1-3.2 1.8V8.3H9.2V19h3.3v-5.3c0-1.4.3-2.8 2-2.8 1.7 0 1.7 1.6 1.7 2.9V19h3.3l.3-6.1Z"/></svg></a></nav>
     </footer>
   </div>;
 }
