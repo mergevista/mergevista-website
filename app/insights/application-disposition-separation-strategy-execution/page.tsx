@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import RelatedInsights from "../RelatedInsights";
 import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
@@ -103,6 +104,7 @@ export default function ApplicationDispositionArticle(){return <main className={
     <h2>Final thought</h2>
     <p>Application disposition is where separation strategy becomes real.</p><p>Every disposition decision creates work—or removes it. It shapes the TSA, infrastructure build, data migration, contract strategy, testing scope, migration waves, support model, cost, and timeline.</p><p>A good decision simplifies the separation and moves the buyer toward a sustainable future state.</p><p>A weak decision shifts uncertainty into execution, where it becomes more expensive and more difficult to resolve.</p><p>The objective is not to migrate every application the business uses.</p><p>It is to provide every business capability the separated organization needs—with the right technology, in the right environment, at the right time.</p><p><strong>That is why application disposition should never be treated as just another column in the inventory.</strong></p>
   </article>
+  <RelatedInsights current="application-disposition-separation-strategy-execution" productHref="/solutions" productLabel="Explore MergeVista solutions" />
   <section className={styles.articleCta}><div><small>TURN STRATEGY INTO EXECUTION</small><h2>Connect every application decision to the dependencies, evidence and actions required to complete it.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
   <SiteFooter theme="dark"/>
 </main>}

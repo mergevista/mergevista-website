@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import RelatedInsights from "../RelatedInsights";
 import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
@@ -104,6 +105,7 @@ export default function DayOneIndependenceArticle(){return <main className={styl
     <p>Day 1 is an important milestone, and reaching it without disruption deserves recognition.</p><p>But it is the beginning of the separation journey—not the end.</p><p>Day 1 proves that ownership can change while the business continues to operate, often with substantial support from the seller.</p><p>TSA exit proves that the buyer can operate independently.</p>
     <p>The strongest IT M&amp;A programs understand that difference from the start. They use Day 1 to protect continuity, preserve the knowledge developed before close, and create a disciplined path toward evidence-based independence.</p><p>Because closing the transaction transfers the business.</p><p><strong>Exiting the TSAs is what truly separates it.</strong></p>
   </article>
+  <RelatedInsights current="day-1-is-not-independence" productHref="/solutions" productLabel="Explore MergeVista solutions" />
   <section className={styles.articleCta}><div><small>MOVE FROM CONTINUITY TO INDEPENDENCE</small><h2>Connect every Day 1 dependency to the evidence required for TSA exit.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
   <SiteFooter theme="dark"/>
 </main>}

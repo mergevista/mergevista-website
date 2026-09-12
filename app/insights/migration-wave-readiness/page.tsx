@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import RelatedInsights from "../RelatedInsights";
 import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
@@ -112,6 +113,7 @@ export default function MigrationWaveReadinessArticle(){return <main className={
     <p>When that information remains spread across workstream trackers, spreadsheets, emails, meeting notes, testing tools, and presentation decks, the program spends enormous effort reconciling status—and still may not see the operating risk.</p>
     <p>A migration wave is ready when the technical components, business processes, dependencies, people, and evidence come together as one executable picture.</p><p>Until then, green may simply mean that each team completed its part.</p><p><strong>And in IT M&amp;A, completing the parts is not the same as making the whole work.</strong></p>
   </article>
+  <RelatedInsights current="migration-wave-readiness" productHref="/platform" />
   <section className={styles.articleCta}><div><small>MOVE FROM STATUS TO READINESS</small><h2>Connect every migration dependency, decision and test result to the wave it affects.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
   <SiteFooter theme="dark"/>
 </main>}

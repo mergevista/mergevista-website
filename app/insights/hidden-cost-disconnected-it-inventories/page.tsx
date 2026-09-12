@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import RelatedInsights from "../RelatedInsights";
 import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
@@ -99,6 +100,7 @@ export default function DisconnectedInventoriesArticle(){return <main className=
     <p>In an IT separation, knowing what exists is only the beginning.</p>
     <p><strong>The real value comes from knowing how everything is connected.</strong></p>
   </article>
+  <RelatedInsights current="hidden-cost-disconnected-it-inventories" productHref="/ai-capabilities" productLabel="Explore AI capabilities" />
   <section className={styles.articleCta}><div><small>CONNECT THE EXECUTION BASELINE</small><h2>See the dependencies that determine separation readiness.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
   <SiteFooter theme="dark"/>
 </main>}

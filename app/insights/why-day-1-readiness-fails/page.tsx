@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import RelatedInsights from "../RelatedInsights";
 import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "./day-one.module.css";
 
@@ -89,6 +90,7 @@ export default function DayOneReadinessArticle() {
       <p><strong>If applications, infrastructure, data, contracts, licenses, users and business processes come together on Day 1, it should be by design—not by luck.</strong></p>
     </article>
 
+    <RelatedInsights current="why-day-1-readiness-fails" productHref="/platform" />
     <section className={styles.articleCta}><div><small>MOVE FROM STATUS TO READINESS</small><h2>Connect every workstream to one executable Day 1 outcome.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
     <SiteFooter theme="dark" />
   </main>;

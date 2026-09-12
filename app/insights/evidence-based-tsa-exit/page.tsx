@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import RelatedInsights from "../RelatedInsights";
 import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
@@ -90,6 +91,7 @@ export default function TsaExitArticle(){return <main className={styles.page}><A
     <p>An evidence-based TSA exit model tells you whether the underlying dependency has actually been removed.</p>
     <p><strong>That is the difference between tracking an agreement and executing a separation.</strong></p>
   </article>
+  <RelatedInsights current="evidence-based-tsa-exit" productHref="/solutions" productLabel="Explore MergeVista solutions" />
   <section className={styles.articleCta}><div><small>PROVE OPERATIONAL INDEPENDENCE</small><h2>Connect every TSA obligation to the evidence required for exit.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
   <SiteFooter theme="dark"/>
 </main>}
