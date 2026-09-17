@@ -61,9 +61,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: canonicalUrl("/insights"),
-      lastModified: new Date("2026-09-11"),
+      lastModified: new Date("2026-09-17"),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: canonicalUrl("/insights/where-ai-belongs-in-it-ma"),
+      lastModified: new Date("2026-09-17"),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: canonicalUrl("/insights/migration-wave-readiness"),
