@@ -13,7 +13,7 @@ export function UseCasesCollectionStructuredData({ items }: { items: UseCase[] }
     "@id": `${url}#collection`,
     url,
     name: "IT M&A Use Cases",
-    description: "MergeVista use cases for sellers, acquirers, private equity firms, enterprises, carve-out teams and consulting partners.",
+    description: "MergeVista use cases for sellers, acquirers, private equity firms, enterprises, carve-out teams, consulting partners and boutique M&A firms.",
     isPartOf: { "@id": `${brand.websiteUrl}/#website` },
     about: { "@id": `${brand.websiteUrl}/#software` },
     mainEntity: {

@@ -6,9 +6,9 @@ import styles from "../product-pages.module.css";
 import { useCases } from "./data";
 import { UseCasesCollectionStructuredData } from "./UseCaseStructuredData";
 
-export const metadata = pageMetadata("IT M&A Use Cases | MergeVista", "See how MergeVista supports transaction readiness, acquirers, private equity, enterprise M&A, carve-outs and advisory partners.", "/use-cases");
+export const metadata = pageMetadata("IT M&A Use Cases | MergeVista", "See how MergeVista supports transaction readiness, acquirers, private equity, enterprise M&A, carve-outs, consulting partners and boutique M&A firms.", "/use-cases");
 
-const pathways = [["PREPARE", "Seller readiness"], ["ACQUIRE", "First-time & serial buyers"], ["SCALE", "Private equity"], ["CONTROL", "Enterprise M&A"], ["SEPARATE", "Carve-outs"]] as const;
+const pathways = [["PREPARE", "Seller readiness"], ["ACQUIRE", "First-time & serial buyers"], ["SCALE", "Private equity"], ["CONTROL", "Enterprise M&A"], ["SEPARATE", "Carve-outs"], ["ENABLE", "Advisory partners"]] as const;
 
 export default function UseCasesPage() { return <main className={styles.page}>
   <UseCasesCollectionStructuredData items={useCases} />

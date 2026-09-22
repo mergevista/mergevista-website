@@ -56,13 +56,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: canonicalUrl("/use-cases"),
-      lastModified: new Date("2026-09-21"),
+      lastModified: new Date("2026-09-22"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     ...useCases.map(({ slug }) => ({
       url: canonicalUrl(`/use-cases/${slug}`),
-      lastModified: new Date("2026-09-21"),
+      lastModified: new Date("2026-09-22"),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),

@@ -99,6 +99,18 @@ export const useCases: UseCase[] = [
     capabilities: ["Configurable workflows", "Partner-led workspaces", "Client governance and reporting", "Reusable templates", "Role-based access", "Delivery and channel models"],
     cta: "Discuss a delivery partnership",
   },
+  {
+    slug: "specialist-boutique-ma-firms", number: "08", title: "Specialist and boutique M&A firms", audience: "Independent IT M&A advisors and boutique transaction firms",
+    headline: "Scale your M&A methodology without scaling coordination overhead.",
+    seoDescription: "Help specialist and boutique M&A firms standardize IT diligence, Day 1, integration, carve-out and TSA-exit delivery with MergeVista.",
+    intro: "Turn specialist expertise into a repeatable, platform-enabled delivery model. MergeVista helps lean advisory teams structure engagements, reduce spreadsheet coordination and give clients clearer visibility from diligence through execution.",
+    challenge: "Boutique firms compete through senior expertise and close client relationships, but each new engagement can require rebuilding inventories, trackers, governance and reporting. That limits delivery capacity and makes growth dependent on adding more coordination effort.",
+    signals: ["Your firm specializes in IT diligence, integration, carve-outs or TSA exit", "Senior practitioners spend too much time maintaining trackers and status reports", "You want to support more engagements without adding proportional delivery overhead", "Clients expect a structured workspace and continuity after the advisory phase"],
+    steps: [{title:"Codify your approach",text:"Configure your methodology, terminology, templates and quality controls in a repeatable workspace."},{title:"Mobilize faster",text:"Start each engagement with a governed fact base, clear responsibilities and consistent reporting."},{title:"Extend into execution",text:"Carry diligence findings into Day 1, integration, separation, migration and TSA-exit actions."},{title:"Build recurring value",text:"Use licensing, referral or platform-enabled delivery models to deepen client relationships beyond a single project."}],
+    outcomes: ["More delivery capacity for a lean senior team", "A differentiated and repeatable client experience", "Less spreadsheet administration and reporting effort", "Recurring licensing, referral or platform-enabled revenue opportunities"],
+    capabilities: ["Boutique delivery playbooks", "Configurable client workspaces", "IT inventories and dependencies", "Day 1 and execution governance", "Reusable templates and reporting", "Referral and channel models"],
+    cta: "Explore a boutique partnership",
+  },
 ];
 
 export function getUseCase(slug: string) { return useCases.find(item => item.slug === slug); }
