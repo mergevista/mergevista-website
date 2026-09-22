@@ -85,6 +85,17 @@ const structuredData = {
       publisher: { "@id": `${siteUrl}/#organization` },
       inLanguage: "en-US",
     },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${siteUrl}/#software`,
+      name: brand.productName,
+      applicationCategory: "BusinessApplication",
+      applicationSubCategory: "IT M&A execution platform",
+      operatingSystem: "Web",
+      url: siteUrl,
+      description,
+      provider: { "@id": `${siteUrl}/#organization` },
+    },
   ],
 };
 

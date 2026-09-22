@@ -7,6 +7,17 @@ export function pageMetadata(title: string, description: string, path: string): 
   return {
     title,
     description,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     alternates: { canonical: url },
     openGraph: {
       title,
@@ -14,6 +25,7 @@ export function pageMetadata(title: string, description: string, path: string): 
       type: "website",
       url,
       siteName: "MergeVista",
+      locale: "en_US",
       images: [
         {
           url: "/og.png",
