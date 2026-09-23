@@ -19,6 +19,7 @@ export default function ArticleStructuredData({
     description,
     datePublished: published,
     dateModified: published,
+    image: "https://www.mergevista.com/og.png",
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     author: {
       "@type": "Organization",

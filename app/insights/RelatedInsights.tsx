@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./related-insights.module.css";
 
 const articles = [
+  { slug: "technology-ready-for-diligence", category: "Seller readiness", title: "Your Company Is Ready to Sell. Is Your Technology Ready for Diligence?" },
   { slug: "where-ai-belongs-in-it-ma", category: "AI in IT M&A", title: "Where AI Actually Belongs in IT M&A" },
   { slug: "migration-wave-readiness", category: "Migration readiness", title: "Everything Is Green—So Why Isn’t the Migration Wave Ready?" },
   { slug: "application-disposition-separation-strategy-execution", category: "Application strategy", title: "Application Disposition: Where Separation Strategy Becomes Execution" },
@@ -13,6 +14,7 @@ const articles = [
 ];
 
 const recommendations: Record<string, string[]> = {
+  "technology-ready-for-diligence": ["hidden-cost-disconnected-it-inventories", "where-ai-belongs-in-it-ma", "complete-it-ma-lifecycle"],
   "where-ai-belongs-in-it-ma": ["application-disposition-separation-strategy-execution", "hidden-cost-disconnected-it-inventories", "migration-wave-readiness"],
   "migration-wave-readiness": ["why-day-1-readiness-fails", "hidden-cost-disconnected-it-inventories", "application-disposition-separation-strategy-execution"],
   "application-disposition-separation-strategy-execution": ["hidden-cost-disconnected-it-inventories", "migration-wave-readiness", "complete-it-ma-lifecycle"],
