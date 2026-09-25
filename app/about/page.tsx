@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./about.module.css";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import insetCtaStyles from "../components/inset-cta.module.css";
 import { pageMetadata } from "../lib/seo";
 
 export const metadata = pageMetadata("About MergeVista | IT M&A Execution Platform", "Learn why MergeVista is building a new generation of IT M&A execution platform for acquisitions, divestitures, integrations and separations.", "/about");
@@ -45,8 +46,8 @@ export default function AboutPage() {
       <blockquote>MergeVista LLC is building the next generation of IT M&amp;A execution platforms, shaped by the real-world needs of design partners and early customers.</blockquote>
     </section>
 
-    <section className={styles.cta}><div><small>START A CONVERSATION</small><h2>Help shape a better way to execute IT M&amp;A.</h2><p>Explore the platform and tell us what your transaction teams need most.</p></div><Link href="/book-a-demo">Talk with our team <span>→</span></Link></section>
+    <section className={`${styles.cta} ${insetCtaStyles.inset}`}><div><small>START A CONVERSATION</small><h2>Help shape a better way to execute IT M&amp;A.</h2><p>Explore the platform and tell us what your transaction teams need most.</p></div><Link href="/book-a-demo">Talk with our team <span>→</span></Link></section>
 
-    <SiteFooter />
+    <SiteFooter bordered={false} />
   </main>;
 }

@@ -1,0 +1,21 @@
+.inset.inset {
+  margin: 20px 4vw 40px;
+  padding: 65px 5vw;
+  border-radius: 14px;
+  background: #071a35;
+}
+
+.inset.inset small {
+  color: #65cfdd;
+}
+
+.inset.inset p {
+  color: #aebed0;
+}
+
+@media (max-width: 650px) {
+  .inset.inset {
+    margin: 10px 10px 30px;
+    padding: 42px 25px;
+  }
+}

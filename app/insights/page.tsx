@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import insetCtaStyles from "../components/inset-cta.module.css";
 import styles from "./insights.module.css";
 import heroStyles from "./insights-hero.module.css";
 
@@ -45,6 +46,6 @@ export default function InsightsPage() { return <main className={styles.page}>
   </section>
   <section className={styles.topicSection}><div><small>EXPLORE BY TOPIC</small><h2>Navigate the execution challenges that matter most.</h2></div><nav aria-label="Insight topics">{topics.map(topic=><a href="#latest" key={topic}>{topic}<span>→</span></a>)}</nav></section>
   <section className={styles.latest} id="latest"><div className={styles.sectionHead}><div><small>LATEST INSIGHTS</small><h2>Ideas grounded in execution.</h2></div><p>Clear, practical perspectives—not abstract transformation theory.</p></div><div className={styles.articleGrid}>{articles.map(([category,title,summary,time,tone,href,date])=><article key={title} className={styles[tone]}><div className={styles.cardVisual}><span>{category}</span><i/><i/><i/></div><div className={styles.cardBody}><small>{date} · {time}</small><h3>{title}</h3><p>{summary}</p><Link href={href}>Read article <b>→</b></Link></div></article>)}</div></section>
-  <section className={styles.cta}><div><small>FROM INSIGHT TO EXECUTION</small><h2>Turn better thinking into better deal outcomes.</h2><p>See how MergeVista supports the complete IT M&amp;A journey.</p></div><div><Link href="/book-a-demo">Book a demo <span>→</span></Link><Link href="/#platform">Explore platform</Link></div></section>
-  <SiteFooter theme="dark" />
+  <section className={`${styles.cta} ${insetCtaStyles.inset}`}><div><small>FROM INSIGHT TO EXECUTION</small><h2>Turn better thinking into better deal outcomes.</h2><p>See how MergeVista supports the complete IT M&amp;A journey.</p></div><div><Link href="/book-a-demo">Book a demo <span>→</span></Link><Link href="/#platform">Explore platform</Link></div></section>
+  <SiteFooter bordered={false} />
 </main> }
