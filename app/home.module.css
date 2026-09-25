@@ -82,3 +82,8 @@
 }
 
 @media(prefers-reduced-motion:reduce){.productWrap,.inlineProduct,.wideProduct,.productScreenshot,.inlineProduct img,.wideProduct img,.productCallout{transition:none!important;transform:none!important}}
+.page .proof b,.page .stages article>span,.page .securityList span:before,.page .trust span::first-letter{color:#1769e8}
+.page .ai li:before{color:#78adf5}
+.page .audienceGrid small{color:#1769e8}
+.page .eyebrowLight,.page .ownerBuyer small,.page .aiMore,.page .executiveOutcomes h2 em{color:#78adf5}
+.page .executiveOutcomes .eyebrowLight span,.page .ai .eyebrowLight span{background:#78adf5}

@@ -94,3 +94,11 @@
 .useCaseHero,.detailHero{background:radial-gradient(circle at 88% 16%,#dbeafe 0,transparent 28%),linear-gradient(135deg,#fff 46%,#f4f8fc)}
 .pathwayMap>small,.pathwayMap article b,.pathwayMap>p i,.detailBrief>small,.detailBrief>div b,.detailBrief>div i,.detailSignals li:before,.detailResults aside small{color:#78adf5}
 .useCaseTop small,.useCaseGrid li:before,.useCaseFlow b,.detailSteps small,.detailResults li:before,.useCaseNext small{color:#1769e8}
+.page .visualTop b,.page .proof b,.page .capabilityGrid small,.page .solutionGrid small,.page .solutionGrid li:before{color:#1769e8}
+.page .aiBand li:before{color:#b8d6ff}
+.page .capabilityGrid li:before{background:#1769e8;box-shadow:0 0 0 4px rgba(23,105,232,.12)}
+.page .aiWorkflow small{color:#1769e8}
+.page .boundaryGrid li:before{color:#1769e8}
+.page .aiFlowHead b,.page .aiFlowTrack small,.page .aiFlowTrack i,.page .governanceGrid b,.page .productFrameTop b{color:#78adf5}
+.page .aiBand .eyebrow,.page .governanceBand .eyebrow,.page .detailSignals .eyebrow{color:#78adf5}
+.page .aiBand .eyebrow span,.page .governanceBand .eyebrow span,.page .detailSignals .eyebrow span{background:#78adf5}

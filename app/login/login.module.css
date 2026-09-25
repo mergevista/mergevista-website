@@ -4,3 +4,5 @@
 
 /* Clean logo treatment for the dark panel. */
 .brand{display:flex;align-items:center;gap:11px;width:max-content;color:#fff;text-decoration:none}.brand img{display:block;width:42px;height:42px;object-fit:contain}.brand strong{font-size:27px;letter-spacing:-1px}.brand strong span{color:#3c8cff}
+.page .eyebrow,.page .story h1 em{color:#78adf5}
+.page .eyebrow span{background:#78adf5}
