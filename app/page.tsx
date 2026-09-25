@@ -89,6 +89,6 @@ export default function MarketingHome() {
 
     <section className={styles.cta}><Image className={styles.ctaLogo} src="/brand/mergevista-icon-white-transparent.png" alt="" width={128} height={124} aria-hidden="true"/><div><h2>One platform from discovery to TSA exit.</h2><p>Give sellers and buyers a shared operating model for separation, Day 1 continuity, TSA operations and migration.</p></div><div><Link className={styles.primaryLight} href="/book-a-demo">Book a demo →</Link><Link href="/platform">Explore the platform</Link></div></section>
 
-    <SiteFooter />
+    <SiteFooter bordered={false} />
   </main>;
 }

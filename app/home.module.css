@@ -49,6 +49,8 @@
 .valueGrid article:nth-child(2),.valueGrid article:nth-child(4){border-top-color:#8da4ba}
 .how{background:#f4f7fb}
 .cta{background:#0b2c57}
+.cta{margin-bottom:40px}
+@media(max-width:700px){.cta{margin-bottom:30px}}
 .primary,.primarySmall{background:#1769e8}
 
 .productWrap,.inlineProduct,.wideProduct{position:relative;border:1px solid #c8d6e5;border-radius:16px;box-shadow:0 28px 70px rgba(13,44,83,.16)}

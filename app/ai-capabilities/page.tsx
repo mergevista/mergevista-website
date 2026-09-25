@@ -63,6 +63,6 @@ export default function AiCapabilitiesPage() {
     <section className={styles.boundarySection}><div><div className={styles.eyebrow}><span />The responsibility boundary</div><h2>AI accelerates analysis. People remain accountable.</h2></div><div className={styles.boundaryGrid}><article><small>AI ASSISTS</small><ul><li>Extracting structured information from source documents</li><li>Normalizing inconsistent product references</li><li>Proposing product-to-inventory relationships</li><li>Highlighting potential licensing and coverage exceptions</li></ul></article><article><small>PEOPLE DECIDE</small><ul><li>Whether extracted information is correct and approved</li><li>Which inventory relationships become authoritative</li><li>Product scope, disposition and Day 1 coverage</li><li>Commercial, migration and TSA exit actions</li></ul></article></div></section>
 
     <section className={styles.cta}><div><h2>See contract intelligence become execution intelligence.</h2><p>Explore the complete path from agreement evidence to governed inventory and readiness decisions.</p></div><Link href="/book-a-demo">Book a demo →</Link></section>
-    <SiteFooter />
+    <SiteFooter bordered={false} />
   </main>;
 }

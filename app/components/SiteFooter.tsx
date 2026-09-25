@@ -3,12 +3,12 @@ import Link from "next/link";
 import styles from "./site-footer.module.css";
 import { brand } from "../lib/brand";
 
-type SiteFooterProps = { theme?: "light" | "dark" };
+type SiteFooterProps = { theme?: "light" | "dark"; bordered?: boolean };
 
-export default function SiteFooter({ theme = "light" }: SiteFooterProps) {
+export default function SiteFooter({ theme = "light", bordered = true }: SiteFooterProps) {
   const dark = theme === "dark";
   return <div className={`${styles.shell} ${dark ? styles.dark : styles.light}`}>
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${bordered ? "" : styles.borderless}`}>
       <Link className={styles.brand} href="/" aria-label="MergeVista home">
         {dark ? <span className={styles.darkLockup}><Image src="/brand/mergevista-icon-white-transparent.png" alt="" width={128} height={124} aria-hidden="true"/><strong>Merge<span>Vista</span></strong></span> : <Image src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212}/>}
         <small>AI-Powered IT M&amp;A Execution Platform</small>

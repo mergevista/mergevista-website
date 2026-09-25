@@ -41,6 +41,6 @@ export default async function UseCaseDetailPage({ params }: { params: Promise<{ 
     <section className={`${styles.section} ${styles.sectionAlt}`}><div className={styles.detailResults}><div><div className={styles.eyebrow}><span />Expected outcomes</div><h2>What changes when the work is connected.</h2><ul>{item.outcomes.map(outcome => <li key={outcome}>{outcome}</li>)}</ul></div><aside><small>RELEVANT CAPABILITIES</small>{item.capabilities.map(capability => <span key={capability}>{capability}</span>)}</aside></div></section>
     <nav className={styles.useCaseNext} aria-label="Explore other use cases"><span>Explore another situation</span><div>{relatedUseCases.map(other => <Link key={other.slug} href={`/use-cases/${other.slug}`}><small>{other.number}</small>{other.title}<b>→</b></Link>)}</div></nav>
     <section className={styles.cta}><div><h2>See how this use case works in MergeVista.</h2><p>We’ll focus the conversation on your transaction model, team and immediate priorities.</p></div><Link href="/book-a-demo">{item.cta} →</Link></section>
-    <SiteFooter />
+    <SiteFooter bordered={false} />
   </main>;
 }

@@ -68,6 +68,10 @@
 }
 @media(prefers-reduced-motion:reduce){.productFrame,.productFrame img,.productCallout,.capabilityGrid article{transition:none!important;transform:none!important}}
 
+/* Keep inset conversion panels visually separate from the footer. */
+.cta{margin-bottom:40px}
+@media(max-width:680px){.cta{margin-bottom:30px}}
+
 .useCaseHero{background:radial-gradient(circle at 88% 16%,#d7f3f3 0,transparent 28%),linear-gradient(135deg,#fff 46%,#f3f8fc)}
 .pathwayMap{padding:30px;border:1px solid #c8d8e7;border-radius:16px;background:#071a35;color:#fff;box-shadow:0 32px 75px rgba(7,26,53,.2)}
 .pathwayMap>small{color:#6dd0da;font-size:8px;font-weight:900;letter-spacing:1.35px}.pathwayMap>strong{display:block;max-width:520px;margin:18px 0 25px;font-size:20px;line-height:1.35}.pathwayMap>div{display:grid;gap:9px}.pathwayMap article{display:grid;grid-template-columns:90px 1fr;align-items:center;padding:14px 16px;border:1px solid #294563;border-radius:8px;background:#ffffff08}.pathwayMap article b{color:#62d1dc;font-size:8px;letter-spacing:1px}.pathwayMap article span{font-size:13px;font-weight:800}.pathwayMap>p{margin:23px 0 0;padding-top:18px;border-top:1px solid #294563;color:#a9bdd2;font-size:10px;font-weight:800;letter-spacing:.3px}.pathwayMap>p i{padding:0 5px;color:#62d1dc;font-style:normal}
