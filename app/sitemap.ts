@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { brand, canonicalUrl } from "./lib/brand";
 import { useCases } from "./use-cases/data";
+import { capabilityPackages } from "./capabilities/data";
 
 export const dynamic = "force-static";
 
@@ -54,6 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    ...capabilityPackages.map(({ slug }) => ({
+      url: canonicalUrl(`/capabilities/${slug}`),
+      lastModified: new Date("2026-09-29"),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     {
       url: canonicalUrl("/solutions"),
       lastModified: new Date("2026-08-28"),
