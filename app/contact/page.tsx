@@ -8,8 +8,9 @@ export const metadata = pageMetadata("Contact | MergeVista", "Contact MergeVista
 
 const routes = [
   { number: "01", title: "Sales and demos", text: "Explore how MergeVista can support your acquisition, divestiture, integration or separation.", action: "Request a product conversation", href: "/book-a-demo" },
-  { number: "02", title: "Customer support", text: "Get help with workspace access, product questions or an existing MergeVista engagement.", action: "support@mergevista.com", href: "mailto:support@mergevista.com" },
-  { number: "03", title: "General inquiries", text: "Contact us about partnerships, company information, media or anything else.", action: "hello@mergevista.com", href: "mailto:hello@mergevista.com" },
+  { number: "02", title: "Guided trial", text: "Evaluate MergeVista seriously in a secure workspace configured around a representative IT M&A scenario.", action: "Apply for a guided trial", href: "/guided-trial" },
+  { number: "03", title: "Customer support", text: "Get help with workspace access, product questions or an existing MergeVista engagement.", action: "support@mergevista.com", href: "mailto:support@mergevista.com" },
+  { number: "04", title: "General inquiries", text: "Contact us about partnerships, company information, media or anything else.", action: "hello@mergevista.com", href: "mailto:hello@mergevista.com" },
 ];
 
 export default function ContactPage() {

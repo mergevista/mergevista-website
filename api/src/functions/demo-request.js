@@ -29,6 +29,7 @@ app.http("demo-request", {
     const role = clean(body.role, 160);
     const transactionType = clean(body.transactionType, 80);
     const message = clean(body.message, 3000);
+    const guidedTrial = message.startsWith("GUIDED TRIAL APPLICATION");
     const consent = body.consent === true;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -51,9 +52,9 @@ app.http("demo-request", {
       recipients: { to: [{ address: recipient }] },
       replyTo: [{ address: email, displayName: `${firstName} ${lastName}` }],
       content: {
-        subject: `MergeVista demo request — ${company}`,
-        plainText: `New MergeVista demo request\n\nName: ${firstName} ${lastName}\nWork email: ${email}\nCompany: ${company}\nRole: ${role}\nTransaction type: ${transactionType}\n\nMessage:\n${message || "Not provided"}`,
-        html: `<h2>New MergeVista demo request</h2><table cellpadding="7"><tr><td><b>Name</b></td><td>${safe.firstName} ${safe.lastName}</td></tr><tr><td><b>Work email</b></td><td>${safe.email}</td></tr><tr><td><b>Company</b></td><td>${safe.company}</td></tr><tr><td><b>Role</b></td><td>${safe.role}</td></tr><tr><td><b>Transaction type</b></td><td>${safe.transactionType}</td></tr></table><h3>Message</h3><p>${safe.message.replace(/\n/g, "<br>")}</p>`,
+        subject: guidedTrial ? `MergeVista guided trial application — ${company}` : `MergeVista demo request — ${company}`,
+        plainText: `${guidedTrial ? "New MergeVista guided trial application" : "New MergeVista demo request"}\n\nName: ${firstName} ${lastName}\nWork email: ${email}\nCompany: ${company}\nRole: ${role}\nTransaction type: ${transactionType}\n\nMessage:\n${message || "Not provided"}`,
+        html: `<h2>${guidedTrial ? "New MergeVista guided trial application" : "New MergeVista demo request"}</h2><table cellpadding="7"><tr><td><b>Name</b></td><td>${safe.firstName} ${safe.lastName}</td></tr><tr><td><b>Work email</b></td><td>${safe.email}</td></tr><tr><td><b>Company</b></td><td>${safe.company}</td></tr><tr><td><b>Role</b></td><td>${safe.role}</td></tr><tr><td><b>Transaction type</b></td><td>${safe.transactionType}</td></tr></table><h3>Message</h3><p>${safe.message.replace(/\n/g, "<br>")}</p>`,
       },
     });
     await poller.pollUntilDone();

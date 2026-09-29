@@ -19,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: canonicalUrl("/guided-trial"),
+      lastModified: new Date("2026-09-29"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: canonicalUrl("/contact"),
       lastModified: new Date(),
       changeFrequency: "monthly",

@@ -102,3 +102,5 @@
 .page .aiFlowHead b,.page .aiFlowTrack small,.page .aiFlowTrack i,.page .governanceGrid b,.page .productFrameTop b{color:#78adf5}
 .page .aiBand .eyebrow,.page .governanceBand .eyebrow,.page .detailSignals .eyebrow{color:#78adf5}
 .page .aiBand .eyebrow span,.page .governanceBand .eyebrow span,.page .detailSignals .eyebrow span{background:#78adf5}
+.ctaActions{display:flex;align-items:center;gap:13px;flex-wrap:wrap;justify-content:flex-end}.cta .ctaSecondary{border:1px solid #47617e;background:transparent;color:#fff}@media(max-width:680px){.ctaActions{justify-content:flex-start}.cta .ctaSecondary{padding-left:0;border:0}}
+.tertiary{align-self:center;margin-left:5px;color:#1769e8;text-decoration:none;text-transform:uppercase;font-size:10px;font-weight:900;letter-spacing:.7px;white-space:nowrap}.tertiary:hover{text-decoration:underline}@media(max-width:680px){.tertiary{margin:2px 0 0}}
