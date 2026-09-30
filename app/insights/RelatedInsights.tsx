@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./related-insights.module.css";
 
 const articles = [
+  { slug: "data-separation-not-database-extract", category: "Data separation", title: "Data Separation Is Not a Database Extract" },
   { slug: "technology-ready-for-diligence", category: "Seller readiness", title: "Your Company Is Ready to Sell. Is Your Technology Ready for Diligence?" },
   { slug: "where-ai-belongs-in-it-ma", category: "AI in IT M&A", title: "Where AI Actually Belongs in IT M&A" },
   { slug: "migration-wave-readiness", category: "Migration readiness", title: "Everything Is Green—So Why Isn’t the Migration Wave Ready?" },
@@ -14,10 +15,11 @@ const articles = [
 ];
 
 const recommendations: Record<string, string[]> = {
+  "data-separation-not-database-extract": ["application-disposition-separation-strategy-execution", "migration-wave-readiness", "day-1-is-not-independence"],
   "technology-ready-for-diligence": ["hidden-cost-disconnected-it-inventories", "where-ai-belongs-in-it-ma", "complete-it-ma-lifecycle"],
   "where-ai-belongs-in-it-ma": ["application-disposition-separation-strategy-execution", "hidden-cost-disconnected-it-inventories", "migration-wave-readiness"],
   "migration-wave-readiness": ["why-day-1-readiness-fails", "hidden-cost-disconnected-it-inventories", "application-disposition-separation-strategy-execution"],
-  "application-disposition-separation-strategy-execution": ["hidden-cost-disconnected-it-inventories", "migration-wave-readiness", "complete-it-ma-lifecycle"],
+  "application-disposition-separation-strategy-execution": ["data-separation-not-database-extract", "migration-wave-readiness", "complete-it-ma-lifecycle"],
   "day-1-is-not-independence": ["evidence-based-tsa-exit", "why-day-1-readiness-fails", "complete-it-ma-lifecycle"],
   "complete-it-ma-lifecycle": ["why-day-1-readiness-fails", "application-disposition-separation-strategy-execution", "evidence-based-tsa-exit"],
   "why-day-1-readiness-fails": ["migration-wave-readiness", "hidden-cost-disconnected-it-inventories", "day-1-is-not-independence"],
