@@ -28,6 +28,15 @@ const capabilities = [
   { number: "06", label: "Human governance", title: "Keep accountable people in control of every consequential decision", text: "AI creates proposals—not final transaction decisions. Reviewers can correct extracted values, approve or reject matches, provide reasons and preserve the resulting history.", points: ["Pending-review status for extracted information", "Explicit approval or rejection of reconciliation proposals", "Reason-required removal of approved inventory links and auditable actions"], outcome: "Automation with defensible control" },
 ];
 
+const capabilityPageByNumber: Record<string, string> = {
+  "01": "/ai-capabilities/contract-commercial-intelligence",
+  "02": "/ai-capabilities/contract-commercial-intelligence",
+  "03": "/ai-capabilities/contract-commercial-intelligence",
+  "04": "/ai-capabilities/inventory-reconciliation-exceptions",
+  "05": "/ai-capabilities/inventory-reconciliation-exceptions",
+  "06": "/ai-capabilities/human-governed-ai",
+};
+
 export default function AiCapabilitiesPage() {
   return <main className={styles.page}>
     <SiteHeader />
@@ -52,7 +61,7 @@ export default function AiCapabilitiesPage() {
 
     <section className={`${styles.section} ${styles.sectionAlt}`}>
       <div className={styles.sectionHead}><div className={styles.eyebrow}><span />Platform capabilities</div><h2>Intelligence designed for governed IT M&amp;A execution.</h2><p>Each capability produces structured, reviewable information that remains connected to transaction context and accountable ownership.</p></div>
-      <div className={`${styles.capabilityGrid} ${styles.aiCapabilityGrid}`}>{capabilities.map((capability) => <article key={capability.number}><div className={styles.capabilityTop}><small>{capability.number}</small><span>{capability.label}</span></div><h3>{capability.title}</h3><p>{capability.text}</p><ul>{capability.points.map((point) => <li key={point}>{point}</li>)}</ul><b>{capability.outcome} →</b></article>)}</div>
+      <div className={`${styles.capabilityGrid} ${styles.aiCapabilityGrid}`}>{capabilities.map((capability) => <article key={capability.number}><div className={styles.capabilityTop}><small>{capability.number}</small><span>{capability.label}</span></div><h3>{capability.title}</h3><p>{capability.text}</p><ul>{capability.points.map((point) => <li key={point}>{point}</li>)}</ul><b><Link href={capabilityPageByNumber[capability.number]} style={{color:"inherit",textDecoration:"none"}}>{capability.outcome} →</Link></b></article>)}</div>
     </section>
 
     <section className={styles.governanceBand}>

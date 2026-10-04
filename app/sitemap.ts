@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { brand, canonicalUrl } from "./lib/brand";
 import { useCases } from "./use-cases/data";
 import { capabilityPackages } from "./capabilities/data";
+import { solutions } from "./solutions/data";
+import { aiCapabilities } from "./ai-capabilities/data";
 
 export const dynamic = "force-static";
 
@@ -67,6 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    ...solutions.map(({ slug }) => ({
+      url: canonicalUrl(`/solutions/${slug}`),
+      lastModified: new Date("2026-10-04"),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     {
       url: canonicalUrl("/use-cases"),
       lastModified: new Date("2026-09-22"),
@@ -85,6 +93,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    ...aiCapabilities.map(({ slug }) => ({
+      url: canonicalUrl(`/ai-capabilities/${slug}`),
+      lastModified: new Date("2026-10-04"),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     {
       url: canonicalUrl("/insights"),
       lastModified: new Date("2026-09-30"),
