@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const solution = getSolution(slug);
   if (!solution) return {};
-  return pageMetadata(`${solution.name} for IT M&A | MergeVista`, solution.seoDescription, `/solutions/${solution.slug}`);
+  return pageMetadata(`${solution.seoTitle ?? `${solution.name} for IT M&A`} | MergeVista`, solution.seoDescription, `/solutions/${solution.slug}`);
 }
 
 export default async function SolutionDetailPage({ params }: PageProps) {

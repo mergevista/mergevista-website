@@ -1,6 +1,7 @@
 export type Solution = {
   slug: string;
   name: string;
+  seoTitle?: string;
   eyebrow: string;
   headline: string;
   introduction: string;
@@ -66,7 +67,8 @@ export const solutions: Solution[] = [
   },
   {
     slug: "day-1-readiness",
-    name: "Day 1 Readiness",
+    name: "Day 1 Readiness for Carve-Outs",
+    seoTitle: "Day 1 Readiness for Carve-Outs",
     eyebrow: "Protect continuity at legal close",
     headline: "Prove the business can operate—not merely that the plan is green.",
     introduction: "Connect workstream readiness to the applications, infrastructure, users, sites, access, contracts, services and evidence required for operational continuity on Day 1.",
@@ -89,7 +91,8 @@ export const solutions: Solution[] = [
   },
   {
     slug: "tsa-management-exit",
-    name: "TSA Management & Exit",
+    name: "Post-Close Migration & TSA Exit",
+    seoTitle: "Post-Close Migration & TSA Exit",
     eyebrow: "Operate every service with an exit path",
     headline: "Manage TSA delivery and exit as one connected operating process.",
     introduction: "Connect service obligations, owners, consumption, costs, issues, technology dependencies, migration milestones and objective exit evidence from transition through final termination.",

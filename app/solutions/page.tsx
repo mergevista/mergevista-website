@@ -4,13 +4,13 @@ import SiteHeader from "../components/SiteHeader";
 import { pageMetadata } from "../lib/seo";
 import styles from "../product-pages.module.css";
 
-export const metadata = pageMetadata("IT Separation & Integration Solutions | MergeVista", "Explore MergeVista solutions for divestitures, acquisitions, Day 1 readiness, TSA management, migration and TSA exit.", "/solutions");
+export const metadata = pageMetadata("IT Separation & Integration Solutions | MergeVista", "Explore MergeVista solutions for divestitures, acquisitions, carve-out Day 1 readiness, post-close migration and TSA exit.", "/solutions");
 
 const solutions = [
   ["01", "Divestitures and separations", "Create a trusted carve-out baseline, expose shared dependencies and coordinate logical and physical separation across seller and buyer teams.", ["Connected separation inventories", "Site and workstream planning", "Contract, license and consent visibility"]],
   ["02", "Acquisitions and integrations", "Give the buyer a structured view of acquired technology, transition dependencies and the decisions required to establish the future-state environment.", ["Buyer transition planning", "Disposition and dependency decisions", "Migration wave coordination"]],
-  ["03", "Day 1 readiness", "Demonstrate that employees, business processes and critical services can operate—not simply that individual workstreams report green.", ["Outcome-based readiness criteria", "Cross-workstream dependencies", "Evidence and accountable approvals"]],
-  ["04", "TSA management and exit", "Connect every service to its obligations, costs, dependencies, milestones and objective exit evidence from the moment the TSA is established.", ["Service delivery and consumption", "SLA, charge and issue management", "Evidence-based exit governance"]],
+  ["03", "Day 1 readiness for carve-outs", "Demonstrate that employees, business processes and critical services can operate from legal close—not simply that individual workstreams report green.", ["Outcome-based readiness criteria", "Cross-workstream dependencies", "Evidence and accountable approvals"]],
+  ["04", "Post-close migration and TSA exit", "Connect migration and every interim service to its obligations, costs, dependencies, milestones and objective exit evidence.", ["Service delivery and consumption", "Migration and dependency control", "Evidence-based exit governance"]],
 ];
 const solutionSlugs = ["divestitures-separations", "acquisitions-integrations", "day-1-readiness", "tsa-management-exit"];
 
