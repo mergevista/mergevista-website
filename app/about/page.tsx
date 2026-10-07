@@ -38,7 +38,7 @@ export default function AboutPage() {
 
     <section className={styles.principles}>
       <div className={styles.sectionIntro}><div className={styles.eyebrow}><span/>What we believe</div><h2>Principles that shape the platform.</h2></div>
-      <div className={styles.grid}>{principles.map(([number, title, text]) => <article key={number}><small>{number}</small><h3>{title}</h3><p>{text}</p></article>)}</div>
+      <div className={styles.grid}>{principles.map(([, title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
     </section>
 
     <section className={styles.building}>

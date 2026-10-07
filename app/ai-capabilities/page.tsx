@@ -52,7 +52,7 @@ export default function AiCapabilitiesPage() {
       </div>
     </header>
 
-    <section className={styles.proof}><div><span><b>01</b>Source-grounded extraction</span><span><b>02</b>Private Azure AI processing</span><span><b>03</b>Confidence + rationale</span><span><b>04</b>Human approval</span></div></section>
+    <section className={styles.proof}><div><span>Source-grounded extraction</span><span>Private Azure AI processing</span><span>Confidence + rationale</span><span>Human approval</span></div></section>
 
     <section className={styles.section}>
       <div className={styles.sectionHead}><div className={styles.eyebrow}><span />One connected intelligence chain</div><h2>Do more than extract contract fields.</h2><p>The value comes from carrying trustworthy commercial intelligence forward—into the products, rights, technology records and execution decisions that determine whether the transaction can operate.</p></div>
@@ -61,7 +61,7 @@ export default function AiCapabilitiesPage() {
 
     <section className={`${styles.section} ${styles.sectionAlt}`}>
       <div className={styles.sectionHead}><div className={styles.eyebrow}><span />Platform capabilities</div><h2>Intelligence designed for governed IT M&amp;A execution.</h2><p>Each capability produces structured, reviewable information that remains connected to transaction context and accountable ownership.</p></div>
-      <div className={`${styles.capabilityGrid} ${styles.aiCapabilityGrid}`}>{capabilities.map((capability) => <article key={capability.number}><div className={styles.capabilityTop}><small>{capability.number}</small><span>{capability.label}</span></div><h3>{capability.title}</h3><p>{capability.text}</p><ul>{capability.points.map((point) => <li key={point}>{point}</li>)}</ul><b><Link href={capabilityPageByNumber[capability.number]} style={{color:"inherit",textDecoration:"none"}}>{capability.outcome} →</Link></b></article>)}</div>
+      <div className={`${styles.capabilityGrid} ${styles.aiCapabilityGrid}`}>{capabilities.map((capability) => <article key={capability.number}><div className={styles.capabilityTop}><span>{capability.label}</span></div><h3>{capability.title}</h3><p>{capability.text}</p><ul>{capability.points.map((point) => <li key={point}>{point}</li>)}</ul><b><Link href={capabilityPageByNumber[capability.number]} style={{color:"inherit",textDecoration:"none"}}>{capability.outcome} →</Link></b></article>)}</div>
     </section>
 
     <section className={styles.governanceBand}>

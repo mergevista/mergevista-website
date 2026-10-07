@@ -14,7 +14,7 @@ export default function BookDemoPage() {
         <div className={styles.eyebrow}><span/>A focused product conversation</div>
         <h1>See how MergeVista brings <em>clarity and control</em> to IT M&amp;A execution.</h1>
         <p>Tell us what you are working through. We will tailor the conversation around your transaction, operating model and priorities.</p>
-        <div className={styles.outcomes}><span><b>01</b>Explore the complete IT M&amp;A lifecycle</span><span><b>02</b>See connected inventory and execution</span><span><b>03</b>Discuss your Day 1, TSA and exit priorities</span></div>
+        <div className={styles.outcomes}><span>Explore the complete IT M&amp;A lifecycle</span><span>See connected inventory and execution</span><span>Discuss your Day 1, TSA and exit priorities</span></div>
         <aside><p>Prefer email?</p><a href="mailto:hello@mergevista.com">hello@mergevista.com</a></aside>
       </div>
       <div className={styles.formPanel}><BookDemoForm /></div>

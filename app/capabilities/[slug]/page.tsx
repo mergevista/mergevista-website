@@ -57,9 +57,9 @@ export default async function CapabilityPage({ params }: PageProps) {
       <aside><small>CONNECTED INFORMATION</small><div>{item.connected.map((record) => <span key={record}>{record}</span>)}</div></aside>
     </div></section>
 
-    <section className={styles.section}><div className={styles.sectionHead}><div className={styles.eyebrow}><span />Operational outcomes</div><h2>What your team can govern with confidence.</h2></div><div className={styles.packageOutcomes}>{item.outcomes.map((outcome, index) => <article key={outcome}><small>0{index + 1}</small><h3>{outcome}</h3></article>)}</div></section>
+    <section className={styles.section}><div className={styles.sectionHead}><div className={styles.eyebrow}><span />Operational outcomes</div><h2>What your team can govern with confidence.</h2></div><div className={styles.packageOutcomes}>{item.outcomes.map((outcome) => <article key={outcome}><h3>{outcome}</h3></article>)}</div></section>
 
-    <section className={styles.packageNext}><span>EXPAND WITHIN THE SAME PLATFORM</span><div>{related.map((candidate) => <Link href={`/capabilities/${candidate.slug}`} key={candidate.slug}><small>{candidate.number}</small><strong>{candidate.shortName}</strong><b>→</b></Link>)}</div><Link className={styles.completeLink} href="/platform">Explore the complete MergeVista platform →</Link></section>
+    <section className={styles.packageNext}><span>EXPAND WITHIN THE SAME PLATFORM</span><div>{related.map((candidate) => <Link href={`/capabilities/${candidate.slug}`} key={candidate.slug}><strong>{candidate.shortName}</strong><b>→</b></Link>)}</div><Link className={styles.completeLink} href="/platform">Explore the complete MergeVista platform →</Link></section>
 
     <section className={styles.cta}><div><h2>See {item.shortName} in your transaction context.</h2><p>Start with the capabilities you need today, with room to expand across the complete lifecycle.</p></div><div className={styles.ctaActions}><Link href="/book-a-demo">Book a demo →</Link><Link className={styles.ctaSecondary} href="/guided-trial">Apply for a guided trial →</Link></div></section>
     <SiteFooter bordered={false} />

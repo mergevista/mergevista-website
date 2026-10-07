@@ -38,7 +38,7 @@ export default function MarketingHome() {
 
     <section className={styles.proof} aria-label="MergeVista platform principles">
       <p>Purpose-built for complex acquisitions and divestitures</p>
-      <div><span><b>01</b>Buyer + seller collaboration</span><span><b>02</b>End-to-end traceability</span><span><b>03</b>Enterprise controls</span><span><b>04</b>Human-governed AI</span></div>
+      <div><span>Buyer + seller collaboration</span><span>End-to-end traceability</span><span>Enterprise controls</span><span>Human-governed AI</span></div>
     </section>
 
     <section className={styles.signal}><span>DISCOVERY</span><i/><span>ASSESSMENT</span><i/><span>SEPARATION</span><i/><span>DAY 1</span><i/><span>TSA OPERATIONS</span><i/><span>MIGRATION</span><i/><span>TSA EXIT</span></section>
@@ -60,10 +60,10 @@ export default function MarketingHome() {
     <section className={styles.value} id="outcomes">
       <div className={styles.valueLead}><div className={styles.sectionIntro}><div className={styles.eyebrow}><span/>One system of execution</div><h2>Turn fragmented IT tracking into measurable deal outcomes.</h2><p>Move from disconnected spreadsheets and status meetings to a connected operating model that protects Day 1 and accelerates migration and TSA exit.</p></div><div className={styles.inlineProduct} data-product-reveal><div className={styles.inlineProductTop}><span>LIVE PRODUCT VIEW <i>Illustrative sample data</i></span><b>GOVERNED INVENTORY</b></div><Image src="/product/application-inventory-enriched.png" alt="MergeVista governed application inventory with ownership and data quality controls" width={1672} height={941}/></div></div>
       <div className={styles.valueGrid}>
-        <article><span>01</span><h3>Establish the baseline faster</h3><p>Import applications, infrastructure, sites, users, contracts and licenses into a deal-specific data model.</p><b>Reduce weeks of reconciliation</b></article>
-        <article><span>02</span><h3>Protect Day 1</h3><p>Connect dependencies, separation activities, readiness gates and critical decisions across every workstream.</p><b>Maintain business continuity</b></article>
-        <article><span>03</span><h3>Control TSA delivery</h3><p>Manage services, obligations, performance, costs, issues and exit criteria in one operating view.</p><b>Make every service accountable</b></article>
-        <article><span>04</span><h3>Accelerate migration and exit</h3><p>Coordinate buyer-led migrations while tracking the evidence required to retire each TSA service.</p><b>Exit sooner with less risk</b></article>
+        <article><h3>Establish the baseline faster</h3><p>Import applications, infrastructure, sites, users, contracts and licenses into a deal-specific data model.</p><b>Reduce weeks of reconciliation</b></article>
+        <article><h3>Protect Day 1</h3><p>Connect dependencies, separation activities, readiness gates and critical decisions across every workstream.</p><b>Maintain business continuity</b></article>
+        <article><h3>Control TSA delivery</h3><p>Manage services, obligations, performance, costs, issues and exit criteria in one operating view.</p><b>Make every service accountable</b></article>
+        <article><h3>Accelerate migration and exit</h3><p>Coordinate buyer-led migrations while tracking the evidence required to retire each TSA service.</p><b>Exit sooner with less risk</b></article>
       </div>
     </section>
 
@@ -78,10 +78,10 @@ export default function MarketingHome() {
     <section className={styles.audiences}>
       <div className={styles.sectionIntro}><div className={styles.eyebrow}><span/>Built around the transaction team</div><h2>One execution environment. Every deal stakeholder.</h2><p>Give each leader the context they need while keeping plans, dependencies, decisions and evidence connected in one operating model.</p></div>
       <div className={styles.audienceGrid}>
-        <article><small>01</small><h3>CIO &amp; technology leadership</h3><p>See readiness, risk, cost and critical decisions across the complete transaction.</p><b>Executive control →</b></article>
-        <article><small>02</small><h3>Integration &amp; separation leaders</h3><p>Coordinate execution across workstreams, companies, milestones and dependencies.</p><b>Connected execution →</b></article>
-        <article><small>03</small><h3>Corporate development</h3><p>Connect transaction commitments with operational delivery and business outcomes.</p><b>Deal visibility →</b></article>
-        <article><small>04</small><h3>Private equity operating teams</h3><p>Apply a repeatable IT M&amp;A operating model across portfolio transactions.</p><b>Portfolio repeatability →</b></article>
+        <article><h3>CIO &amp; technology leadership</h3><p>See readiness, risk, cost and critical decisions across the complete transaction.</p><b>Executive control →</b></article>
+        <article><h3>Integration &amp; separation leaders</h3><p>Coordinate execution across workstreams, companies, milestones and dependencies.</p><b>Connected execution →</b></article>
+        <article><h3>Corporate development</h3><p>Connect transaction commitments with operational delivery and business outcomes.</p><b>Deal visibility →</b></article>
+        <article><h3>Private equity operating teams</h3><p>Apply a repeatable IT M&amp;A operating model across portfolio transactions.</p><b>Portfolio repeatability →</b></article>
       </div>
     </section>
 
