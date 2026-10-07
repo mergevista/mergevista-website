@@ -101,9 +101,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     {
       url: canonicalUrl("/insights"),
-      lastModified: new Date("2026-09-30"),
+      lastModified: new Date("2026-10-07"),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: canonicalUrl("/insights/application-move-license-may-not"),
+      lastModified: new Date("2026-10-07"),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: canonicalUrl("/insights/data-separation-not-database-extract"),
