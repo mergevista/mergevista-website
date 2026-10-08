@@ -10,18 +10,20 @@ import localStyles from "./day-one.module.css";
 const title = "Why Day 1 Readiness Fails Despite Detailed Project Plans";
 const description = "Why detailed workstream plans do not guarantee Day 1 readiness—and how integrated inventories, dependencies, decisions and evidence create operational confidence.";
 const path = "/insights/why-day-1-readiness-fails";
+const image = "/insights/day-one-readiness-gap.webp";
+const imageAlt = "Detailed project plans separated from the Day 1 operating checkpoint";
 
 export const metadata: Metadata = {
   title: `${title} | MergeVista Insights`,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-20", images: [] },
-  twitter: { card: "summary", title, description, images: [] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-20", images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 export default function DayOneReadinessArticle() {
   return <main className={styles.page}>
-    <ArticleStructuredData title={title} description={description} path={path} published="2026-08-20" />
+    <ArticleStructuredData title={title} description={description} path={path} published="2026-08-20" image={image} />
     <SiteHeader />
     <header className={styles.hero}>
       <Link href="/insights">← Back to Insights</Link>

@@ -12,13 +12,15 @@ const seoTitle = "Technology Due Diligence for Business Sellers | MergeVista";
 const description = "How lower-middle-market companies can prepare technology inventories, cybersecurity evidence, contracts, costs and risks before buyer due diligence.";
 const path = "/insights/technology-ready-for-diligence";
 const published = "2026-09-23";
+const image = "/insights/technology-diligence-ready.webp";
+const imageAlt = "Technology records organized for buyer due diligence";
 
 export const metadata: Metadata = {
   title: seoTitle,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: "/og.png", width: 1200, height: 630, alt: "MergeVista — AI-Powered IT M&A Execution Platform" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 const inventoryFields = [
@@ -95,7 +97,7 @@ const readinessView = [
 ];
 
 export default function TechnologyReadyForDiligenceArticle() { return <main className={styles.page}>
-  <ArticleStructuredData title={title} description={description} path={path} published={published}/>
+  <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
   <SiteHeader/>
   <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>SELLER READINESS · 11 MIN READ</small><h1>Your company is ready to sell. Is your technology ready for diligence?</h1><p>Buyers are not expecting enterprise-scale technology. They are expecting to understand what they are buying.</p><div><span>MergeVista Insights</span><i/><span>September 23, 2026</span></div></header>
   <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>Technology readiness does not mean eliminating every weakness before a sale. It means understanding the environment, being transparent about its risks, and showing the buyer that those risks can be managed.</p></section>

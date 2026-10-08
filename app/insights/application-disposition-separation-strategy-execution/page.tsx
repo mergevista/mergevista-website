@@ -10,12 +10,14 @@ import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 const title = "Application Disposition: Where Separation Strategy Becomes Execution";
 const description = "Why application disposition is more than an inventory field—and how it shapes data, infrastructure, contracts, TSAs, migration waves and operational readiness.";
 const path = "/insights/application-disposition-separation-strategy-execution";
+const image = "/insights/application-disposition-pathways.webp";
+const imageAlt = "Enterprise application connected to multiple governed disposition pathways";
 
 export const metadata: Metadata = {
   title: `${title} | MergeVista Insights`, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-09-07", images: [] },
-  twitter: { card: "summary", title, description, images: [] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-09-07", images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 const dispositionOptions = ["Transfer with the business", "Be migrated to the buyer’s environment", "Be cloned or logically separated", "Remain with the seller and be provided under a TSA", "Be replaced by an existing buyer platform", "Be replaced by a newly implemented solution", "Be consolidated with another application", "Be retired after data is archived", "Remain temporarily while a longer-term decision is implemented"];
@@ -31,7 +33,7 @@ const practicalModel = [
   ["5. What proves the disposition is complete?", "Define the evidence required: migrated data, tested interfaces, effective licenses, business acceptance, operational support, removed seller access, or confirmed retirement."],
 ];
 
-export default function ApplicationDispositionArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-09-07"/><SiteHeader/>
+export default function ApplicationDispositionArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-09-07" image={image}/><SiteHeader/>
   <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>APPLICATION STRATEGY · 12 MIN READ</small><h1>Application disposition: Where separation strategy becomes execution</h1><p>Disposition is not an inventory update. It is a business and technology decision that shapes almost every part of the separation.</p><div><span>MergeVista Insights</span><i/><span>September 7, 2026</span></div></header>
   <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>The objective is not to migrate every application the business uses. It is to provide every capability the separated organization needs—with the right technology, environment, and timing.</p></section>
   <article className={styles.article}>

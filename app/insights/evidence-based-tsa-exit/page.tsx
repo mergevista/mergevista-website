@@ -10,18 +10,20 @@ import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 const title = "From TSA Tracking to Evidence-Based TSA Exit";
 const description = "How transaction teams can preserve separation knowledge, connect TSA services to their dependencies and use objective evidence to prove operational independence.";
 const path = "/insights/evidence-based-tsa-exit";
+const image = "/insights/evidence-based-tsa-exit.webp";
+const imageAlt = "TSA obligations and evidence connected to an approved exit";
 
 export const metadata: Metadata = {
   title: `${title} | MergeVista Insights`, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-13", images: [] },
-  twitter: { card: "summary", title, description, images: [] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-13", images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 const applicationEvidence = ["The replacement or migrated application is operational", "Required users have access and appropriate roles", "Data has been migrated, reconciled and approved", "Interfaces have been rebuilt and tested", "Infrastructure and monitoring are operational", "Security controls have been validated", "Support procedures and ownership are established", "Contracts and licenses are effective", "Business acceptance has been documented", "Seller access and dependencies can be removed", "Cutover, rollback and stabilization plans are approved"];
 const knowledgePackage = ["The service to the business processes it supports", "The service to its applications, infrastructure, users, data, contracts and licenses", "The original separation assessment to the agreed TSA scope", "Key assumptions to identified risks and dependencies", "Exit prerequisites to accountable owners", "Exit criteria to the evidence required for approval"];
 
-export default function TsaExitArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-08-13"/><SiteHeader/>
+export default function TsaExitArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-08-13" image={image}/><SiteHeader/>
   <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>TSA OPERATIONS · 9 MIN READ</small><h1>From TSA tracking to evidence-based TSA exit</h1><p>The TSA contains more separation intelligence than most buyers realize. Yet much of it is lost the moment the agreement is signed.</p><div><span>MergeVista Insights</span><i/><span>August 13, 2026</span></div></header>
   <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>An exit date is a target. Exit evidence demonstrates that the underlying dependency has actually been removed and the buyer can operate independently.</p></section>
   <article className={styles.article}>

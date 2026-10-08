@@ -3,6 +3,7 @@ type ArticleStructuredDataProps = {
   description: string;
   path: string;
   published: string;
+  image?: string;
 };
 
 export default function ArticleStructuredData({
@@ -10,6 +11,7 @@ export default function ArticleStructuredData({
   description,
   path,
   published,
+  image = "/og.png",
 }: ArticleStructuredDataProps) {
   const url = `https://www.mergevista.com${path}`;
   const data = {
@@ -19,7 +21,7 @@ export default function ArticleStructuredData({
     description,
     datePublished: published,
     dateModified: published,
-    image: "https://www.mergevista.com/og.png",
+    image: `https://www.mergevista.com${image}`,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     author: {
       "@type": "Organization",

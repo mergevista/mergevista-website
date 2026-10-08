@@ -11,12 +11,14 @@ const title = "Where AI Actually Belongs in IT M&A";
 const description = "Where AI adds practical value in IT M&A: organizing evidence, reconciling information and preparing decisions while keeping experienced practitioners accountable.";
 const path = "/insights/where-ai-belongs-in-it-ma";
 const published = "2026-09-17";
+const image = "/insights/ai-governed-decisions.webp";
+const imageAlt = "AI organizing transaction evidence for accountable human approval";
 
 export const metadata: Metadata = {
   title: `${title} | MergeVista Insights`, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [] },
-  twitter: { card: "summary", title, description, images: [] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 const aiActivities = [
@@ -50,7 +52,7 @@ const consequentialDecisions = [
 ];
 
 export default function WhereAiBelongsArticle() { return <main className={styles.page}>
-  <ArticleStructuredData title={title} description={description} path={path} published={published}/>
+  <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
   <SiteHeader/>
   <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>AI IN IT M&amp;A · 7 MIN READ</small><h1>Where AI Actually Belongs in IT M&amp;A</h1><p>AI should accelerate the analysis. It should not remove accountability from the decision.</p><div><span>MergeVista Insights</span><i/><span>September 17, 2026</span></div></header>
   <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>The real opportunity for AI is reducing the enormous amount of work that happens before a good decision can be made—not making consequential transaction decisions for people.</p></section>

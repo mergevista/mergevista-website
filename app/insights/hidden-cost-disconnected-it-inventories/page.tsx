@@ -10,18 +10,20 @@ import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 const title = "The Hidden Cost of Disconnected IT Inventories";
 const description = "Why complete asset lists still miss separation risk—and how dependency intelligence connects applications, infrastructure, data, sites, contracts and licenses.";
 const path = "/insights/hidden-cost-disconnected-it-inventories";
+const image = "/insights/disconnected-it-inventories.webp";
+const imageAlt = "Disconnected IT inventory towers producing conflicting transaction records";
 
 export const metadata: Metadata = {
   title: `${title} | MergeVista Insights`, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-06", images: [] },
-  twitter: { card: "summary", title, description, images: [] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-06", images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 const commonGaps = ["Applications without mapped databases or hosting environments", "Servers without clear application or business owners", "Interfaces listed separately from the applications they connect", "File shares without documented business consumers", "Shared services without identified dependent applications", "Contracts without links to the technology they cover", "Software licenses without user, location or environment assignments", "Data repositories without clear ownership or disposition decisions", "Site inventories that omit centrally managed technology", "Central inventories that omit locally managed applications"];
 const connectedModel = ["Business processes to applications", "Applications to infrastructure", "Applications to databases and data repositories", "Applications to interfaces and file shares", "Applications to identity and security services", "Assets to sites and migration waves", "Technology to contracts and licenses", "Dependencies to owners, decisions, risks and exit criteria"];
 
-export default function DisconnectedInventoriesArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-08-06"/><SiteHeader/>
+export default function DisconnectedInventoriesArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-08-06" image={image}/><SiteHeader/>
   <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>SEPARATION · 9 MIN READ</small><h1>The hidden cost of disconnected IT inventories</h1><p>A complete list of assets does not provide a complete view of separation risk. The real risk sits in the connections between them.</p><div><span>MergeVista Insights</span><i/><span>August 6, 2026</span></div></header>
   <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>An inventory tells the program what exists. A dependency model shows what must move together, what can move separately and what will break if the sequence is wrong.</p></section>
   <article className={styles.article}>

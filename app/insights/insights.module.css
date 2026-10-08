@@ -3,3 +3,16 @@
 .page .featuredCopy>small,.page .topicSection small,.page .latest small{color:#1769e8}
 .page .lifecycle i{color:#78adf5}
 .page .frameworkTop b,.page .cta small{color:#78adf5}
+
+/* Image-led editorial card trial */
+.featuredArtwork{aspect-ratio:16/10;overflow:hidden;border-radius:14px;background:#eaf2fc;box-shadow:0 30px 70px rgba(7,26,53,.16)}
+.featuredArtwork img{display:block;width:100%;height:100%;object-fit:cover}
+.articleGrid{gap:48px 28px}
+.articleGrid .editorialCard{overflow:visible;border:0;border-radius:0;background:transparent;box-shadow:none}
+.editorialCard .cardVisual{aspect-ratio:16/10;height:auto;padding:0;border-radius:12px;background:#eaf2fc;box-shadow:0 12px 32px rgba(7,26,53,.08)}
+.editorialCard .cardImage{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.editorialCard:hover .cardImage{transform:scale(1.025)}
+.editorialCard .cardBody{min-height:300px;padding:18px 2px 4px}
+.categoryPill{align-self:flex-start;margin-bottom:12px;padding:6px 9px;border-radius:999px;background:#eaf2ff;color:#1769e8;font-size:8px;font-weight:900;letter-spacing:1px}
+.editorialCard .cardBody h3{margin:14px 0 13px}
+@media(max-width:650px){.featuredArtwork{border-radius:10px}.articleGrid{gap:42px}.editorialCard .cardBody{min-height:auto}.editorialCard .cardBody a{margin-top:26px}}

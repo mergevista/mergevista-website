@@ -10,12 +10,14 @@ import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 const title = "Everything Is Green—So Why Isn’t the Migration Wave Ready?";
 const description = "Why green workstream status does not guarantee migration-wave readiness—and how connected dependencies, business-process testing and evidence improve go/no-go decisions.";
 const path = "/insights/migration-wave-readiness";
+const image = "/insights/migration-wave-dependencies.webp";
+const imageAlt = "Completed migration workstreams blocked by a hidden dependency";
 
 export const metadata: Metadata = {
   title: `${title} | MergeVista Insights`, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-09-11", images: [] },
-  twitter: { card: "summary", title, description, images: [] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-09-11", images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 const commonFailures = [
@@ -41,7 +43,7 @@ const waveQuestions = [
   "What evidence supports the recommendation to proceed?",
 ];
 
-export default function MigrationWaveReadinessArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-09-11"/><SiteHeader/>
+export default function MigrationWaveReadinessArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-09-11" image={image}/><SiteHeader/>
   <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>MIGRATION READINESS · 11 MIN READ</small><h1>Everything is green—so why isn’t the migration wave ready?</h1><p>Workstream status can look reassuring while the operating outcome remains uncertain.</p><div><span>MergeVista Insights</span><i/><span>September 11, 2026</span></div></header>
   <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>Everything can be green independently—and still fail collectively. A migration wave is ready only when the combined environment has been shown to support the business after cutover.</p></section>
   <article className={styles.article}>

@@ -12,13 +12,15 @@ const seoTitle = "Data Separation in IT Divestitures | MergeVista";
 const description = "Why divestiture data separation requires business-owned scope, retention, privacy, dependency and usability decisions—not merely a database extract.";
 const path = "/insights/data-separation-not-database-extract";
 const published = "2026-09-30";
+const image = "/insights/data-separation-governed.webp";
+const imageAlt = "Shared enterprise data separating into governed buyer and seller environments";
 
 export const metadata: Metadata = {
   title: seoTitle,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: "/og.png", width: 1200, height: 630, alt: "MergeVista — AI-Powered IT M&A Execution Platform" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 const applicationQuestions = [
@@ -76,7 +78,7 @@ const discoveryChecklist = [
 ];
 
 export default function DataSeparationArticle() { return <main className={styles.page}>
-  <ArticleStructuredData title={title} description={description} path={path} published={published}/>
+  <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
   <SiteHeader/>
   <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>DATA SEPARATION · 9 MIN READ</small><h1>Data Separation Is Not a Database Extract</h1><p>The difficult part is not moving records. It is defining what each company needs to operate—and proving the separation is complete.</p><div><span>MergeVista Insights</span><i/><span>September 30, 2026</span></div></header>
   <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>A technical team can build an accurate extract of an incorrectly defined scope. Data separation succeeds only when business-owned rules, dependencies and end-to-end usability are proven.</p></section>

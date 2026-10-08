@@ -12,13 +12,15 @@ const seoTitle = "Software Licensing in IT Separations | MergeVista";
 const description = "Why application migration readiness in an IT separation must include contracts, entitlements, vendor consent, deployment rights and evidence—not only technical readiness.";
 const path = "/insights/application-move-license-may-not";
 const published = "2026-10-07";
+const image = "/insights/application-license-may-not.webp";
+const imageAlt = "Application moving while its commercial software license remains restricted";
 
 export const metadata: Metadata = {
   title: seoTitle,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: "/og.png", width: 1200, height: 630, alt: "MergeVista — AI-Powered IT M&A Execution Platform" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 const entitlementExamples = [
@@ -86,7 +88,7 @@ const readinessEvidence = [
 ];
 
 export default function ApplicationLicenseArticle() { return <main className={styles.page}>
-  <ArticleStructuredData title={title} description={description} path={path} published={published}/>
+  <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
   <SiteHeader/>
   <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>SOFTWARE LICENSING · 12 MIN READ</small><h1>The Application Can Move. The License May Not.</h1><p>Technical migration readiness does not prove that the buyer has the commercial and operational right to use the software.</p><div><span>MergeVista Insights</span><i/><span>October 7, 2026</span></div></header>
   <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>An application is ready only when the buyer has the technology, data, access, support and contractual rights required to operate it.</p></section>

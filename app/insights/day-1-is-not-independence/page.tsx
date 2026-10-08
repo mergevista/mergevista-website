@@ -10,19 +10,21 @@ import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 const title = "Day 1 Is Not Independence: What Happens After Legal Close?";
 const description = "Why a successful legal close proves continuity—not operational independence—and how transaction teams can turn Day 1 dependencies into evidence-based TSA exits.";
 const path = "/insights/day-1-is-not-independence";
+const image = "/insights/day-one-not-independence.webp";
+const imageAlt = "Business crossing legal close while temporary seller dependencies remain";
 
 export const metadata: Metadata = {
   title: `${title} | MergeVista Insights`, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-09-02", images: [] },
-  twitter: { card: "summary", title, description, images: [] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-09-02", images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 
 const tsaDependencies = ["A target hosting environment", "Data extraction and reconciliation", "Replacement interfaces", "Identity and access changes", "Network connectivity", "Security controls", "Software licenses", "Third-party consents", "User testing", "Support procedures", "Knowledge transfer", "Seller decommissioning activities"];
 const exitEvidence = ["The replacement capability is operational", "Required users can perform their business processes", "Data has been migrated and reconciled", "Interfaces and upstream and downstream dependencies have been tested", "Security, monitoring, backup, and recovery controls are operating", "Contracts and licenses are effective", "Support ownership and procedures are established", "Knowledge transfer has been completed", "Temporary access and workarounds have been removed or formally accepted", "Seller activities required for final separation are complete", "Business owners have accepted the operational outcome"];
 const preCloseRequirements = ["A clearly defined service scope", "Identified business and technology dependencies", "Buyer and seller responsibilities", "Exit prerequisites", "Contract and licensing requirements", "Data separation requirements", "Key assumptions and risks", "Evidence-based exit criteria", "A realistic exit timeline", "Named owners on both sides"];
 
-export default function DayOneIndependenceArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-09-02"/><SiteHeader/>
+export default function DayOneIndependenceArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-09-02" image={image}/><SiteHeader/>
   <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>POST-CLOSE EXECUTION · 13 MIN READ</small><h1>Day 1 is not independence: What happens after legal close?</h1><p>Legal close transfers ownership. It does not necessarily transfer the ability to operate independently.</p><div><span>MergeVista Insights</span><i/><span>September 2, 2026</span></div></header>
   <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>Day 1 proves the business can continue operating after ownership changes. TSA exit proves the buyer can operate without the seller.</p></section>
   <article className={styles.article}>

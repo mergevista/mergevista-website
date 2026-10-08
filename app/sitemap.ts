@@ -101,7 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     {
       url: canonicalUrl("/insights"),
-      lastModified: new Date("2026-10-07"),
+      lastModified: new Date("2026-10-08"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
