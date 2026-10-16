@@ -34,16 +34,16 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
             </Link>
             <div className={styles.menuRule} />
             <Link href="/capabilities/migration-tsa-exit">
-              <span><b>Migration &amp; TSA Exit</b><small>Govern post-Day 1 migration and drive services to a defensible exit.</small></span>
+              <span><b>MergeVista Migration &amp; TSA Exit</b><small>Govern post-Day 1 migration and drive services to a defensible exit.</small></span>
             </Link>
             <Link href="/capabilities/day-1-readiness">
-              <span><b>Day 1 Readiness</b><small>Prepare carved-out operations to maintain continuity from legal close.</small></span>
+              <span><b>MergeVista Day 1 Readiness</b><small>Prepare carved-out operations to maintain continuity from legal close.</small></span>
             </Link>
             <Link href="/capabilities/transaction-control">
-              <span><b>Transaction Control</b><small>Connect plans, milestones, RAID and decisions across every workstream.</small></span>
+              <span><b>MergeVista Transaction Control</b><small>Connect plans, milestones, RAID and decisions across every workstream.</small></span>
             </Link>
             <Link href="/capabilities/transaction-baseline">
-              <span><b>Transaction Baseline</b><small>Establish the trusted inventory and evidence every transaction needs.</small></span>
+              <span><b>MergeVista Transaction Baseline</b><small>Establish the trusted inventory and evidence every transaction needs.</small></span>
             </Link>
           </div>
           <Link className={styles.platformFeature} href="/platform">
@@ -155,7 +155,7 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
       aria-hidden={!menuOpen}
     >
       <Link href="/platform" onClick={closeMenu}>Platform</Link>
-      <div className={styles.mobileSubmenu}><Link href="/capabilities/migration-tsa-exit" onClick={closeMenu}>MergeVista Migration &amp; TSA Exit</Link><Link href="/capabilities/day-1-readiness" onClick={closeMenu}>MergeVista Day 1 Readiness</Link><Link href="/capabilities/transaction-control" onClick={closeMenu}>MergeVista Transaction Control</Link><Link href="/capabilities/transaction-baseline" onClick={closeMenu}>MergeVista Transaction Baseline</Link></div>
+      <div className={styles.mobileSubmenu}><Link href="/platform" onClick={closeMenu}>MergeVista Complete</Link><Link href="/capabilities/migration-tsa-exit" onClick={closeMenu}>MergeVista Migration &amp; TSA Exit</Link><Link href="/capabilities/day-1-readiness" onClick={closeMenu}>MergeVista Day 1 Readiness</Link><Link href="/capabilities/transaction-control" onClick={closeMenu}>MergeVista Transaction Control</Link><Link href="/capabilities/transaction-baseline" onClick={closeMenu}>MergeVista Transaction Baseline</Link></div>
       <Link href="/solutions" onClick={closeMenu}>Solutions</Link>
       <div className={styles.mobileSubmenu}><Link href="/solutions/divestitures-separations" onClick={closeMenu}>Divestitures &amp; Separations</Link><Link href="/solutions/acquisitions-integrations" onClick={closeMenu}>Acquisitions &amp; Integrations</Link><Link href="/solutions/day-1-readiness" onClick={closeMenu}>Day 1 Readiness for Carve-Outs</Link><Link href="/solutions/tsa-management-exit" onClick={closeMenu}>Post-Close Migration &amp; TSA Exit</Link></div>
       <Link href="/use-cases" onClick={closeMenu}>Use Cases</Link>
