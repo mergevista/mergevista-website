@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./related-insights.module.css";
 
 const articles = [
+  { slug: "tsa-exit-not-cost-exit", category: "Stranded IT costs", title: "TSA Exit Is Not Cost Exit" },
   { slug: "application-move-license-may-not", category: "Software licensing", title: "The Application Can Move. The License May Not." },
   { slug: "data-separation-not-database-extract", category: "Data separation", title: "Data Separation Is Not a Database Extract" },
   { slug: "technology-ready-for-diligence", category: "Seller readiness", title: "Your Company Is Ready to Sell. Is Your Technology Ready for Diligence?" },
@@ -16,7 +17,8 @@ const articles = [
 ];
 
 const recommendations: Record<string, string[]> = {
-  "application-move-license-may-not": ["application-disposition-separation-strategy-execution", "data-separation-not-database-extract", "evidence-based-tsa-exit"],
+  "tsa-exit-not-cost-exit": ["application-move-license-may-not", "evidence-based-tsa-exit", "day-1-is-not-independence"],
+  "application-move-license-may-not": ["tsa-exit-not-cost-exit", "application-disposition-separation-strategy-execution", "evidence-based-tsa-exit"],
   "data-separation-not-database-extract": ["application-move-license-may-not", "application-disposition-separation-strategy-execution", "migration-wave-readiness"],
   "technology-ready-for-diligence": ["hidden-cost-disconnected-it-inventories", "where-ai-belongs-in-it-ma", "complete-it-ma-lifecycle"],
   "where-ai-belongs-in-it-ma": ["application-disposition-separation-strategy-execution", "hidden-cost-disconnected-it-inventories", "migration-wave-readiness"],
@@ -25,7 +27,7 @@ const recommendations: Record<string, string[]> = {
   "day-1-is-not-independence": ["evidence-based-tsa-exit", "why-day-1-readiness-fails", "complete-it-ma-lifecycle"],
   "complete-it-ma-lifecycle": ["why-day-1-readiness-fails", "application-disposition-separation-strategy-execution", "evidence-based-tsa-exit"],
   "why-day-1-readiness-fails": ["migration-wave-readiness", "hidden-cost-disconnected-it-inventories", "day-1-is-not-independence"],
-  "evidence-based-tsa-exit": ["application-move-license-may-not", "day-1-is-not-independence", "application-disposition-separation-strategy-execution"],
+  "evidence-based-tsa-exit": ["tsa-exit-not-cost-exit", "application-move-license-may-not", "day-1-is-not-independence"],
   "hidden-cost-disconnected-it-inventories": ["application-disposition-separation-strategy-execution", "why-day-1-readiness-fails", "migration-wave-readiness"],
 };
 
