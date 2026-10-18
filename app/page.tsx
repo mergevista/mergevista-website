@@ -1,94 +1,81 @@
-import Link from "next/link";
 import Image from "next/image";
-import styles from "./home.module.css";
-import SiteFooter from "./components/SiteFooter";
-import SiteHeader from "./components/SiteHeader";
+import Link from "next/link";
+import {
+  ArrowRight, BadgeCheck, Bot, Boxes, Check, ChevronDown, CircleGauge,
+  FileCheck2, Fingerprint, LockKeyhole, Network, PanelTop, Route,
+  ShieldCheck, Sparkles, Users,
+} from "lucide-react";
+import { Badge } from "./components/poc/badge";
+import { Button } from "./components/poc/button";
+import { Card } from "./components/poc/card";
+import { Separator } from "./components/poc/separator";
 
-const stages = [
-  ["01", "Discovery", "Build a reliable IT baseline from inventories, source systems and transaction documents."],
-  ["02", "Assessment", "Expose dependencies, contract obligations, dispositions, TSA needs and execution risks."],
-  ["03", "Separation", "Execute logical and physical separation while controlling dependencies and readiness."],
-  ["04", "Day 1", "Validate operational continuity, ownership transitions and critical business services."],
-  ["05", "TSA Operations", "Manage services, obligations, performance, costs, issues and buyer consumption."],
-  ["06", "Migration", "Coordinate buyer-led application, data, user and infrastructure migrations."],
-  ["07", "TSA Exit", "Prove exit readiness, complete service transitions and close TSA obligations."],
+const stages = ["Discovery", "Assessment", "Separation", "Day 1", "TSA operations", "Migration", "TSA exit"];
+const capabilities = [
+  { icon: Boxes, eyebrow: "TRANSACTION BASELINE", title: "Establish the facts before the plan hardens.", text: "Reconcile applications, infrastructure, sites, users, contracts and licenses into one governed transaction record.", result: "A baseline every workstream can trust" },
+  { icon: CircleGauge, eyebrow: "TRANSACTION CONTROL", title: "Turn activity into accountable execution.", text: "Connect plans, milestones, RAID, decisions, ownership and evidence across both sides of the transaction.", result: "Executive visibility without status theatre" },
+  { icon: BadgeCheck, eyebrow: "OPERATIONAL READINESS", title: "Prove continuity at legal close.", text: "Evaluate dependencies, ownership, access, cutover actions and readiness criteria at the level where operations can fail.", result: "A defensible Day 1 decision" },
+  { icon: Route, eyebrow: "TRANSITION & EXIT", title: "Move from temporary service to independence.", text: "Govern migration, TSA obligations, cost, performance and objective exit evidence through final separation.", result: "Faster exits with fewer hidden dependencies" },
 ];
 
+function SiteMark() {
+  return <Link href="/" className="block" aria-label="MergeVista homepage">
+    <Image src="/brand/mergevista-primary-light.png" alt="MergeVista — AI-powered IT M&A execution platform" width={675} height={212} className="h-auto w-[176px] object-contain" />
+  </Link>;
+}
+
+function Header() {
+  const nav = [["Platform", "/platform"], ["Solutions", "/solutions"], ["Use Cases", "/use-cases"], ["AI Capabilities", "/ai-capabilities"]];
+  return <header className="sticky top-0 z-50 border-b border-zinc-200/90 bg-white/95 backdrop-blur-xl">
+    <div className="mx-auto flex h-[74px] max-w-[1560px] items-center justify-between px-5 lg:px-8">
+      <SiteMark />
+      <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
+        {nav.map(([item, href]) => <Link key={item} href={href} className="flex h-9 items-center gap-1 rounded-md px-3 text-[13px] font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-950">{item}<ChevronDown className="size-3.5" /></Link>)}
+        <Link href="/insights" className="h-9 rounded-md px-3 py-2 text-[13px] font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950">Insights</Link>
+        <Link href="/about" className="h-9 rounded-md px-3 py-2 text-[13px] font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950">About</Link>
+      </nav>
+      <div className="hidden items-center gap-2 sm:flex"><Button asChild variant="ghost"><Link href="/contact">Contact</Link></Button><Button asChild><Link href="/book-a-demo">Book a demo<ArrowRight /></Link></Button></div>
+      <details className="relative sm:hidden"><summary className="flex size-10 list-none cursor-pointer items-center justify-center rounded-md border border-zinc-200 text-zinc-700"><PanelTop className="size-4" /></summary><nav className="absolute right-0 top-12 grid w-64 gap-1 rounded-lg border border-zinc-200 bg-white p-2 shadow-xl">{[...nav, ["Insights", "/insights"], ["About", "/about"], ["Contact", "/contact"]].map(([item, href]) => <Link key={item} href={href} className="rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100">{item}</Link>)}<Button asChild className="mt-1"><Link href="/book-a-demo">Book a demo</Link></Button></nav></details>
+    </div>
+  </header>;
+}
+
+function ProductFrame({ src, alt, label, priority = false }: { src: string; alt: string; label: string; priority?: boolean }) {
+  return <Card className="overflow-hidden shadow-[0_24px_70px_rgba(24,24,27,0.11)]">
+    <div className="flex h-11 items-center border-b border-zinc-200 bg-zinc-950 px-4 text-white"><div className="flex gap-1.5"><i className="size-2 rounded-full bg-red-400"/><i className="size-2 rounded-full bg-amber-300"/><i className="size-2 rounded-full bg-emerald-400"/></div><span className="ml-4 text-[10px] font-medium tracking-wide text-zinc-300">LIVE PRODUCT VIEW</span><Badge className="ml-auto border-zinc-700 bg-zinc-900 text-zinc-300">{label}</Badge></div>
+    <Image src={src} alt={alt} width={1672} height={941} priority={priority} className="block h-auto w-full bg-zinc-50" sizes="(max-width: 900px) 94vw, 54vw" />
+  </Card>;
+}
+
 export default function MarketingHome() {
-  return <main className={styles.page}>
-    <SiteHeader />
-
-    <section className={styles.hero}>
-      <div className={styles.heroGlow}/>
-      <div className={styles.heroCopy}>
-        <div className={styles.eyebrow}><span/>The AI-powered execution platform for IT M&amp;A</div>
-        <h1>Run the complete IT M&amp;A journey with <em>clarity and control.</em></h1>
-        <p>MergeVista connects sellers and buyers across discovery, separation, Day 1, TSA operations, migration and TSA exit—all in one AI-powered execution platform.</p>
-        <div className={styles.heroActions}><Link className={styles.primary} href="/book-a-demo">Book a demo <b>→</b></Link><Link className={styles.secondary} href="/platform">Explore the platform</Link></div>
-        <div className={styles.trust}><span>✓ Deal-ready operating model</span><span>✓ Unlimited collaboration</span><span>✓ Evidence-backed AI</span></div>
-      </div>
-
-      <div className={styles.productWrap} aria-label="MergeVista product preview" data-product-reveal>
-        <div className={styles.browserBar}><span/><span/><span/><b>MergeVista · Deal Dashboard</b><small>Illustrative sample data</small><i>•••</i></div>
-        <Image className={styles.productScreenshot} src="/product/avenlor-deal-dashboard.png" alt="MergeVista Avenlor deal dashboard showing Day 1 timing, attention items, RAID status and key milestones" width={1584} height={992} priority/>
-        <div className={`${styles.productCallout} ${styles.calloutReadiness}`} aria-hidden="true"><b>Day 1 focus</b><span>189 days remaining</span></div>
-        <div className={`${styles.productCallout} ${styles.calloutRisk}`} aria-hidden="true"><b>Executive attention</b><span>16 overdue RAID items</span></div>
+  return <main className="min-h-screen bg-white font-sans text-zinc-950">
+    <Header />
+    <section className="relative overflow-hidden border-b border-zinc-200 bg-[#fcfcfc]">
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] bg-[size:72px_72px] opacity-[0.28] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
+      <div className="relative mx-auto grid max-w-[1560px] gap-14 px-5 py-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8 lg:py-28">
+        <div className="max-w-[680px]"><Badge className="gap-2 bg-white"><Sparkles className="size-3.5 text-[#1559a6]"/>Purpose-built for IT M&amp;A</Badge><h1 className="mt-7 text-[clamp(3.2rem,6.4vw,6.4rem)] font-semibold leading-[0.96] tracking-[-0.065em] text-zinc-950">Run the entire transaction from one operating model.</h1><p className="mt-7 max-w-[620px] text-lg leading-8 text-zinc-600">MergeVista connects sellers and buyers across discovery, separation, Day 1, TSA operations, migration and exit—without losing the data, decisions or evidence created along the way.</p><div className="mt-9 flex flex-wrap gap-3"><Button asChild size="lg"><Link href="/book-a-demo">Book a demo<ArrowRight /></Link></Button><Button asChild size="lg" variant="outline"><Link href="/platform">Explore the platform</Link></Button></div><div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-xs text-zinc-500">{["Deal-ready operating model", "Unlimited collaboration", "Human-governed AI"].map(item => <span key={item} className="flex items-center gap-2"><Check className="size-3.5 text-[#1559a6]"/>{item}</span>)}</div></div>
+        <div className="relative lg:-mr-20"><div className="absolute -inset-12 -z-10 rounded-full bg-[#1559a6]/8 blur-3xl"/><ProductFrame src="/product/avenlor-deal-dashboard.png" alt="MergeVista deal command center with milestones, attention items and governed inventory" label="ILLUSTRATIVE SAMPLE DATA" priority /></div>
       </div>
     </section>
 
-    <section className={styles.proof} aria-label="MergeVista platform principles">
-      <p>Purpose-built for complex acquisitions and divestitures</p>
-      <div><span>Buyer + seller collaboration</span><span>End-to-end traceability</span><span>Enterprise controls</span><span>Human-governed AI</span></div>
-    </section>
+    <section className="border-b border-zinc-200 bg-white"><div className="mx-auto grid max-w-[1560px] divide-y divide-zinc-200 px-5 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4 lg:px-8">{[
+      [Users, "Buyer + seller", "One shared transaction workspace"], [Network, "End-to-end", "Traceability from evidence to outcome"], [ShieldCheck, "Enterprise controls", "Access, audit and accountability"], [Bot, "Human governed", "AI with evidence and review"],
+    ].map(([Icon, title, text]) => { const I = Icon as typeof Users; return <div key={title as string} className="flex gap-3 px-5 py-7"><I className="mt-0.5 size-4 shrink-0 text-[#1559a6]"/><div><strong className="block text-xs font-semibold text-zinc-900">{title as string}</strong><span className="mt-1 block text-[11px] leading-5 text-zinc-500">{text as string}</span></div></div>; })}</div></section>
 
-    <section className={styles.signal}><span>DISCOVERY</span><i/><span>ASSESSMENT</span><i/><span>SEPARATION</span><i/><span>DAY 1</span><i/><span>TSA OPERATIONS</span><i/><span>MIGRATION</span><i/><span>TSA EXIT</span></section>
+    <section className="mx-auto max-w-[1560px] px-5 py-24 lg:px-8 lg:py-32"><div className="grid gap-14 lg:grid-cols-[0.72fr_1.28fr] lg:items-end"><div><Badge>ONE CONNECTED LIFECYCLE</Badge><h2 className="mt-5 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">Every stage. Every workstream. One transaction record.</h2></div><p className="max-w-2xl text-base leading-7 text-zinc-600 lg:justify-self-end">The seller establishes the baseline and leads separation. The buyer joins planning, assumes operational responsibility at Day 1 and leads migration through TSA exit.</p></div><div className="mt-14 grid overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 sm:grid-cols-2 lg:grid-cols-7">{stages.map((stage, index) => <div key={stage} className="relative min-h-32 border-b border-zinc-200 p-5 last:border-0 sm:border-r lg:border-b-0"><span className="font-mono text-[10px] text-zinc-400">{String(index + 1).padStart(2,"0")}</span><p className="mt-8 text-sm font-medium text-zinc-800">{stage}</p>{index < stages.length - 1 && <ArrowRight className="absolute right-3 top-5 hidden size-3.5 text-zinc-300 lg:block"/>}</div>)}</div><div className="mt-4 grid gap-3 text-[11px] font-medium sm:grid-cols-[3fr_2fr_2fr]"><div className="rounded-md border border-zinc-200 bg-white px-4 py-3 text-zinc-600">SELLER-LED · Discovery through separation</div><div className="rounded-md border border-blue-200 bg-blue-50 px-4 py-3 text-blue-800">JOINT GOVERNANCE · Day 1 and TSA</div><div className="rounded-md bg-zinc-950 px-4 py-3 text-white">BUYER-LED · Migration and exit</div></div></section>
 
-    <section className={styles.ownership} aria-label="Seller and buyer participation across the transaction lifecycle">
-      <div className={styles.sectionIntro}><div className={styles.eyebrow}><span/>One shared transaction workspace</div><h2>Continuous execution across both sides of the deal.</h2><p>The seller establishes the baseline and leads separation. The buyer joins planning, assumes operational responsibility at Day 1 and leads migration through TSA exit.</p><Link className={styles.sectionLink} href="/solutions">Explore transaction solutions →</Link></div>
-      <div className={styles.ownershipTrack}><div className={styles.ownerSeller}><small>SELLER-LED</small><b>Discovery · Assessment · Separation</b></div><div className={styles.ownerJoint}><small>JOINT TRANSITION</small><b>Day 1</b></div><div className={styles.ownerTsa}><small>JOINT TSA GOVERNANCE</small><b>Seller delivers · Buyer consumes</b></div><div className={styles.ownerBuyer}><small>BUYER-LED</small><b>Migration · TSA Exit</b></div></div>
-      <div className={styles.planningLayer}><strong>CONTINUOUS PLANNING</strong><span>Seller-led separation &amp; Day 1</span><i/><span>Joint TSA service &amp; exit</span><i/><span>Buyer-led migration</span></div>
-    </section>
+    <section className="border-y border-zinc-800 bg-zinc-950 text-white"><div className="mx-auto grid max-w-[1560px] gap-16 px-5 py-24 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8 lg:py-32"><div><Badge className="border-zinc-700 bg-zinc-900 text-zinc-300">EXECUTIVE CONTROL</Badge><h2 className="mt-6 text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">One trusted baseline. Every decision evidenced.</h2><p className="mt-6 max-w-xl text-base leading-7 text-zinc-400">Connect operational detail to the outcomes leadership needs to govern—readiness, risk, cost, accountability and exit.</p><div className="mt-10 grid gap-3 sm:grid-cols-2">{["Trusted inventory", "Visible dependencies", "Governed decisions", "Provable exit"].map(item => <div key={item} className="flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-sm text-zinc-300"><Check className="size-4 text-blue-400"/>{item}</div>)}</div></div><Card className="border-zinc-800 bg-zinc-900 p-2 shadow-2xl"><ProductFrame src="/product/application-inventory-enriched.png" alt="Governed MergeVista application inventory" label="GOVERNED INVENTORY" /></Card></div></section>
 
-    <section className={styles.executiveOutcomes}>
-      <div className={styles.nodeField} aria-hidden="true"><i/><i/><i/><i/><i/></div>
-      <div className={styles.eyebrowLight}><span/>Executive clarity throughout the deal</div>
-      <h2>One trusted baseline.<br/>Every workstream aligned.<br/><em>Every decision evidenced.</em></h2>
-      <p>MergeVista connects the operational detail of execution to the outcomes leadership needs to govern—readiness, risk, cost, accountability and exit.</p>
-      <div><span>Trusted inventory</span><span>Visible dependencies</span><span>Governed decisions</span><span>Provable exit</span></div>
-    </section>
+    <section className="mx-auto max-w-[1560px] px-5 py-24 lg:px-8 lg:py-32"><div className="max-w-3xl"><Badge>CAPABILITY PACKAGES</Badge><h2 className="mt-5 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">Start where the transaction needs control.</h2><p className="mt-5 text-base leading-7 text-zinc-600">Expand across the lifecycle without rebuilding your data, decisions or execution history.</p></div><div className="mt-14 grid gap-4 md:grid-cols-2">{capabilities.map(({icon: Icon, eyebrow, title, text, result}) => <Card key={eyebrow} className="group p-7 transition-colors hover:border-zinc-300 hover:bg-zinc-50/60 sm:p-9"><div className="flex items-start justify-between"><span className="flex size-10 items-center justify-center rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-600"><Icon className="size-5 stroke-[1.6]"/></span><ArrowRight className="size-4 text-zinc-300 transition-transform group-hover:translate-x-1 group-hover:text-zinc-700"/></div><small className="mt-8 block text-[10px] font-semibold tracking-[0.14em] text-[#1559a6]">{eyebrow}</small><h3 className="mt-3 max-w-xl text-2xl font-semibold tracking-[-0.025em]">{title}</h3><p className="mt-4 max-w-xl text-sm leading-6 text-zinc-600">{text}</p><Separator className="my-6"/><p className="flex items-center gap-2 text-xs font-medium text-zinc-700"><Check className="size-3.5 text-[#1559a6]"/>{result}</p></Card>)}</div></section>
 
-    <section className={styles.value} id="outcomes">
-      <div className={styles.valueLead}><div className={styles.sectionIntro}><div className={styles.eyebrow}><span/>One system of execution</div><h2>Turn fragmented IT tracking into measurable deal outcomes.</h2><p>Move from disconnected spreadsheets and status meetings to a connected operating model that protects Day 1 and accelerates migration and TSA exit.</p></div><div className={styles.inlineProduct} data-product-reveal><div className={styles.inlineProductTop}><span>LIVE PRODUCT VIEW <i>Illustrative sample data</i></span><b>GOVERNED INVENTORY</b></div><Image src="/product/application-inventory-enriched.png" alt="MergeVista governed application inventory with ownership and data quality controls" width={1672} height={941}/></div></div>
-      <div className={styles.valueGrid}>
-        <article><h3>Establish the baseline faster</h3><p>Import applications, infrastructure, sites, users, contracts and licenses into a deal-specific data model.</p><b>Reduce weeks of reconciliation</b></article>
-        <article><h3>Protect Day 1</h3><p>Connect dependencies, separation activities, readiness gates and critical decisions across every workstream.</p><b>Maintain business continuity</b></article>
-        <article><h3>Control TSA delivery</h3><p>Manage services, obligations, performance, costs, issues and exit criteria in one operating view.</p><b>Make every service accountable</b></article>
-        <article><h3>Accelerate migration and exit</h3><p>Coordinate buyer-led migrations while tracking the evidence required to retire each TSA service.</p><b>Exit sooner with less risk</b></article>
-      </div>
-    </section>
+    <section className="border-y border-zinc-200 bg-zinc-50"><div className="mx-auto grid max-w-[1560px] gap-16 px-5 py-24 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:px-8 lg:py-32"><div><Badge className="bg-white">COMMERCIAL + TECHNICAL</Badge><h2 className="mt-5 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">Connect what the contract permits to what the transaction needs.</h2><p className="mt-6 text-base leading-7 text-zinc-600">Carry approved commercial intelligence into products, entitlements, inventories, readiness and execution decisions.</p><Button asChild variant="outline" className="mt-8"><Link href="/ai-capabilities">Explore AI capabilities<ArrowRight/></Link></Button></div><ProductFrame src="/product/contracts-licenses-enriched.png" alt="MergeVista contracts and licenses workspace" label="CONTRACTS & LICENSES" /></div></section>
 
-    <section className={styles.how} id="platform">
-      <div className={styles.sectionIntro}><div className={styles.eyebrow}><span/>From discovery to TSA exit</div><h2>A complete IT M&amp;A operating model for every deal.</h2><p>One lifecycle connects seller-led separation with buyer-led transition—without losing the data, decisions or evidence created along the way.</p></div>
-      <div className={styles.stages}>{stages.map(([n,title,text])=><article key={n}><span>{n}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
-      <div className={styles.wideProduct} data-product-reveal><div className={styles.inlineProductTop}><span>LIVE PRODUCT VIEW <i>Illustrative sample data</i></span><b>CONTRACTS &amp; LICENSES</b></div><Image src="/product/contracts-licenses-enriched.png" alt="MergeVista contracts and licenses workspace connecting commercial obligations to execution" width={1672} height={941}/></div>
-    </section>
+    <section className="mx-auto max-w-[1560px] px-5 py-24 lg:px-8 lg:py-32"><div className="grid gap-16 lg:grid-cols-2 lg:items-center"><div><Badge>MERGEVISTA INTELLIGENCE</Badge><h2 className="mt-5 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">AI grounded in transaction evidence.</h2><p className="mt-6 max-w-xl text-base leading-7 text-zinc-600">Structure evidence and prepare decisions without removing accountable people from the process.</p><div className="mt-8 space-y-3">{["Extract and normalize source evidence", "Connect products, rights and inventory", "Surface coverage and readiness exceptions", "Preserve confidence, rationale and human approval"].map(item => <div key={item} className="flex items-center gap-3 rounded-lg border border-zinc-200 px-4 py-3 text-sm text-zinc-700"><Sparkles className="size-4 text-[#1559a6]"/>{item}</div>)}</div></div><Card className="overflow-hidden bg-zinc-950 p-7 text-white sm:p-9"><div className="flex items-center justify-between"><Badge className="border-zinc-700 bg-zinc-900 text-zinc-300">AI ASSESSMENT</Badge><Bot className="size-5 text-blue-400"/></div><h3 className="mt-7 text-2xl font-semibold">Orion Software Subscription Agreement</h3><div className="mt-8 divide-y divide-zinc-800 border-y border-zinc-800">{[["Assignment requirement","Consent required"],["Recommended action","Split agreement"],["Affected inventory","Applications · Users"]].map(([label,value]) => <div key={label} className="flex items-center justify-between gap-6 py-4 text-sm"><span className="text-zinc-500">{label}</span><strong className="text-right font-medium text-zinc-200">{value}</strong></div>)}</div><blockquote className="my-7 border-l-2 border-blue-500 pl-4 text-sm leading-6 text-zinc-400">“Prior written consent is required before assignment…”</blockquote><div className="flex items-center justify-between text-xs"><span className="text-zinc-500">89% confidence</span><span className="font-medium text-blue-400">Review recommendation →</span></div></Card></div></section>
 
-    <section className={styles.ai} id="ai"><div><div className={styles.eyebrowLight}><span/>MergeVista Intelligence</div><h2>AI grounded in your transaction evidence.</h2><p>Turn inventory data and deal documents into structured intelligence—with source evidence, confidence and human review built into every recommendation.</p><ul><li>Normalize inventories and identify data gaps</li><li>Extract contracts, licenses, obligations and consent requirements</li><li>Discover cross-inventory dependencies and Day 1 risks</li><li>Generate separation, migration and TSA exit actions</li></ul><Link className={styles.aiMore} href="/ai-capabilities">Explore AI capabilities →</Link></div><aside><small>AI ASSESSMENT</small><h3>Orion Software Subscription Agreement</h3><div><span>Assignment requirement</span><b>Consent Required</b></div><div><span>Recommended action</span><b>Split agreement</b></div><div><span>Affected inventory</span><b>Applications · Users</b></div><blockquote>“Prior written consent is required before assignment…”</blockquote><footer><span>89% confidence</span><b>Review recommendation →</b></footer></aside></section>
+    <section className="border-y border-zinc-200 bg-zinc-50"><div className="mx-auto grid max-w-[1560px] gap-10 px-5 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-8"><div><Badge className="bg-white">ENTERPRISE BY DESIGN</Badge><h2 className="mt-5 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">Sensitive transaction data deserves uncompromising control.</h2><Button asChild variant="ghost" className="mt-5 -ml-4"><Link href="/security">Explore Security &amp; Trust<ArrowRight/></Link></Button></div><div className="grid gap-3 sm:grid-cols-2">{[[LockKeyhole,"Deal-level access controls"],[Fingerprint,"Tenant data isolation"],[FileCheck2,"Evidence and audit history"],[ShieldCheck,"Customer-controlled AI processing"]].map(([Icon,label]) => { const I = Icon as typeof LockKeyhole; return <Card key={label as string} className="flex items-center gap-3 p-4"><I className="size-4 text-zinc-400"/><span className="text-sm font-medium text-zinc-700">{label as string}</span></Card>; })}</div></div></section>
 
-    <section className={styles.audiences}>
-      <div className={styles.sectionIntro}><div className={styles.eyebrow}><span/>Built around the transaction team</div><h2>One execution environment. Every deal stakeholder.</h2><p>Give each leader the context they need while keeping plans, dependencies, decisions and evidence connected in one operating model.</p></div>
-      <div className={styles.audienceGrid}>
-        <article><h3>CIO &amp; technology leadership</h3><p>See readiness, risk, cost and critical decisions across the complete transaction.</p><b>Executive control →</b></article>
-        <article><h3>Integration &amp; separation leaders</h3><p>Coordinate execution across workstreams, companies, milestones and dependencies.</p><b>Connected execution →</b></article>
-        <article><h3>Corporate development</h3><p>Connect transaction commitments with operational delivery and business outcomes.</p><b>Deal visibility →</b></article>
-        <article><h3>Private equity operating teams</h3><p>Apply a repeatable IT M&amp;A operating model across portfolio transactions.</p><b>Portfolio repeatability →</b></article>
-      </div>
-    </section>
+    <section className="px-5 py-16 lg:px-8"><div className="mx-auto grid max-w-[1500px] gap-8 rounded-2xl bg-zinc-950 p-8 text-white sm:p-12 lg:grid-cols-[1fr_auto] lg:items-center lg:p-16"><div><Badge className="border-zinc-700 bg-zinc-900 text-zinc-300">ONE OPERATING MODEL</Badge><h2 className="mt-5 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">See the complete IT M&amp;A journey in one governed environment.</h2><p className="mt-5 max-w-2xl text-sm leading-6 text-zinc-400">Give sellers and buyers a shared system for separation, Day 1 continuity, TSA operations, migration and exit.</p></div><div className="flex flex-wrap gap-3"><Button asChild size="lg" variant="inverse"><Link href="/book-a-demo">Book a demo<ArrowRight/></Link></Button><Button asChild size="lg" className="border border-zinc-700 bg-zinc-900 hover:bg-zinc-800"><Link href="/platform">Explore platform</Link></Button></div></div></section>
 
-    <section className={styles.security} id="security"><div><div className={styles.eyebrow}><span/>Enterprise by design</div><h2>Sensitive transaction data deserves uncompromising control.</h2><Link href="/security">Explore Security &amp; Trust →</Link></div><div className={styles.securityList}><span>Deal-level access controls</span><span>Tenant data isolation</span><span>Evidence and audit history</span><span>Customer-controlled AI processing</span></div></section>
-
-    <section className={styles.cta}><Image className={styles.ctaLogo} src="/brand/mergevista-icon-white-transparent.png" alt="" width={128} height={124} aria-hidden="true"/><div><h2>One platform from discovery to TSA exit.</h2><p>Give sellers and buyers a shared operating model for separation, Day 1 continuity, TSA operations and migration.</p></div><div><Link className={styles.primaryLight} href="/book-a-demo">Book a demo →</Link><Link href="/platform">Explore the platform</Link></div></section>
-
-    <SiteFooter bordered={false} />
+    <footer className="border-t border-zinc-200 bg-white"><div className="mx-auto flex max-w-[1560px] flex-col gap-8 px-5 py-10 lg:flex-row lg:items-center lg:justify-between lg:px-8"><SiteMark/><p className="text-xs text-zinc-500">© 2026 MergeVista LLC. All rights reserved.</p><nav className="flex flex-wrap gap-x-6 gap-y-3 text-xs font-medium text-zinc-600">{[["Platform","/platform"],["Solutions","/solutions"],["Insights","/insights"],["About","/about"],["Security","/security"],["Privacy","/privacy"],["Terms","/terms"]].map(([item,href]) => <Link key={item} href={href} className="hover:text-zinc-950">{item}</Link>)}</nav></div></footer>
   </main>;
 }
