@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     url: "https://www.mergevista.com/insights",
     images: [
       {
-        url: "/insights/tsa-exit-stranded-costs.png",
-        width: 1672,
-        height: 941,
-        alt: "Separated buyer and seller environments with duplicate infrastructure and ongoing costs remaining active",
+        url: "/insights/migration-wave-dependencies.webp",
+        width: 1586,
+        height: 992,
+        alt: "Migration workstreams connected around hidden exceptions and dependencies",
       },
     ],
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/insights/tsa-exit-stranded-costs.png"],
+    images: ["/insights/migration-wave-dependencies.webp"],
   },
 };
 
@@ -47,6 +47,17 @@ const topics = [
   "AI in IT M&A",
 ];
 const articles = [
+  [
+    "STRANDED IT COSTS",
+    "TSA exit is not cost exit",
+    "Where duplicate environments, licenses, contracts, cloud resources and support arrangements continue after operational separation.",
+    "11 min read",
+    "navy",
+    "/insights/tsa-exit-not-cost-exit",
+    "Oct 16, 2026",
+    "/insights/tsa-exit-stranded-costs.png",
+    "Separated buyer and seller environments with duplicate infrastructure and ongoing costs remaining active",
+  ],
   [
     "SOFTWARE LICENSING",
     "The application can move. The license may not.",
@@ -233,29 +244,29 @@ export default function InsightsPage() {
       <section className="mx-auto max-w-[1560px] px-5 py-12 lg:px-8 lg:py-16">
         <Card className="grid overflow-hidden lg:grid-cols-[1.15fr_.85fr]">
           <Image
-            src="/insights/tsa-exit-stranded-costs.png"
-            alt="Separated buyer and seller environments with duplicate infrastructure and ongoing costs remaining active"
-            width={1672}
-            height={941}
+            src="/insights/migration-wave-dependencies.webp"
+            alt="Migration workstreams connected around hidden exceptions and dependencies"
+            width={1586}
+            height={992}
             priority
             className="h-[260px] w-full object-cover sm:h-[340px] lg:order-2 lg:h-full lg:max-h-[470px]"
           />
           <div className="flex flex-col p-7 sm:p-10 lg:p-14">
             <Badge className="w-fit">
-              FEATURED INSIGHT · STRANDED IT COSTS
+              FEATURED INSIGHT · SEPARATION EXECUTION
             </Badge>
             <h2 className="mt-7 max-w-xl text-4xl font-medium leading-[1.05] tracking-[-.045em] sm:text-5xl">
-              TSA exit is not cost exit.
+              The exception list is the real separation plan.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-600">
-              Where duplicate environments, licenses, contracts, cloud resources
-              and support arrangements continue after operational separation.
+              The standard migration path helps the program move at scale. The
+              exception process helps the program finish.
             </p>
             <div className="mt-6 text-xs text-zinc-500">
-              Oct 16, 2026 · 11 min read
+              Oct 26, 2026 · 9 min read
             </div>
             <Button asChild className="mt-auto self-start pt-9" variant="ghost">
-              <Link href="/insights/tsa-exit-not-cost-exit">
+              <Link href="/insights/exception-list-real-separation-plan">
                 Read the insight
                 <ArrowRight />
               </Link>

@@ -3,6 +3,11 @@ import styles from "./related-insights.module.css";
 
 const articles = [
   {
+    slug: "exception-list-real-separation-plan",
+    category: "Separation execution",
+    title: "The Exception List Is the Real Separation Plan",
+  },
+  {
     slug: "tsa-exit-not-cost-exit",
     category: "Stranded IT costs",
     title: "TSA Exit Is Not Cost Exit",
@@ -67,6 +72,11 @@ const articles = [
 ];
 
 const recommendations: Record<string, string[]> = {
+  "exception-list-real-separation-plan": [
+    "migration-wave-readiness",
+    "why-day-1-readiness-fails",
+    "hidden-cost-disconnected-it-inventories",
+  ],
   "tsa-exit-not-cost-exit": [
     "application-move-license-may-not",
     "evidence-based-tsa-exit",
@@ -93,8 +103,8 @@ const recommendations: Record<string, string[]> = {
     "migration-wave-readiness",
   ],
   "migration-wave-readiness": [
+    "exception-list-real-separation-plan",
     "why-day-1-readiness-fails",
-    "hidden-cost-disconnected-it-inventories",
     "application-disposition-separation-strategy-execution",
   ],
   "application-disposition-separation-strategy-execution": [
@@ -113,8 +123,8 @@ const recommendations: Record<string, string[]> = {
     "evidence-based-tsa-exit",
   ],
   "why-day-1-readiness-fails": [
+    "exception-list-real-separation-plan",
     "migration-wave-readiness",
-    "hidden-cost-disconnected-it-inventories",
     "day-1-is-not-independence",
   ],
   "evidence-based-tsa-exit": [
