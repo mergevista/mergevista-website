@@ -49,11 +49,29 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.svg?v=7", type: "image/svg+xml" },
-      { url: "/brand/mergevista-tab-icon-v6-32.png?v=7", type: "image/png", sizes: "32x32" },
+      {
+        url: "/brand/mergevista-tab-icon-v8-16.png",
+        type: "image/png",
+        sizes: "16x16",
+      },
+      {
+        url: "/brand/mergevista-tab-icon-v8-32.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "/brand/mergevista-tab-icon-v8-48.png",
+        type: "image/png",
+        sizes: "48x48",
+      },
+      {
+        url: "/brand/mergevista-tab-icon-v8-64.png",
+        type: "image/png",
+        sizes: "64x64",
+      },
     ],
-    shortcut: "/favicon.svg?v=7",
-    apple: "/brand/mergevista-apple-icon-v6.png",
+    shortcut: "/brand/mergevista-tab-icon-v8-32.png",
+    apple: "/brand/mergevista-apple-icon-v8.png",
   },
 };
 

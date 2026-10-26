@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "TSA Exit Is Not Cost Exit: Where Stranded IT Costs Hide After Separation";
@@ -53,13 +53,13 @@ const costExitEvidence = [
   "Documented approval for any cost that must remain",
 ];
 
-export default function TsaExitNotCostExitArticle() { return <main className={styles.page}>
+export default function TsaExitNotCostExitArticle() { return <main className="min-h-screen bg-white text-zinc-950">
   <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
   <SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>STRANDED IT COSTS · 11 MIN READ</small><h1>TSA Exit Is Not Cost Exit: Where Stranded IT Costs Hide After Separation</h1><p>Operational independence does not prove that the old environments, contracts, licenses and support costs have been removed.</p><div><span>MergeVista Insights</span><i/><span>October 16, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>TSA exit proves that the buyer can operate independently. Cost exit requires separate evidence that legacy technology and commercial commitments have been removed, resized or explicitly accepted.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>Exiting a TSA is an important milestone in any separation. It means the buyer can operate the service independently and no longer depends on the seller for that particular capability.</p>
+  <ArticleHero category={<>STRANDED IT COSTS · 11 MIN READ</>} title={<>TSA Exit Is Not Cost Exit: Where Stranded IT Costs Hide After Separation</>} description={<>Operational independence does not prove that the old environments, contracts, licenses and support costs have been removed.</>} date={<>October 16, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>TSA exit proves that the buyer can operate independently. Cost exit requires separate evidence that legacy technology and commercial commitments have been removed, resized or explicitly accepted.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">Exiting a TSA is an important milestone in any separation. It means the buyer can operate the service independently and no longer depends on the seller for that particular capability.</p>
     <p>But there is a common assumption that once the TSA ends, the cost associated with it also disappears.</p>
     <p><strong>That is not always the case.</strong></p>
     <p>A TSA exit confirms that a service is no longer being provided by the seller. It does not necessarily confirm that the applications, infrastructure, contracts, licenses, support arrangements and people supporting that service have been removed or resized.</p>
@@ -142,8 +142,8 @@ export default function TsaExitNotCostExitArticle() { return <main className={st
     <p>It is also:</p>
     <blockquote>“What has actually stopped, what are we still paying for, and who owns removing the remaining cost?”</blockquote>
     <p><strong>That is the difference between tracking a TSA exit and completing the separation.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="tsa-exit-not-cost-exit" productHref="/solutions" productLabel="Explore TSA management and exit"/>
-  <section className={styles.articleCta}><div><small>FROM TSA EXIT TO COST EXIT</small><h2>Connect every exit milestone to the technology and commercial actions that remove the cost.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>FROM TSA EXIT TO COST EXIT</>} title={<>Connect every exit milestone to the technology and commercial actions that remove the cost.</>}/>
   <SiteFooter theme="dark"/>
 </main> }

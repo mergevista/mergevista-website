@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Where AI Actually Belongs in IT M&A";
@@ -51,13 +51,13 @@ const consequentialDecisions = [
   "making commitments on behalf of the buyer or seller",
 ];
 
-export default function WhereAiBelongsArticle() { return <main className={styles.page}>
+export default function WhereAiBelongsArticle() { return <main className="min-h-screen bg-white text-zinc-950">
   <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
   <SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>AI IN IT M&amp;A · 7 MIN READ</small><h1>Where AI Actually Belongs in IT M&amp;A</h1><p>AI should accelerate the analysis. It should not remove accountability from the decision.</p><div><span>MergeVista Insights</span><i/><span>September 17, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>The real opportunity for AI is reducing the enormous amount of work that happens before a good decision can be made—not making consequential transaction decisions for people.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>AI is becoming part of almost every technology conversation today, and M&amp;A is no exception.</p>
+  <ArticleHero category={<>AI IN IT M&amp;A · 7 MIN READ</>} title={<>Where AI Actually Belongs in IT M&amp;A</>} description={<>AI should accelerate the analysis. It should not remove accountability from the decision.</>} date={<>September 17, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>The real opportunity for AI is reducing the enormous amount of work that happens before a good decision can be made—not making consequential transaction decisions for people.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">AI is becoming part of almost every technology conversation today, and M&amp;A is no exception.</p>
     <p>But in IT M&amp;A, I think the more important question is not whether AI can be used.</p>
     <p>It is where AI should actually be used.</p>
     <p>There is a tendency to jump quickly to the idea that AI can make complex decisions for us. In reality, some of the most important decisions in an IT separation or integration still require experience, business judgment, risk tolerance, and context that cannot simply be delegated to a model.</p>
@@ -158,8 +158,8 @@ export default function WhereAiBelongsArticle() { return <main className={styles
     <p>Then let experienced practitioners make the decisions.</p>
     <p>That is where I believe AI actually belongs in IT M&amp;A.</p>
     <p><strong>AI should accelerate the analysis. It should not remove accountability from the decision.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="where-ai-belongs-in-it-ma" productHref="/ai-capabilities" productLabel="Explore AI capabilities"/>
-  <section className={styles.articleCta}><div><small>HUMAN-GOVERNED AI</small><h2>Move from scattered information to accountable decisions.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>HUMAN-GOVERNED AI</>} title={<>Move from scattered information to accountable decisions.</>}/>
   <SiteFooter theme="dark"/>
 </main> }

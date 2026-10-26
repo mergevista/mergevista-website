@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Your Company Is Ready to Sell. Is Your Technology Ready for Diligence?";
@@ -96,13 +96,13 @@ const readinessView = [
   "An initial view of potential integration considerations",
 ];
 
-export default function TechnologyReadyForDiligenceArticle() { return <main className={styles.page}>
+export default function TechnologyReadyForDiligenceArticle() { return <main className="min-h-screen bg-white text-zinc-950">
   <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
   <SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>SELLER READINESS · 11 MIN READ</small><h1>Your company is ready to sell. Is your technology ready for diligence?</h1><p>Buyers are not expecting enterprise-scale technology. They are expecting to understand what they are buying.</p><div><span>MergeVista Insights</span><i/><span>September 23, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>Technology readiness does not mean eliminating every weakness before a sale. It means understanding the environment, being transparent about its risks, and showing the buyer that those risks can be managed.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>For many lower-middle-market companies, technology has evolved alongside the business.</p>
+  <ArticleHero category={<>SELLER READINESS · 11 MIN READ</>} title={<>Your company is ready to sell. Is your technology ready for diligence?</>} description={<>Buyers are not expecting enterprise-scale technology. They are expecting to understand what they are buying.</>} date={<>September 23, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>Technology readiness does not mean eliminating every weakness before a sale. It means understanding the environment, being transparent about its risks, and showing the buyer that those risks can be managed.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">For many lower-middle-market companies, technology has evolved alongside the business.</p>
     <p>Applications were added when new capabilities were needed. Infrastructure changed as the company expanded. Cloud platforms replaced some older systems, while other systems continued to operate because they were stable and familiar.</p>
     <p>Important processes may depend on spreadsheets, local databases, shared drives, or integrations built several years ago. A small internal IT team may work closely with managed-service providers and software vendors to keep everything running.</p>
     <p>This operating model may serve the business effectively.</p>
@@ -278,8 +278,8 @@ export default function TechnologyReadyForDiligenceArticle() { return <main clas
     <p>It means understanding the environment, being transparent about its risks, and showing the buyer that those risks can be managed.</p>
     <p>The company may be ready for a transaction.</p>
     <p><strong>The technology story should be ready with it.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="technology-ready-for-diligence" productHref="/platform" productLabel="Explore the MergeVista platform"/>
-  <section className={styles.articleCta}><div><small>PREPARE BEFORE DILIGENCE</small><h2>Build a credible, connected view of the technology the buyer will evaluate.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>PREPARE BEFORE DILIGENCE</>} title={<>Build a credible, connected view of the technology the buyer will evaluate.</>}/>
   <SiteFooter theme="dark"/>
 </main> }

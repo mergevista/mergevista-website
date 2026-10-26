@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Everything Is Green—So Why Isn’t the Migration Wave Ready?";
@@ -43,11 +43,11 @@ const waveQuestions = [
   "What evidence supports the recommendation to proceed?",
 ];
 
-export default function MigrationWaveReadinessArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-09-11" image={image}/><SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>MIGRATION READINESS · 11 MIN READ</small><h1>Everything is green—so why isn’t the migration wave ready?</h1><p>Workstream status can look reassuring while the operating outcome remains uncertain.</p><div><span>MergeVista Insights</span><i/><span>September 11, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>Everything can be green independently—and still fail collectively. A migration wave is ready only when the combined environment has been shown to support the business after cutover.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>A few days before a migration wave, the status report often looks reassuring.</p>
+export default function MigrationWaveReadinessArticle(){return <main className="min-h-screen bg-white text-zinc-950"><ArticleStructuredData title={title} description={description} path={path} published="2026-09-11" image={image}/><SiteHeader/>
+  <ArticleHero category={<>MIGRATION READINESS · 11 MIN READ</>} title={<>Everything is green—so why isn’t the migration wave ready?</>} description={<>Workstream status can look reassuring while the operating outcome remains uncertain.</>} date={<>September 11, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>Everything can be green independently—and still fail collectively. A migration wave is ready only when the combined environment has been shown to support the business after cutover.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">A few days before a migration wave, the status report often looks reassuring.</p>
     <p>Applications are green. Infrastructure is green. End-user computing is green. Network is green. Testing is green. The site team confirms that preparations are complete. The PMO reports that the wave is on track.</p>
     <p>Then someone asks a simple question:</p><blockquote>Can the business actually operate after the migration?</blockquote><p>Suddenly, the conversation changes.</p>
     <p>The site may be ready. The desktops may be ready. The applications may have passed their individual checks. But that does not necessarily mean the migration wave is ready.</p>
@@ -114,8 +114,8 @@ export default function MigrationWaveReadinessArticle(){return <main className={
     <p>The question is whether the plan, inventories, dependencies, testing results, risks, decisions, and evidence are connected around the migration wave.</p>
     <p>When that information remains spread across workstream trackers, spreadsheets, emails, meeting notes, testing tools, and presentation decks, the program spends enormous effort reconciling status—and still may not see the operating risk.</p>
     <p>A migration wave is ready when the technical components, business processes, dependencies, people, and evidence come together as one executable picture.</p><p>Until then, green may simply mean that each team completed its part.</p><p><strong>And in IT M&amp;A, completing the parts is not the same as making the whole work.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="migration-wave-readiness" productHref="/platform" />
-  <section className={styles.articleCta}><div><small>MOVE FROM STATUS TO READINESS</small><h2>Connect every migration dependency, decision and test result to the wave it affects.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>MOVE FROM STATUS TO READINESS</>} title={<>Connect every migration dependency, decision and test result to the wave it affects.</>}/>
   <SiteFooter theme="dark"/>
 </main>}

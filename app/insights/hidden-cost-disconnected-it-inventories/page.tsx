@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "The Hidden Cost of Disconnected IT Inventories";
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
 const commonGaps = ["Applications without mapped databases or hosting environments", "Servers without clear application or business owners", "Interfaces listed separately from the applications they connect", "File shares without documented business consumers", "Shared services without identified dependent applications", "Contracts without links to the technology they cover", "Software licenses without user, location or environment assignments", "Data repositories without clear ownership or disposition decisions", "Site inventories that omit centrally managed technology", "Central inventories that omit locally managed applications"];
 const connectedModel = ["Business processes to applications", "Applications to infrastructure", "Applications to databases and data repositories", "Applications to interfaces and file shares", "Applications to identity and security services", "Assets to sites and migration waves", "Technology to contracts and licenses", "Dependencies to owners, decisions, risks and exit criteria"];
 
-export default function DisconnectedInventoriesArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-08-06" image={image}/><SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>SEPARATION · 9 MIN READ</small><h1>The hidden cost of disconnected IT inventories</h1><p>A complete list of assets does not provide a complete view of separation risk. The real risk sits in the connections between them.</p><div><span>MergeVista Insights</span><i/><span>August 6, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>An inventory tells the program what exists. A dependency model shows what must move together, what can move separately and what will break if the sequence is wrong.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>Most IT separation programs begin by building inventories. Each inventory may be accurate within its own boundaries. The problem is that businesses do not operate through inventories. They operate through connected technology ecosystems.</p>
+export default function DisconnectedInventoriesArticle(){return <main className="min-h-screen bg-white text-zinc-950"><ArticleStructuredData title={title} description={description} path={path} published="2026-08-06" image={image}/><SiteHeader/>
+  <ArticleHero category={<>SEPARATION · 9 MIN READ</>} title={<>The hidden cost of disconnected IT inventories</>} description={<>A complete list of assets does not provide a complete view of separation risk. The real risk sits in the connections between them.</>} date={<>August 6, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>An inventory tells the program what exists. A dependency model shows what must move together, what can move separately and what will break if the sequence is wrong.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">Most IT separation programs begin by building inventories. Each inventory may be accurate within its own boundaries. The problem is that businesses do not operate through inventories. They operate through connected technology ecosystems.</p>
     <p>An application relies on a database. The database may run on infrastructure owned by another team. The application may exchange files through a shared server at a different location. Users may authenticate through the seller’s identity environment. Interfaces may connect to applications scheduled for another migration wave.</p>
     <p>When these relationships are not visible, the program has several lists—but no reliable view of how the business actually works.</p>
 
@@ -101,8 +101,8 @@ export default function DisconnectedInventoriesArticle(){return <main className=
     <p>The hidden cost is not the time spent reconciling spreadsheets. It is the migration that succeeds technically while the business process fails operationally.</p>
     <p>In an IT separation, knowing what exists is only the beginning.</p>
     <p><strong>The real value comes from knowing how everything is connected.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="hidden-cost-disconnected-it-inventories" productHref="/ai-capabilities" productLabel="Explore AI capabilities" />
-  <section className={styles.articleCta}><div><small>CONNECT THE EXECUTION BASELINE</small><h2>See the dependencies that determine separation readiness.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>CONNECT THE EXECUTION BASELINE</>} title={<>See the dependencies that determine separation readiness.</>}/>
   <SiteFooter theme="dark"/>
 </main>}

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Day 1 Is Not Independence: What Happens After Legal Close?";
@@ -24,11 +24,11 @@ const tsaDependencies = ["A target hosting environment", "Data extraction and re
 const exitEvidence = ["The replacement capability is operational", "Required users can perform their business processes", "Data has been migrated and reconciled", "Interfaces and upstream and downstream dependencies have been tested", "Security, monitoring, backup, and recovery controls are operating", "Contracts and licenses are effective", "Support ownership and procedures are established", "Knowledge transfer has been completed", "Temporary access and workarounds have been removed or formally accepted", "Seller activities required for final separation are complete", "Business owners have accepted the operational outcome"];
 const preCloseRequirements = ["A clearly defined service scope", "Identified business and technology dependencies", "Buyer and seller responsibilities", "Exit prerequisites", "Contract and licensing requirements", "Data separation requirements", "Key assumptions and risks", "Evidence-based exit criteria", "A realistic exit timeline", "Named owners on both sides"];
 
-export default function DayOneIndependenceArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-09-02" image={image}/><SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>POST-CLOSE EXECUTION · 13 MIN READ</small><h1>Day 1 is not independence: What happens after legal close?</h1><p>Legal close transfers ownership. It does not necessarily transfer the ability to operate independently.</p><div><span>MergeVista Insights</span><i/><span>September 2, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>Day 1 proves the business can continue operating after ownership changes. TSA exit proves the buyer can operate without the seller.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>Day 1 is one of the most visible milestones in a divestiture.</p>
+export default function DayOneIndependenceArticle(){return <main className="min-h-screen bg-white text-zinc-950"><ArticleStructuredData title={title} description={description} path={path} published="2026-09-02" image={image}/><SiteHeader/>
+  <ArticleHero category={<>POST-CLOSE EXECUTION · 13 MIN READ</>} title={<>Day 1 is not independence: What happens after legal close?</>} description={<>Legal close transfers ownership. It does not necessarily transfer the ability to operate independently.</>} date={<>September 2, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>Day 1 proves the business can continue operating after ownership changes. TSA exit proves the buyer can operate without the seller.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">Day 1 is one of the most visible milestones in a divestiture.</p>
     <p>Employees transition to the buyer. New legal entities become operational. Financial controls take effect. Communications are released. Access is provisioned, command centers are activated, and critical business processes are closely monitored.</p>
     <p>When the day ends without a major disruption, the program understandably celebrates.</p><p>But what has actually been achieved?</p>
     <p>In many transactions, Day 1 does not represent technology independence. It represents continuity supported by Transition Service Agreements, temporary access arrangements, duplicated processes, manual workarounds, and significant assistance from the seller.</p>
@@ -106,8 +106,8 @@ export default function DayOneIndependenceArticle(){return <main className={styl
     <h2>Final thought</h2>
     <p>Day 1 is an important milestone, and reaching it without disruption deserves recognition.</p><p>But it is the beginning of the separation journey—not the end.</p><p>Day 1 proves that ownership can change while the business continues to operate, often with substantial support from the seller.</p><p>TSA exit proves that the buyer can operate independently.</p>
     <p>The strongest IT M&amp;A programs understand that difference from the start. They use Day 1 to protect continuity, preserve the knowledge developed before close, and create a disciplined path toward evidence-based independence.</p><p>Because closing the transaction transfers the business.</p><p><strong>Exiting the TSAs is what truly separates it.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="day-1-is-not-independence" productHref="/solutions" productLabel="Explore MergeVista solutions" />
-  <section className={styles.articleCta}><div><small>MOVE FROM CONTINUITY TO INDEPENDENCE</small><h2>Connect every Day 1 dependency to the evidence required for TSA exit.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>MOVE FROM CONTINUITY TO INDEPENDENCE</>} title={<>Connect every Day 1 dependency to the evidence required for TSA exit.</>}/>
   <SiteFooter theme="dark"/>
 </main>}

@@ -1,8 +1,9 @@
 .inset.inset {
   margin: 20px 4vw 40px;
   padding: 65px 5vw;
-  border-radius: 14px;
-  background: #071a35;
+  border: 1px solid #31577d;
+  border-radius: 10px;
+  background: #143d6b;
 }
 
 .inset.inset small {

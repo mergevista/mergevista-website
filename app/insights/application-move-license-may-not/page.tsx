@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "The Application Can Move. The License May Not.";
@@ -87,13 +87,13 @@ const readinessEvidence = [
   "Approval that the commercial dependency can be removed",
 ];
 
-export default function ApplicationLicenseArticle() { return <main className={styles.page}>
+export default function ApplicationLicenseArticle() { return <main className="min-h-screen bg-white text-zinc-950">
   <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
   <SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>SOFTWARE LICENSING · 12 MIN READ</small><h1>The Application Can Move. The License May Not.</h1><p>Technical migration readiness does not prove that the buyer has the commercial and operational right to use the software.</p><div><span>MergeVista Insights</span><i/><span>October 7, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>An application is ready only when the buyer has the technology, data, access, support and contractual rights required to operate it.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>In an IT separation, application planning often begins with a familiar set of questions.</p>
+  <ArticleHero category={<>SOFTWARE LICENSING · 12 MIN READ</>} title={<>The Application Can Move. The License May Not.</>} description={<>Technical migration readiness does not prove that the buyer has the commercial and operational right to use the software.</>} date={<>October 7, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>An application is ready only when the buyer has the technology, data, access, support and contractual rights required to operate it.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">In an IT separation, application planning often begins with a familiar set of questions.</p>
     <p>Is the application moving to the buyer? Will it remain temporarily with the seller? Does it need to be cloned, rebuilt, replaced, or retired? What infrastructure does it require? How much data needs to move? When can it be included in a migration wave?</p>
     <p>The application disposition is agreed. The technical team develops a solution. The migration date is added to the plan.</p>
     <p>Then someone asks:</p>
@@ -208,8 +208,8 @@ export default function ApplicationLicenseArticle() { return <main className={st
     <p>Contracts and licenses should not sit at the edge of the IT separation plan. They are part of the application disposition, the migration strategy, the Day 1 solution and the TSA exit.</p>
     <p>The application may be able to move.</p>
     <p><strong>Before it does, make sure the right to use it can move too.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="application-move-license-may-not" productHref="/ai-capabilities" productLabel="Explore contract intelligence"/>
-  <section className={styles.articleCta}><div><small>COMMERCIAL AND TECHNICAL READINESS</small><h2>Connect every application to the rights required to operate it.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>COMMERCIAL AND TECHNICAL READINESS</>} title={<>Connect every application to the rights required to operate it.</>}/>
   <SiteFooter theme="dark"/>
 </main> }
