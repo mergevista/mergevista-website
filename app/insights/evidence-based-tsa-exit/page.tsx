@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "From TSA Tracking to Evidence-Based TSA Exit";
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
 const applicationEvidence = ["The replacement or migrated application is operational", "Required users have access and appropriate roles", "Data has been migrated, reconciled and approved", "Interfaces have been rebuilt and tested", "Infrastructure and monitoring are operational", "Security controls have been validated", "Support procedures and ownership are established", "Contracts and licenses are effective", "Business acceptance has been documented", "Seller access and dependencies can be removed", "Cutover, rollback and stabilization plans are approved"];
 const knowledgePackage = ["The service to the business processes it supports", "The service to its applications, infrastructure, users, data, contracts and licenses", "The original separation assessment to the agreed TSA scope", "Key assumptions to identified risks and dependencies", "Exit prerequisites to accountable owners", "Exit criteria to the evidence required for approval"];
 
-export default function TsaExitArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-08-13" image={image}/><SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>TSA OPERATIONS · 9 MIN READ</small><h1>From TSA tracking to evidence-based TSA exit</h1><p>The TSA contains more separation intelligence than most buyers realize. Yet much of it is lost the moment the agreement is signed.</p><div><span>MergeVista Insights</span><i/><span>August 13, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>An exit date is a target. Exit evidence demonstrates that the underlying dependency has actually been removed and the buyer can operate independently.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>Transition Service Agreements are among the most important—and most underused—sources of information in a divestiture.</p>
+export default function TsaExitArticle(){return <main className="min-h-screen bg-white text-zinc-950"><ArticleStructuredData title={title} description={description} path={path} published="2026-08-13" image={image}/><SiteHeader/>
+  <ArticleHero category={<>TSA OPERATIONS · 9 MIN READ</>} title={<>From TSA tracking to evidence-based TSA exit</>} description={<>The TSA contains more separation intelligence than most buyers realize. Yet much of it is lost the moment the agreement is signed.</>} date={<>August 13, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>An exit date is a target. Exit evidence demonstrates that the underlying dependency has actually been removed and the buyer can operate independently.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">Transition Service Agreements are among the most important—and most underused—sources of information in a divestiture.</p>
     <p>Before a TSA is finalized, the seller typically invests significant effort in understanding how the carved-out business operates. Teams perform detailed discovery, assess shared technology, identify logical and physical separation requirements, review contracts and licenses, determine allocation methods, estimate service volumes, define service levels and establish exit assumptions.</p>
     <p>That work may involve months of discussions among business, technology, finance, legal, procurement, tax and operational teams. The resulting TSA is therefore more than a commercial agreement. It represents a considerable body of separation knowledge.</p>
     <p>Yet once the transaction closes, much of that knowledge disappears from the execution process. The TSA becomes an operating document for service delivery and a checklist for exit. Meanwhile, the buyer often begins separation discovery again.</p>
@@ -92,8 +92,8 @@ export default function TsaExitArticle(){return <main className={styles.page}><A
     <p>A TSA tracker tells you which services exist, what they cost and when they are expected to end.</p>
     <p>An evidence-based TSA exit model tells you whether the underlying dependency has actually been removed.</p>
     <p><strong>That is the difference between tracking an agreement and executing a separation.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="evidence-based-tsa-exit" productHref="/solutions" productLabel="Explore MergeVista solutions" />
-  <section className={styles.articleCta}><div><small>PROVE OPERATIONAL INDEPENDENCE</small><h2>Connect every TSA obligation to the evidence required for exit.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>PROVE OPERATIONAL INDEPENDENCE</>} title={<>Connect every TSA obligation to the evidence required for exit.</>}/>
   <SiteFooter theme="dark"/>
 </main>}

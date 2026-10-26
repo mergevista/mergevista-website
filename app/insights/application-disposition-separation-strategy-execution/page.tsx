@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Application Disposition: Where Separation Strategy Becomes Execution";
@@ -33,11 +33,11 @@ const practicalModel = [
   ["5. What proves the disposition is complete?", "Define the evidence required: migrated data, tested interfaces, effective licenses, business acceptance, operational support, removed seller access, or confirmed retirement."],
 ];
 
-export default function ApplicationDispositionArticle(){return <main className={styles.page}><ArticleStructuredData title={title} description={description} path={path} published="2026-09-07" image={image}/><SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>APPLICATION STRATEGY · 12 MIN READ</small><h1>Application disposition: Where separation strategy becomes execution</h1><p>Disposition is not an inventory update. It is a business and technology decision that shapes almost every part of the separation.</p><div><span>MergeVista Insights</span><i/><span>September 7, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>The objective is not to migrate every application the business uses. It is to provide every capability the separated organization needs—with the right technology, environment, and timing.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>Application disposition is one of the most important decisions in an IT separation.</p>
+export default function ApplicationDispositionArticle(){return <main className="min-h-screen bg-white text-zinc-950"><ArticleStructuredData title={title} description={description} path={path} published="2026-09-07" image={image}/><SiteHeader/>
+  <ArticleHero category={<>APPLICATION STRATEGY · 12 MIN READ</>} title={<>Application disposition: Where separation strategy becomes execution</>} description={<>Disposition is not an inventory update. It is a business and technology decision that shapes almost every part of the separation.</>} date={<>September 7, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>The objective is not to migrate every application the business uses. It is to provide every capability the separated organization needs—with the right technology, environment, and timing.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">Application disposition is one of the most important decisions in an IT separation.</p>
     <p>It is also one of the most misunderstood.</p>
     <p>In many programs, disposition appears as a column in the application inventory. Each application is marked with a value such as migrate, transfer, replace, retire, retain, clone, or TSA.</p><p>Once the field is populated, the application is considered assessed.</p>
     <p>But disposition is not an inventory update. It is a business and technology decision that shapes almost every part of the separation.</p>
@@ -105,8 +105,8 @@ export default function ApplicationDispositionArticle(){return <main className={
 
     <h2>Final thought</h2>
     <p>Application disposition is where separation strategy becomes real.</p><p>Every disposition decision creates work—or removes it. It shapes the TSA, infrastructure build, data migration, contract strategy, testing scope, migration waves, support model, cost, and timeline.</p><p>A good decision simplifies the separation and moves the buyer toward a sustainable future state.</p><p>A weak decision shifts uncertainty into execution, where it becomes more expensive and more difficult to resolve.</p><p>The objective is not to migrate every application the business uses.</p><p>It is to provide every business capability the separated organization needs—with the right technology, in the right environment, at the right time.</p><p><strong>That is why application disposition should never be treated as just another column in the inventory.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="application-disposition-separation-strategy-execution" productHref="/solutions" productLabel="Explore MergeVista solutions" />
-  <section className={styles.articleCta}><div><small>TURN STRATEGY INTO EXECUTION</small><h2>Connect every application decision to the dependencies, evidence and actions required to complete it.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>TURN STRATEGY INTO EXECUTION</>} title={<>Connect every application decision to the dependencies, evidence and actions required to complete it.</>}/>
   <SiteFooter theme="dark"/>
 </main>}

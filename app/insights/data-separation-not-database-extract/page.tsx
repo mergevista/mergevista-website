@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Data Separation Is Not a Database Extract";
@@ -77,13 +77,13 @@ const discoveryChecklist = [
   "Validation and acceptance criteria",
 ];
 
-export default function DataSeparationArticle() { return <main className={styles.page}>
+export default function DataSeparationArticle() { return <main className="min-h-screen bg-white text-zinc-950">
   <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
   <SiteHeader/>
-  <header className={styles.hero}><Link href="/insights">← Back to Insights</Link><small>DATA SEPARATION · 9 MIN READ</small><h1>Data Separation Is Not a Database Extract</h1><p>The difficult part is not moving records. It is defining what each company needs to operate—and proving the separation is complete.</p><div><span>MergeVista Insights</span><i/><span>September 30, 2026</span></div></header>
-  <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>A technical team can build an accurate extract of an incorrectly defined scope. Data separation succeeds only when business-owned rules, dependencies and end-to-end usability are proven.</p></section>
-  <article className={styles.article}>
-    <p className={styles.lead}>When an application is moving as part of a divestiture, the conversation about data often starts with a deceptively simple question:</p>
+  <ArticleHero category={<>DATA SEPARATION · 9 MIN READ</>} title={<>Data Separation Is Not a Database Extract</>} description={<>The difficult part is not moving records. It is defining what each company needs to operate—and proving the separation is complete.</>} date={<>September 30, 2026</>} image={image} imageAlt={imageAlt}/>
+  <ArticleTakeaway><p>A technical team can build an accurate extract of an incorrectly defined scope. Data separation succeeds only when business-owned rules, dependencies and end-to-end usability are proven.</p></ArticleTakeaway>
+  <ArticleBody>
+    <p className="article-lead">When an application is moving as part of a divestiture, the conversation about data often starts with a deceptively simple question:</p>
     <blockquote>“Can we extract the buyer’s data?”</blockquote>
     <p>That sounds like a technical task. Identify the relevant records, export them, load them into the new environment, reconcile the totals, and move on.</p>
     <p>In reality, data separation is rarely that clean.</p>
@@ -170,8 +170,8 @@ export default function DataSeparationArticle() { return <main className={styles
     <p>That requires more than database skills. It requires connected decisions across the business, applications, infrastructure, security, legal, contracts, reporting, migration, and TSA teams.</p>
     <p>A clean extract is useful.</p>
     <p><strong>A defensible, usable, and operationally complete separation is the real outcome.</strong></p>
-  </article>
+  </ArticleBody>
   <RelatedInsights current="data-separation-not-database-extract" productHref="/solutions" productLabel="Explore separation solutions"/>
-  <section className={styles.articleCta}><div><small>CONNECTED SEPARATION DECISIONS</small><h2>Turn data scope into an operational separation plan.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+  <ArticleCta eyebrow={<>CONNECTED SEPARATION DECISIONS</>} title={<>Turn data scope into an operational separation plan.</>}/>
   <SiteFooter theme="dark"/>
 </main> }

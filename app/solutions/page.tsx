@@ -1,27 +1,154 @@
-import Link from "next/link";
-import SiteFooter from "../components/SiteFooter";
-import SiteHeader from "../components/SiteHeader";
+import ModernHub from "../components/ModernHub";
+import { Badge } from "../components/poc/badge";
+import { Card } from "../components/poc/card";
 import { pageMetadata } from "../lib/seo";
-import styles from "../product-pages.module.css";
 
-export const metadata = pageMetadata("IT Separation & Integration Solutions | MergeVista", "Explore MergeVista solutions for divestitures, acquisitions, carve-out Day 1 readiness, post-close migration and TSA exit.", "/solutions");
+export const metadata = pageMetadata(
+  "IT Separation & Integration Solutions | MergeVista",
+  "Explore MergeVista solutions for divestitures, acquisitions, carve-out Day 1 readiness, post-close migration and TSA exit.",
+  "/solutions",
+);
 
-const solutions = [
-  ["01", "Divestitures and separations", "Create a trusted carve-out baseline, expose shared dependencies and coordinate logical and physical separation across seller and buyer teams.", ["Connected separation inventories", "Site and workstream planning", "Contract, license and consent visibility"]],
-  ["02", "Acquisitions and integrations", "Give the buyer a structured view of acquired technology, transition dependencies and the decisions required to establish the future-state environment.", ["Buyer transition planning", "Disposition and dependency decisions", "Migration wave coordination"]],
-  ["03", "Day 1 readiness for carve-outs", "Demonstrate that employees, business processes and critical services can operate from legal close—not simply that individual workstreams report green.", ["Outcome-based readiness criteria", "Cross-workstream dependencies", "Evidence and accountable approvals"]],
-  ["04", "Post-close migration and TSA exit", "Connect migration and every interim service to its obligations, costs, dependencies, milestones and objective exit evidence.", ["Service delivery and consumption", "Migration and dependency control", "Evidence-based exit governance"]],
+const cards = [
+  {
+    eyebrow: "01",
+    title: "Divestitures and separations",
+    text: "Create a trusted carve-out baseline, expose shared dependencies and coordinate logical and physical separation across seller and buyer teams.",
+    href: "/solutions/divestitures-separations",
+    points: [
+      "Connected separation inventories",
+      "Site and workstream planning",
+      "Contract, license and consent visibility",
+    ],
+    linkLabel: "Explore this solution",
+  },
+  {
+    eyebrow: "02",
+    title: "Acquisitions and integrations",
+    text: "Give the buyer a structured view of acquired technology, transition dependencies and the decisions required to establish the future-state environment.",
+    href: "/solutions/acquisitions-integrations",
+    points: [
+      "Buyer transition planning",
+      "Disposition and dependency decisions",
+      "Migration wave coordination",
+    ],
+    linkLabel: "Explore this solution",
+  },
+  {
+    eyebrow: "03",
+    title: "Day 1 readiness for carve-outs",
+    text: "Demonstrate that employees, business processes and critical services can operate from legal close—not simply that individual workstreams report green.",
+    href: "/solutions/day-1-readiness",
+    points: [
+      "Outcome-based readiness criteria",
+      "Cross-workstream dependencies",
+      "Evidence and accountable approvals",
+    ],
+    linkLabel: "Explore this solution",
+  },
+  {
+    eyebrow: "04",
+    title: "Post-close migration and TSA exit",
+    text: "Connect migration and every interim service to its obligations, costs, dependencies, milestones and objective exit evidence.",
+    href: "/solutions/tsa-management-exit",
+    points: [
+      "Service delivery and consumption",
+      "Migration and dependency control",
+      "Evidence-based exit governance",
+    ],
+    linkLabel: "Explore this solution",
+  },
 ];
-const solutionSlugs = ["divestitures-separations", "acquisitions-integrations", "day-1-readiness", "tsa-management-exit"];
 
-export default function SolutionsPage(){return <main className={styles.page}>
-  <SiteHeader/>
-  <header className={`${styles.hero} ${styles.solutionHero}`}><div className={styles.heroInner}>
-    <div className={styles.heroCopy}><div className={styles.eyebrow}><span/>Solutions for transaction execution</div><h1>Control the moments that determine <em>deal outcomes.</em></h1><p>Use one connected operating model to establish the baseline, protect Day 1, govern TSA delivery and accelerate migration and exit.</p><div className={styles.actions}><Link className={styles.primary} href="/book-a-demo">Book a demo →</Link><Link className={styles.secondary} href="/platform">Explore the platform</Link></div></div>
-    <div className={styles.solutionMap} aria-label="MergeVista solution areas"><small>FOUR CONNECTED EXECUTION PRIORITIES</small>{solutions.map(([,title,text])=><article key={title as string}><h3>{title as string}</h3><p>{text as string}</p></article>)}</div>
-  </div></header>
-  <section className={styles.section}><div className={styles.sectionHead}><div className={styles.eyebrow}><span/>Built for real transaction pressure</div><h2>Move from planning activity to executable outcomes.</h2><p>Each solution is connected to the same inventories, ownership model, dependencies and evidence—so progress in one part of the transaction does not create blind spots elsewhere.</p></div><div className={styles.solutionGrid}>{solutions.map(([,title,text,items], index)=><article key={title as string}><h3>{title as string}</h3><p>{text as string}</p><ul>{(items as string[]).map(item=><li key={item}>{item}</li>)}</ul><Link href={`/solutions/${solutionSlugs[index]}`}>Explore this solution →</Link></article>)}</div></section>
-  <section className={`${styles.section} ${styles.sectionAlt}`}><div><div className={styles.sectionHead}><div className={styles.eyebrow}><span/>From challenge to outcome</div><h2>Govern the transaction through what must be true.</h2><p>MergeVista connects execution detail to the business outcomes leaders need to protect.</p></div><div className={styles.outcomeTable}><div className={styles.tableHead}><span>EXECUTION CHALLENGE</span><span>MERGEVISTA APPROACH</span><span>BUSINESS OUTCOME</span></div><div><span>Multiple versions of the IT baseline</span><span>Reconciled, governed deal inventories</span><span>A trusted foundation for every plan</span></div><div><span>Workstreams report status independently</span><span>Connected dependencies and readiness evidence</span><span>Operational confidence on Day 1</span></div><div><span>TSA services tracked as a spreadsheet</span><span>Service obligations linked to migration and exit criteria</span><span>Faster, defensible TSA exit</span></div><div><span>Seller and buyer plans lose context at handoff</span><span>One shared transaction workspace</span><span>Continuity from separation through migration</span></div></div></div></section>
-  <section className={styles.cta}><div><h2>Bring your transaction priorities into focus.</h2><p>See how MergeVista can support your acquisition, divestiture, integration or separation.</p></div><div className={styles.ctaActions}><Link href="/book-a-demo">Book a demo →</Link><Link className={styles.ctaSecondary} href="/guided-trial">Apply for a guided trial →</Link></div></section>
-  <SiteFooter bordered={false}/>
-</main>}
+const outcomes = [
+  [
+    "Multiple versions of the IT baseline",
+    "Reconciled, governed deal inventories",
+    "A trusted foundation for every plan",
+  ],
+  [
+    "Workstreams report status independently",
+    "Connected dependencies and readiness evidence",
+    "Operational confidence on Day 1",
+  ],
+  [
+    "TSA services tracked as a spreadsheet",
+    "Service obligations linked to migration and exit criteria",
+    "Faster, defensible TSA exit",
+  ],
+  [
+    "Seller and buyer plans lose context at handoff",
+    "One shared transaction workspace",
+    "Continuity from separation through migration",
+  ],
+];
+
+export default function Page() {
+  return (
+    <ModernHub
+      eyebrow="Solutions for transaction execution"
+      title="Control the moments that determine"
+      accent="deal outcomes."
+      intro="Use one connected operating model to establish the baseline, protect Day 1, govern TSA delivery and accelerate migration and exit."
+      primaryLabel="Book a demo"
+      cards={cards}
+      sectionLabel="BUILT FOR REAL TRANSACTION PRESSURE"
+      sectionTitle="Move from planning activity to executable outcomes."
+      sectionIntro="Each solution is connected to the same inventories, ownership model, dependencies and evidence—so progress in one part of the transaction does not create blind spots elsewhere."
+      imageLabel="FOUR CONNECTED EXECUTION PRIORITIES"
+      imageAlt="MergeVista solution areas"
+      ctaTitle="Bring your transaction priorities into focus."
+      ctaText="See how MergeVista can support your acquisition, divestiture, integration or separation."
+      ctaLabel="Book a demo"
+      ctaSecondaryLabel="Apply for a guided trial"
+    >
+      <section className="border-y border-zinc-200 bg-zinc-50">
+        <div className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
+          <Badge className="bg-white">FROM CHALLENGE TO OUTCOME</Badge>
+          <h2 className="mt-5 max-w-4xl text-4xl font-medium tracking-[-.04em] sm:text-5xl">
+            Govern the transaction through what must be true.
+          </h2>
+          <p className="mt-5 max-w-3xl leading-7 text-zinc-600">
+            MergeVista connects execution detail to the business outcomes
+            leaders need to protect.
+          </p>
+          <Card className="mt-14 overflow-hidden">
+            <div className="hidden grid-cols-3 border-b border-zinc-200 bg-zinc-50 text-xs font-semibold tracking-[.08em] text-zinc-500 md:grid">
+              <span className="p-5">EXECUTION CHALLENGE</span>
+              <span className="border-l border-zinc-200 p-5">
+                MERGEVISTA APPROACH
+              </span>
+              <span className="border-l border-zinc-200 p-5">
+                BUSINESS OUTCOME
+              </span>
+            </div>
+            {outcomes.map((row) => (
+              <div
+                key={row[0]}
+                className="grid border-b border-zinc-200 last:border-b-0 md:grid-cols-3"
+              >
+                {row.map((cell, index) => (
+                  <div
+                    key={cell}
+                    className={`p-5 text-sm leading-6 ${index ? "md:border-l md:border-zinc-200" : "font-medium"}`}
+                  >
+                    <span className="mb-2 block text-[10px] font-semibold tracking-[.08em] text-zinc-400 md:hidden">
+                      {
+                        [
+                          "EXECUTION CHALLENGE",
+                          "MERGEVISTA APPROACH",
+                          "BUSINESS OUTCOME",
+                        ][index]
+                      }
+                    </span>
+                    {cell}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </Card>
+        </div>
+      </section>
+    </ModernHub>
+  );
+}

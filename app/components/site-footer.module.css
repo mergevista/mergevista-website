@@ -4,3 +4,12 @@
 .darkLockup{display:flex;align-items:center;gap:8px}.darkLockup img{width:35px;height:35px;object-fit:contain}.darkLockup strong{color:#fff;font-size:20px;letter-spacing:-.7px}.darkLockup strong span{color:#2878f0}
 @media(max-width:1250px){.footer{grid-template-columns:190px minmax(0,1fr);align-items:start;gap:14px 38px;padding-top:30px;padding-bottom:30px}.footer>p{grid-column:1;grid-row:2;margin:0;text-align:left}.footer nav{grid-column:2;grid-row:1/3;align-content:center;justify-content:flex-end;flex-wrap:wrap;gap:14px 22px;min-height:54px}}
 @media(max-width:850px){.footer{grid-template-columns:1fr;gap:20px}.footer>p{display:block;grid-column:1;grid-row:auto}.footer nav{grid-column:1;grid-row:auto;justify-content:flex-start;min-height:0}}
+
+/* Redesign POC */
+.shell{font-family:var(--font-geist-sans),Arial,Helvetica,sans-serif}
+.footer{padding-top:30px;padding-bottom:30px}
+.light .footer{border-color:#e4e4e7}
+.light .brand small,.light .footer>p{color:#71717a}
+.light .footer nav a{color:#71717a;font-weight:500}
+.dark{background:#143d6b}
+.dark .footer{border-color:#31577d}

@@ -42,9 +42,9 @@ body {
 }
 
 /* Guided trial stays visible in the primary navigation without competing with the demo button. */
-[class*="site-header_links"] { gap: 30px; }
+[class*="site-header_links"] { gap: 28px; }
 [class*="site-header_guidedTrial"] {
   padding-left: 18px;
-  border-left: 1px solid #dce5ef;
-  color: #1769e8 !important;
+  border-left: 1px solid #e4e4e7;
+  color: #1559a6 !important;
 }

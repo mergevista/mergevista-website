@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import ArticleStructuredData from "../ArticleStructuredData";
+import ArticleHero from "../ArticleHero";
+import { ArticleBody, ArticleCta, ArticleTakeaway } from "../ArticleLayout";
 import RelatedInsights from "../RelatedInsights";
-import styles from "../complete-it-ma-lifecycle/article.module.css";
 import localStyles from "./day-one.module.css";
 
 const title = "Why Day 1 Readiness Fails Despite Detailed Project Plans";
@@ -22,21 +22,15 @@ export const metadata: Metadata = {
 };
 
 export default function DayOneReadinessArticle() {
-  return <main className={styles.page}>
+  return <main className="min-h-screen bg-white text-zinc-950">
     <ArticleStructuredData title={title} description={description} path={path} published="2026-08-20" image={image} />
     <SiteHeader />
-    <header className={styles.hero}>
-      <Link href="/insights">← Back to Insights</Link>
-      <small>DAY 1 READINESS · 7 MIN READ</small>
-      <h1>Why Day 1 readiness fails despite detailed project plans</h1>
-      <p>Most Day 1 programs do not suffer from a lack of planning. The problem is that their plans—and the teams behind them—have not been designed to converge.</p>
-      <div><span>MergeVista Insights</span><i/><span>August 20, 2026</span></div>
-    </header>
+    <ArticleHero category={<>DAY 1 READINESS · 7 MIN READ</>} title={<>Why Day 1 readiness fails despite detailed project plans</>} description={<>Most Day 1 programs do not suffer from a lack of planning. The problem is that their plans—and the teams behind them—have not been designed to converge.</>} date={<>August 20, 2026</>} image={image} imageAlt={imageAlt}/>
 
-    <section className={styles.takeaway}><small>KEY TAKEAWAY</small><p>A detailed project plan tells leadership what each team intends to do. An integrated readiness model demonstrates that the business will actually work.</p></section>
+    <ArticleTakeaway><p>A detailed project plan tells leadership what each team intends to do. An integrated readiness model demonstrates that the business will actually work.</p></ArticleTakeaway>
 
-    <article className={styles.article}>
-      <p className={styles.lead}>Most Day 1 programs have detailed workstream plans, application inventories, infrastructure trackers, migration schedules, RAID logs, cutover plans, governance meetings and executive dashboards. Yet, as Day 1 approaches, leadership often discovers that the organization still cannot confidently answer one fundamental question: <strong>Are we truly ready to operate on Day 1?</strong></p>
+    <ArticleBody>
+      <p className="article-lead">Most Day 1 programs have detailed workstream plans, application inventories, infrastructure trackers, migration schedules, RAID logs, cutover plans, governance meetings and executive dashboards. Yet, as Day 1 approaches, leadership often discovers that the organization still cannot confidently answer one fundamental question: <strong>Are we truly ready to operate on Day 1?</strong></p>
       <p>The problem is rarely the absence of plans. The problem is that those plans—and the teams behind them—have not been designed to converge.</p>
 
       <h2>When multiple teams create multiple versions of the truth</h2>
@@ -90,10 +84,10 @@ export default function DayOneReadinessArticle() {
       <p>A detailed project plan tells leadership what each team intends to do.</p>
       <p>An integrated readiness model demonstrates that the business will actually work.</p>
       <p><strong>If applications, infrastructure, data, contracts, licenses, users and business processes come together on Day 1, it should be by design—not by luck.</strong></p>
-    </article>
+    </ArticleBody>
 
     <RelatedInsights current="why-day-1-readiness-fails" productHref="/platform" />
-    <section className={styles.articleCta}><div><small>MOVE FROM STATUS TO READINESS</small><h2>Connect every workstream to one executable Day 1 outcome.</h2></div><Link href="/book-a-demo">Book a demo <span>→</span></Link></section>
+    <ArticleCta eyebrow={<>MOVE FROM STATUS TO READINESS</>} title={<>Connect every workstream to one executable Day 1 outcome.</>}/>
     <SiteFooter theme="dark" />
   </main>;
 }
