@@ -6,7 +6,6 @@ import SiteHeader from "../components/SiteHeader";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Badge } from "../components/poc/badge";
 import { Button } from "../components/poc/button";
-import { Card } from "../components/poc/card";
 
 const pageTitle = "IT M&A Insights, Readiness & TSA Exit | MergeVista";
 const pageDescription =
@@ -23,9 +22,9 @@ export const metadata: Metadata = {
     url: "https://www.mergevista.com/insights",
     images: [
       {
-        url: "/insights/migration-wave-dependencies.webp",
-        width: 1586,
-        height: 992,
+        url: "/insights/social-exception-list.png",
+        width: 1200,
+        height: 630,
         alt: "Migration workstreams connected around hidden exceptions and dependencies",
       },
     ],
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/insights/migration-wave-dependencies.webp"],
+    images: ["/insights/social-exception-list.png"],
   },
 };
 
@@ -55,7 +54,7 @@ const articles = [
     "navy",
     "/insights/tsa-exit-not-cost-exit",
     "Oct 16, 2026",
-    "/insights/tsa-exit-stranded-costs.png",
+    "/insights/editorial-line-tsa-cost-exit-transparent.png",
     "Separated buyer and seller environments with duplicate infrastructure and ongoing costs remaining active",
   ],
   [
@@ -66,7 +65,7 @@ const articles = [
     "blue",
     "/insights/application-move-license-may-not",
     "Oct 7, 2026",
-    "/insights/application-license-may-not.webp",
+    "/insights/editorial-line-license-mobility-transparent.png",
     "Application moving while its commercial software license remains restricted",
   ],
   [
@@ -77,7 +76,7 @@ const articles = [
     "navy",
     "/insights/data-separation-not-database-extract",
     "Sep 30, 2026",
-    "/insights/data-separation-governed.webp",
+    "/insights/editorial-line-data-separation-transparent.png",
     "Shared enterprise data separating into governed buyer and seller environments",
   ],
   [
@@ -88,7 +87,7 @@ const articles = [
     "blue",
     "/insights/technology-ready-for-diligence",
     "Sep 23, 2026",
-    "/insights/technology-diligence-ready.webp",
+    "/insights/editorial-line-diligence-readiness-transparent.png",
     "Technology records organized for buyer due diligence",
   ],
   [
@@ -99,7 +98,7 @@ const articles = [
     "cyan",
     "/insights/where-ai-belongs-in-it-ma",
     "Sep 17, 2026",
-    "/insights/ai-governed-decisions.webp",
+    "/insights/editorial-line-human-governed-ai-transparent.png",
     "AI organizing transaction evidence for accountable human approval",
   ],
   [
@@ -110,7 +109,7 @@ const articles = [
     "navy",
     "/insights/migration-wave-readiness",
     "Sep 11, 2026",
-    "/insights/migration-wave-dependencies.webp",
+    "/insights/editorial-line-migration-readiness-transparent.png",
     "Completed migration workstreams blocked by a hidden dependency",
   ],
   [
@@ -121,7 +120,7 @@ const articles = [
     "blue",
     "/insights/application-disposition-separation-strategy-execution",
     "Sep 7, 2026",
-    "/insights/application-disposition-pathways.webp",
+    "/insights/editorial-line-application-disposition-transparent.png",
     "Enterprise application connected to multiple governed disposition pathways",
   ],
   [
@@ -132,7 +131,7 @@ const articles = [
     "navy",
     "/insights/day-1-is-not-independence",
     "Sep 2, 2026",
-    "/insights/day-one-not-independence.webp",
+    "/insights/editorial-line-day-one-independence-transparent.png",
     "Business crossing legal close while temporary seller dependencies remain",
   ],
   [
@@ -143,7 +142,7 @@ const articles = [
     "blue",
     "/insights/complete-it-ma-lifecycle",
     "Aug 27, 2026",
-    "/insights/complete-it-ma-lifecycle.webp",
+    "/insights/editorial-line-lifecycle-transparent.png",
     "Connected IT M&A lifecycle spanning two organizations",
   ],
   [
@@ -154,7 +153,7 @@ const articles = [
     "blue",
     "/insights/why-day-1-readiness-fails",
     "Aug 20, 2026",
-    "/insights/day-one-readiness-gap.webp",
+    "/insights/editorial-line-day-one-readiness-transparent.png",
     "Detailed project plans separated from the Day 1 operating checkpoint",
   ],
   [
@@ -165,7 +164,7 @@ const articles = [
     "navy",
     "/insights/evidence-based-tsa-exit",
     "Aug 13, 2026",
-    "/insights/evidence-based-tsa-exit.webp",
+    "/insights/editorial-line-tsa-evidence-transparent.png",
     "TSA obligations and evidence connected to an approved exit",
   ],
   [
@@ -176,7 +175,7 @@ const articles = [
     "cyan",
     "/insights/hidden-cost-disconnected-it-inventories",
     "Aug 6, 2026",
-    "/insights/disconnected-it-inventories.webp",
+    "/insights/editorial-line-disconnected-inventories-transparent.png",
     "Disconnected IT inventory towers producing conflicting transaction records",
   ],
 ];
@@ -242,14 +241,14 @@ export default function InsightsPage() {
         </div>
       </section>
       <section className="mx-auto max-w-[1560px] px-5 py-12 lg:px-8 lg:py-16">
-        <Card className="grid overflow-hidden lg:grid-cols-[1.15fr_.85fr]">
+        <article className="grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
           <Image
-            src="/insights/migration-wave-dependencies.webp"
+            src="/insights/editorial-line-exception-list-transparent.png"
             alt="Migration workstreams connected around hidden exceptions and dependencies"
             width={1586}
             height={992}
             priority
-            className="h-[260px] w-full object-cover sm:h-[340px] lg:order-2 lg:h-full lg:max-h-[470px]"
+            className="h-[260px] w-full object-contain sm:h-[340px] lg:order-2 lg:h-full lg:max-h-[470px]"
           />
           <div className="flex flex-col p-7 sm:p-10 lg:p-14">
             <Badge className="w-fit">
@@ -272,7 +271,7 @@ export default function InsightsPage() {
               </Link>
             </Button>
           </div>
-        </Card>
+        </article>
       </section>
       <section className="border-y border-zinc-200 bg-zinc-50">
         <div className="mx-auto max-w-[1560px] px-5 py-10 lg:px-8">
@@ -311,14 +310,14 @@ export default function InsightsPage() {
             Clear, practical perspectives—not abstract transformation theory.
           </p>
         </div>
-        <article className="mt-12 grid overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 lg:grid-cols-[1.05fr_.95fr]">
+        <article className="mt-12 grid gap-8 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
           <Link href={leadHref}>
             <Image
               src={leadImage}
               alt={leadImageAlt}
               width={1536}
               height={1024}
-              className="aspect-[16/9] h-full max-h-[420px] w-full object-cover lg:aspect-auto"
+              className="aspect-[16/9] h-full max-h-[420px] w-full object-contain lg:aspect-auto"
             />
           </Link>
           <div className="flex flex-col p-7 sm:p-10 lg:p-12">
@@ -368,7 +367,7 @@ export default function InsightsPage() {
                       alt={imageAlt}
                       width={1536}
                       height={1024}
-                      className="aspect-[3/2] w-full rounded-xl border border-zinc-200 object-cover"
+                      className="aspect-[3/2] w-full object-contain"
                     />
                   </Link>
                   <div className="flex flex-1 flex-col pt-5">

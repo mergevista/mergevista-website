@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Badge } from "../components/poc/badge";
-import { Card } from "../components/poc/card";
 
 export default function ArticleHero({
   category,
@@ -47,25 +46,17 @@ export default function ArticleHero({
             <span>{date}</span>
           </div>
         </div>
-        <Card className="overflow-hidden shadow-[0_18px_48px_rgba(24,24,27,.08)]">
-          <div className="flex h-9 items-center border-b border-zinc-800 bg-zinc-950 px-3.5 text-white">
-            <span className="text-[9px] tracking-wide text-zinc-400">
-              MERGEVISTA INSIGHTS
-            </span>
-            <Badge className="ml-auto border-zinc-700 bg-zinc-900 text-zinc-300">
-              EXECUTION PERSPECTIVE
-            </Badge>
-          </div>
+        <div className="relative">
           <Image
             src={image}
             alt={imageAlt}
             width={1672}
             height={941}
             priority
-            className="aspect-[16/9] h-auto w-full object-cover"
+            className="aspect-[16/9] h-auto w-full object-contain"
             sizes="(max-width:900px) 94vw,50vw"
           />
-        </Card>
+        </div>
       </div>
     </header>
   );

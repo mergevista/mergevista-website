@@ -13,7 +13,8 @@ const description =
   "Why exceptions—not standard migration paths—determine whether an IT separation will work, and how connected management helps the program finish.";
 const path = "/insights/exception-list-real-separation-plan";
 const published = "2026-10-26";
-const image = "/insights/migration-wave-dependencies.webp";
+const image = "/insights/editorial-line-exception-list-transparent.png";
+const socialImage = "/insights/social-exception-list.png";
 const imageAlt =
   "Migration workstreams connected around the hidden exceptions and dependencies that determine separation readiness";
 
@@ -27,9 +28,9 @@ export const metadata: Metadata = {
     type: "article",
     url: `https://www.mergevista.com${path}`,
     publishedTime: published,
-    images: [{ url: image, width: 1586, height: 992, alt: imageAlt }],
+    images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }],
   },
-  twitter: { card: "summary_large_image", title, description, images: [image] },
+  twitter: { card: "summary_large_image", title, description, images: [socialImage] },
 };
 
 const exceptionQuestions = [
@@ -62,7 +63,7 @@ export default function ExceptionListArticle() {
         description={description}
         path={path}
         published={published}
-        image={image}
+        image={socialImage}
       />
       <SiteHeader />
       <ArticleHero

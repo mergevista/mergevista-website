@@ -11,14 +11,15 @@ const title = "Where AI Actually Belongs in IT M&A";
 const description = "Where AI adds practical value in IT M&A: organizing evidence, reconciling information and preparing decisions while keeping experienced practitioners accountable.";
 const path = "/insights/where-ai-belongs-in-it-ma";
 const published = "2026-09-17";
-const image = "/insights/ai-governed-decisions.webp";
+const image = "/insights/editorial-line-human-governed-ai-transparent.png";
+const socialImage = "/insights/social-human-governed-ai.png";
 const imageAlt = "AI organizing transaction evidence for accountable human approval";
 
 export const metadata: Metadata = {
   title: `${title} | MergeVista Insights`, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
-  twitter: { card: "summary_large_image", title, description, images: [image] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [socialImage] },
 };
 
 const aiActivities = [
@@ -52,7 +53,7 @@ const consequentialDecisions = [
 ];
 
 export default function WhereAiBelongsArticle() { return <main className="min-h-screen bg-white text-zinc-950">
-  <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
+  <ArticleStructuredData title={title} description={description} path={path} published={published} image={socialImage}/>
   <SiteHeader/>
   <ArticleHero category={<>AI IN IT M&amp;A · 7 MIN READ</>} title={<>Where AI Actually Belongs in IT M&amp;A</>} description={<>AI should accelerate the analysis. It should not remove accountability from the decision.</>} date={<>September 17, 2026</>} image={image} imageAlt={imageAlt}/>
   <ArticleTakeaway><p>The real opportunity for AI is reducing the enormous amount of work that happens before a good decision can be made—not making consequential transaction decisions for people.</p></ArticleTakeaway>
