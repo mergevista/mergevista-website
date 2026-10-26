@@ -12,15 +12,16 @@ const seoTitle = "Technology Due Diligence for Business Sellers | MergeVista";
 const description = "How lower-middle-market companies can prepare technology inventories, cybersecurity evidence, contracts, costs and risks before buyer due diligence.";
 const path = "/insights/technology-ready-for-diligence";
 const published = "2026-09-23";
-const image = "/insights/technology-diligence-ready.webp";
+const image = "/insights/editorial-line-diligence-readiness-transparent.png";
+const socialImage = "/insights/social-diligence-readiness.png";
 const imageAlt = "Technology records organized for buyer due diligence";
 
 export const metadata: Metadata = {
   title: seoTitle,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
-  twitter: { card: "summary_large_image", title, description, images: [image] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [socialImage] },
 };
 
 const inventoryFields = [
@@ -97,7 +98,7 @@ const readinessView = [
 ];
 
 export default function TechnologyReadyForDiligenceArticle() { return <main className="min-h-screen bg-white text-zinc-950">
-  <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
+  <ArticleStructuredData title={title} description={description} path={path} published={published} image={socialImage}/>
   <SiteHeader/>
   <ArticleHero category={<>SELLER READINESS · 11 MIN READ</>} title={<>Your company is ready to sell. Is your technology ready for diligence?</>} description={<>Buyers are not expecting enterprise-scale technology. They are expecting to understand what they are buying.</>} date={<>September 23, 2026</>} image={image} imageAlt={imageAlt}/>
   <ArticleTakeaway><p>Technology readiness does not mean eliminating every weakness before a sale. It means understanding the environment, being transparent about its risks, and showing the buyer that those risks can be managed.</p></ArticleTakeaway>

@@ -12,15 +12,16 @@ const seoTitle = "Stranded IT Costs After TSA Exit | MergeVista";
 const description = "Why TSA exit does not automatically remove the seller’s underlying IT costs—and how separation teams can connect decommissioning, licenses, contracts, cloud resources and support changes to evidence-based cost exit.";
 const path = "/insights/tsa-exit-not-cost-exit";
 const published = "2026-10-16";
-const image = "/insights/tsa-exit-stranded-costs.png";
+const image = "/insights/editorial-line-tsa-cost-exit-transparent.png";
+const socialImage = "/insights/social-tsa-cost-exit.png";
 const imageAlt = "Separated buyer and seller environments with duplicate infrastructure and ongoing costs remaining active";
 
 export const metadata: Metadata = {
   title: seoTitle,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: image, width: 1672, height: 941, alt: imageAlt }] },
-  twitter: { card: "summary_large_image", title, description, images: [image] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [socialImage] },
 };
 
 const contractActions = [
@@ -54,7 +55,7 @@ const costExitEvidence = [
 ];
 
 export default function TsaExitNotCostExitArticle() { return <main className="min-h-screen bg-white text-zinc-950">
-  <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
+  <ArticleStructuredData title={title} description={description} path={path} published={published} image={socialImage}/>
   <SiteHeader/>
   <ArticleHero category={<>STRANDED IT COSTS · 11 MIN READ</>} title={<>TSA Exit Is Not Cost Exit: Where Stranded IT Costs Hide After Separation</>} description={<>Operational independence does not prove that the old environments, contracts, licenses and support costs have been removed.</>} date={<>October 16, 2026</>} image={image} imageAlt={imageAlt}/>
   <ArticleTakeaway><p>TSA exit proves that the buyer can operate independently. Cost exit requires separate evidence that legacy technology and commercial commitments have been removed, resized or explicitly accepted.</p></ArticleTakeaway>

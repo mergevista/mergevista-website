@@ -10,20 +10,21 @@ import localStyles from "./day-one.module.css";
 const title = "Why Day 1 Readiness Fails Despite Detailed Project Plans";
 const description = "Why detailed workstream plans do not guarantee Day 1 readiness—and how integrated inventories, dependencies, decisions and evidence create operational confidence.";
 const path = "/insights/why-day-1-readiness-fails";
-const image = "/insights/day-one-readiness-gap.webp";
+const image = "/insights/editorial-line-day-one-readiness-transparent.png";
+const socialImage = "/insights/social-day-one-readiness.png";
 const imageAlt = "Detailed project plans separated from the Day 1 operating checkpoint";
 
 export const metadata: Metadata = {
   title: `${title} | MergeVista Insights`,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-20", images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
-  twitter: { card: "summary_large_image", title, description, images: [image] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-20", images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [socialImage] },
 };
 
 export default function DayOneReadinessArticle() {
   return <main className="min-h-screen bg-white text-zinc-950">
-    <ArticleStructuredData title={title} description={description} path={path} published="2026-08-20" image={image} />
+    <ArticleStructuredData title={title} description={description} path={path} published="2026-08-20" image={socialImage} />
     <SiteHeader />
     <ArticleHero category={<>DAY 1 READINESS · 7 MIN READ</>} title={<>Why Day 1 readiness fails despite detailed project plans</>} description={<>Most Day 1 programs do not suffer from a lack of planning. The problem is that their plans—and the teams behind them—have not been designed to converge.</>} date={<>August 20, 2026</>} image={image} imageAlt={imageAlt}/>
 

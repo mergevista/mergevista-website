@@ -12,15 +12,16 @@ const seoTitle = "Data Separation in IT Divestitures | MergeVista";
 const description = "Why divestiture data separation requires business-owned scope, retention, privacy, dependency and usability decisions—not merely a database extract.";
 const path = "/insights/data-separation-not-database-extract";
 const published = "2026-09-30";
-const image = "/insights/data-separation-governed.webp";
+const image = "/insights/editorial-line-data-separation-transparent.png";
+const socialImage = "/insights/social-data-separation.png";
 const imageAlt = "Shared enterprise data separating into governed buyer and seller environments";
 
 export const metadata: Metadata = {
   title: seoTitle,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
-  twitter: { card: "summary_large_image", title, description, images: [image] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [socialImage] },
 };
 
 const applicationQuestions = [
@@ -78,7 +79,7 @@ const discoveryChecklist = [
 ];
 
 export default function DataSeparationArticle() { return <main className="min-h-screen bg-white text-zinc-950">
-  <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
+  <ArticleStructuredData title={title} description={description} path={path} published={published} image={socialImage}/>
   <SiteHeader/>
   <ArticleHero category={<>DATA SEPARATION · 9 MIN READ</>} title={<>Data Separation Is Not a Database Extract</>} description={<>The difficult part is not moving records. It is defining what each company needs to operate—and proving the separation is complete.</>} date={<>September 30, 2026</>} image={image} imageAlt={imageAlt}/>
   <ArticleTakeaway><p>A technical team can build an accurate extract of an incorrectly defined scope. Data separation succeeds only when business-owned rules, dependencies and end-to-end usability are proven.</p></ArticleTakeaway>

@@ -12,15 +12,16 @@ const seoTitle = "Software Licensing in IT Separations | MergeVista";
 const description = "Why application migration readiness in an IT separation must include contracts, entitlements, vendor consent, deployment rights and evidence—not only technical readiness.";
 const path = "/insights/application-move-license-may-not";
 const published = "2026-10-07";
-const image = "/insights/application-license-may-not.webp";
+const image = "/insights/editorial-line-license-mobility-transparent.png";
+const socialImage = "/insights/social-license-mobility.png";
 const imageAlt = "Application moving while its commercial software license remains restricted";
 
 export const metadata: Metadata = {
   title: seoTitle,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
-  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: image, width: 1536, height: 1024, alt: imageAlt }] },
-  twitter: { card: "summary_large_image", title, description, images: [image] },
+  openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: published, images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
+  twitter: { card: "summary_large_image", title, description, images: [socialImage] },
 };
 
 const entitlementExamples = [
@@ -88,7 +89,7 @@ const readinessEvidence = [
 ];
 
 export default function ApplicationLicenseArticle() { return <main className="min-h-screen bg-white text-zinc-950">
-  <ArticleStructuredData title={title} description={description} path={path} published={published} image={image}/>
+  <ArticleStructuredData title={title} description={description} path={path} published={published} image={socialImage}/>
   <SiteHeader/>
   <ArticleHero category={<>SOFTWARE LICENSING · 12 MIN READ</>} title={<>The Application Can Move. The License May Not.</>} description={<>Technical migration readiness does not prove that the buyer has the commercial and operational right to use the software.</>} date={<>October 7, 2026</>} image={image} imageAlt={imageAlt}/>
   <ArticleTakeaway><p>An application is ready only when the buyer has the technology, data, access, support and contractual rights required to operate it.</p></ArticleTakeaway>
