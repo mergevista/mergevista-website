@@ -187,8 +187,8 @@ export default function MarketingHome() {
           </div>
           <div className="relative lg:-mr-20">
             <ProductFrame
-              src="/product/redesign-deal-dashboard-landing.png"
-              alt="MergeVista Avenlor deal dashboard showing Day 1 timing, attention items, RAID status and key milestones"
+              src="/product/redesign-deal-execution-dashboard-landing.png"
+              alt="MergeVista Avenlor deal dashboard showing execution progress, planned versus actual activity, workstream progress and site readiness"
               label="ILLUSTRATIVE SAMPLE DATA"
               priority
             />
