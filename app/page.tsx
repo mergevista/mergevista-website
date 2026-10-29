@@ -7,11 +7,13 @@ import {
   FileCheck2,
   Fingerprint,
   LockKeyhole,
+  Play,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
+import DemoVideoCard from "./components/DemoVideoCard";
 import { Badge } from "./components/poc/badge";
 import { Button } from "./components/poc/button";
 import { Card } from "./components/poc/card";
@@ -171,6 +173,12 @@ export default function MarketingHome() {
               <Button asChild size="lg" variant="outline">
                 <Link href="/platform">Explore the platform</Link>
               </Button>
+              <Button asChild size="lg" variant="ghost">
+                <Link href="#product-demo">
+                  <Play className="fill-current" />
+                  Watch the 2-minute demo
+                </Link>
+              </Button>
             </div>
             <div className="mt-9 flex flex-wrap gap-6 text-xs text-zinc-500">
               {[
@@ -216,6 +224,33 @@ export default function MarketingHome() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section
+        id="product-demo"
+        className="scroll-mt-20 border-b border-zinc-200 bg-[#fcfcfc]"
+      >
+        <div className="mx-auto grid max-w-[1560px] gap-10 px-5 py-20 lg:grid-cols-[0.58fr_1.42fr] lg:items-center lg:px-8 lg:py-24">
+          <div>
+            <Badge>SEE MergeVista IN ACTION</Badge>
+            <h2 className="mt-5 text-4xl font-medium leading-[1.06] tracking-[-0.04em] sm:text-5xl">
+              From fragmented deal data to controlled execution—in just over
+              two minutes.
+            </h2>
+            <p className="mt-5 max-w-xl leading-7 text-zinc-600">
+              Follow the connected flow from personalized actions and governed
+              inventory through contracts, TSA management, execution,
+              reporting and readiness.
+            </p>
+            <Button asChild variant="ghost" className="mt-5 -ml-4">
+              <Link href="/product-demo">
+                Open the shareable demo page
+                <ArrowRight />
+              </Link>
+            </Button>
+          </div>
+          <DemoVideoCard />
         </div>
       </section>
 
@@ -392,7 +427,7 @@ export default function MarketingHome() {
         className="mx-auto grid max-w-[1560px] scroll-mt-20 gap-16 px-5 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28"
       >
         <div>
-          <Badge>MERGEVISTA INTELLIGENCE</Badge>
+          <Badge>MergeVista INTELLIGENCE</Badge>
           <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
             AI grounded in your transaction evidence.
           </h2>

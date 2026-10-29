@@ -1,4 +1,5 @@
-import { Check, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { Check, Play, Sparkles } from "lucide-react";
 import BookDemoForm from "./BookDemoForm";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
@@ -50,6 +51,16 @@ export default function Page() {
               ))}
             </div>
             <p className="mt-10 text-sm text-zinc-500">
+              Want a quick introduction first?{" "}
+              <Link
+                className="inline-flex items-center gap-1.5 font-medium text-[#1559a6]"
+                href="/product-demo"
+              >
+                <Play className="size-3.5 fill-current" />
+                Watch the product overview
+              </Link>
+            </p>
+            <p className="mt-4 text-sm text-zinc-500">
               Prefer email?{" "}
               <a
                 className="font-medium text-[#1559a6]"

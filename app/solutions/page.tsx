@@ -116,7 +116,7 @@ export default function Page() {
             <div className="hidden grid-cols-3 border-b border-zinc-200 bg-zinc-50 text-xs font-semibold tracking-[.08em] text-zinc-500 md:grid">
               <span className="p-5">EXECUTION CHALLENGE</span>
               <span className="border-l border-zinc-200 p-5">
-                MERGEVISTA APPROACH
+                MergeVista APPROACH
               </span>
               <span className="border-l border-zinc-200 p-5">
                 BUSINESS OUTCOME
@@ -136,7 +136,7 @@ export default function Page() {
                       {
                         [
                           "EXECUTION CHALLENGE",
-                          "MERGEVISTA APPROACH",
+                          "MergeVista APPROACH",
                           "BUSINESS OUTCOME",
                         ][index]
                       }

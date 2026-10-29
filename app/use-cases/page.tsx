@@ -89,7 +89,7 @@ export default function Page() {
               ))}
             </div>
             <div className="mt-16">
-              <Badge className="bg-white">WHERE MERGEVISTA FITS</Badge>
+              <Badge className="bg-white">WHERE MergeVista FITS</Badge>
               <p className="mt-5 text-lg font-medium">
                 Use the same connected execution foundation across different
                 deal situations.

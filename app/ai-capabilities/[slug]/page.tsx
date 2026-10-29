@@ -81,7 +81,7 @@ export default async function Page({ params }: Props) {
       <section className="border-b border-zinc-200">
         <div className="mx-auto max-w-[1560px] px-5 py-7 text-center lg:px-8">
           <p className="text-[10px] font-semibold tracking-[.17em] text-zinc-400">
-            MERGEVISTA INTELLIGENCE
+            MergeVista INTELLIGENCE
           </p>
           <strong className="mt-3 block text-sm">{x.name}</strong>
           <p className="mt-2 text-sm text-zinc-600">
@@ -194,7 +194,7 @@ export default async function Page({ params }: Props) {
       <section className="border-y border-zinc-200 bg-zinc-50">
         <div className="mx-auto max-w-[1560px] px-5 py-16 lg:px-8">
           <Badge className="bg-white">
-            EXPLORE MORE MERGEVISTA INTELLIGENCE
+            EXPLORE MORE MergeVista INTELLIGENCE
           </Badge>
           <div className="mt-8 grid overflow-hidden rounded-xl border border-zinc-200 bg-white md:grid-cols-2">
             {related.map((y) => (

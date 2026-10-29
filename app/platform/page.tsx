@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import DemoVideoCard from "../components/DemoVideoCard";
 import { Badge } from "../components/poc/badge";
 import { Button } from "../components/poc/button";
 import { Card } from "../components/poc/card";
@@ -213,6 +214,22 @@ export default function PlatformPage() {
           </div>
         </div>
       </section>
+      <section className="border-b border-zinc-200 bg-[#fcfcfc]">
+        <div className="mx-auto grid max-w-[1560px] gap-10 px-5 py-20 lg:grid-cols-[0.58fr_1.42fr] lg:items-center lg:px-8 lg:py-24">
+          <div>
+            <Badge>SEE THE PLATFORM IN ACTION</Badge>
+            <h2 className="mt-5 text-4xl font-medium leading-[1.06] tracking-[-0.04em] sm:text-5xl">
+              See how the platform connects the transaction.
+            </h2>
+            <p className="mt-5 max-w-xl leading-7 text-zinc-600">
+              Take a concise tour from the deal dashboard and governed
+              inventory through commercial intelligence, execution and
+              readiness.
+            </p>
+          </div>
+          <DemoVideoCard />
+        </div>
+      </section>
       <section className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
         <div className="max-w-4xl">
           <Badge>CONFIGURABLE CAPABILITY PACKAGES</Badge>
@@ -256,7 +273,7 @@ export default function PlatformPage() {
         <Card className="mt-10 grid gap-8 bg-zinc-950 p-8 text-white sm:p-12 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <Badge className="border-zinc-700 bg-zinc-900 text-zinc-300">
-              MERGEVISTA COMPLETE
+              MergeVista COMPLETE
             </Badge>
             <h3 className="mt-6 text-3xl font-medium tracking-[-0.035em]">
               Need the complete operating model?
@@ -351,7 +368,7 @@ export default function PlatformPage() {
       <section className="border-y border-zinc-200 bg-zinc-50">
         <div className="mx-auto grid max-w-[1560px] gap-14 px-5 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28">
           <div>
-            <Badge className="bg-white">MERGEVISTA INTELLIGENCE</Badge>
+            <Badge className="bg-white">MergeVista INTELLIGENCE</Badge>
             <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
               AI grounded in transaction evidence.
             </h2>

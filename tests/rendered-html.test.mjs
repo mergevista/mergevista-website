@@ -11,6 +11,7 @@ const expectedPages = [
   "use-cases.html",
   "ai-capabilities.html",
   "insights.html",
+  "product-demo.html",
   "insights/exception-list-real-separation-plan.html",
   "book-a-demo.html",
   "guided-trial.html",
@@ -43,7 +44,7 @@ test("exports a complete, branded landing page", async () => {
   assert.match(html, /One operating model/i);
   assert.match(html, /Guided Trial/i);
   assert.match(html, /Book a demo/i);
-  assert.match(html, /redesign-deal-dashboard-landing\.png/i);
+  assert.match(html, /redesign-deal-execution-dashboard-landing\.png/i);
   assert.match(html, /mergevista-tab-icon-v8-32\.png/i);
   assert.match(html, /application\/ld\+json/i);
   assert.doesNotMatch(html, /Your site is taking shape|Building your site/i);

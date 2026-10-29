@@ -131,7 +131,7 @@ export default async function SolutionDetailPage({ params }: PageProps) {
         <div className="mx-auto max-w-[1560px] px-5 py-7 lg:px-8">
           <div className="text-center">
             <p className="text-[10px] font-semibold tracking-[0.17em] text-zinc-400">
-              MERGEVISTA SOLUTION
+              MergeVista SOLUTION
             </p>
             <strong className="mt-3 block text-sm">{solution.name}</strong>
             <p className="mt-2 text-sm text-zinc-600">

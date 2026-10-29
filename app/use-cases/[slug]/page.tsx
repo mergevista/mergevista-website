@@ -136,7 +136,7 @@ export default async function UseCaseDetailPage({
       <section className="border-b border-zinc-200">
         <div className="mx-auto max-w-[1560px] px-5 py-7 lg:px-8">
           <p className="text-center text-[10px] font-semibold tracking-[0.17em] text-zinc-400">
-            MERGEVISTA CONNECTS
+            MergeVista CONNECTS
           </p>
           <div className="mt-6 grid divide-y divide-zinc-200 sm:grid-cols-4 sm:divide-x sm:divide-y-0">
             {["Fact base", "Decisions", "Execution", "Evidence"].map((x) => (
@@ -188,7 +188,7 @@ export default async function UseCaseDetailPage({
       >
         <div className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
           <div className="max-w-4xl">
-            <Badge className="bg-white">HOW MERGEVISTA SUPPORTS THE WORK</Badge>
+            <Badge className="bg-white">HOW MergeVista SUPPORTS THE WORK</Badge>
             <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
               Move from transaction pressure to controlled execution.
             </h2>

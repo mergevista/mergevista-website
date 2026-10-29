@@ -120,7 +120,7 @@ function CapabilityConcept({
         <div className="mx-auto max-w-[1560px] px-5 py-7 lg:px-8">
           <div className="text-center">
             <p className="text-[10px] font-semibold tracking-[0.17em] text-zinc-400">
-              ONE MERGEVISTA PLATFORM
+              ONE MergeVista PLATFORM
             </p>
             <strong className="mt-3 block text-sm">{item.shortName}</strong>
             <p className="mt-2 text-sm text-zinc-600">
