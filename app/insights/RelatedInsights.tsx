@@ -3,6 +3,11 @@ import styles from "./related-insights.module.css";
 
 const articles = [
   {
+    slug: "application-not-separation-boundary-interface-is",
+    category: "Application dependencies",
+    title: "The Application Is Not the Separation Boundary. The Interface Is.",
+  },
+  {
     slug: "exception-list-real-separation-plan",
     category: "Separation execution",
     title: "The Exception List Is the Real Separation Plan",
@@ -72,6 +77,11 @@ const articles = [
 ];
 
 const recommendations: Record<string, string[]> = {
+  "application-not-separation-boundary-interface-is": [
+    "migration-wave-readiness",
+    "application-disposition-separation-strategy-execution",
+    "exception-list-real-separation-plan",
+  ],
   "exception-list-real-separation-plan": [
     "migration-wave-readiness",
     "why-day-1-readiness-fails",

@@ -12,6 +12,7 @@ const expectedPages = [
   "ai-capabilities.html",
   "insights.html",
   "product-demo.html",
+  "insights/application-not-separation-boundary-interface-is.html",
   "insights/exception-list-real-separation-plan.html",
   "book-a-demo.html",
   "guided-trial.html",

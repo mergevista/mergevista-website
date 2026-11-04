@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     url: "https://www.mergevista.com/insights",
     images: [
       {
-        url: "/insights/social-exception-list.png",
+        url: "/insights/social-interface-boundary.png",
         width: 1200,
         height: 630,
-        alt: "Migration workstreams connected around hidden exceptions and dependencies",
+        alt: "Application interfaces crossing a seller-buyer separation boundary",
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/insights/social-exception-list.png"],
+    images: ["/insights/social-interface-boundary.png"],
   },
 };
 
@@ -46,6 +46,17 @@ const topics = [
   "AI in IT M&A",
 ];
 const articles = [
+  [
+    "SEPARATION EXECUTION",
+    "The exception list is the real separation plan",
+    "Why exceptions—not standard migration paths—determine whether an IT separation will work, and how connected management helps the program finish.",
+    "9 min read",
+    "blue",
+    "/insights/exception-list-real-separation-plan",
+    "Oct 26, 2026",
+    "/insights/editorial-line-exception-list-transparent.png",
+    "Migration workstreams connected around hidden exceptions and dependencies",
+  ],
   [
     "STRANDED IT COSTS",
     "TSA exit is not cost exit",
@@ -243,8 +254,8 @@ export default function InsightsPage() {
       <section className="mx-auto max-w-[1560px] px-5 py-12 lg:px-8 lg:py-16">
         <article className="grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
           <Image
-            src="/insights/editorial-line-exception-list-transparent.png"
-            alt="Migration workstreams connected around hidden exceptions and dependencies"
+            src="/insights/editorial-line-interface-boundary-transparent.png"
+            alt="Application connected through interfaces to dependencies across a seller-buyer separation boundary"
             width={1586}
             height={992}
             priority
@@ -252,20 +263,20 @@ export default function InsightsPage() {
           />
           <div className="flex flex-col p-7 sm:p-10 lg:p-14">
             <Badge className="w-fit">
-              FEATURED INSIGHT · SEPARATION EXECUTION
+              FEATURED INSIGHT · APPLICATION DEPENDENCIES
             </Badge>
             <h2 className="mt-7 max-w-xl text-4xl font-medium leading-[1.05] tracking-[-.045em] sm:text-5xl">
-              The exception list is the real separation plan.
+              The application is not the separation boundary. The interface is.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-600">
-              The standard migration path helps the program move at scale. The
-              exception process helps the program finish.
+              An application can move successfully and still leave the business
+              process behind. Operational independence begins where its dependencies do.
             </p>
             <div className="mt-6 text-xs text-zinc-500">
-              Oct 26, 2026 · 9 min read
+              Nov 4, 2026 · 11 min read
             </div>
             <Button asChild className="mt-auto self-start pt-9" variant="ghost">
-              <Link href="/insights/exception-list-real-separation-plan">
+              <Link href="/insights/application-not-separation-boundary-interface-is">
                 Read the insight
                 <ArrowRight />
               </Link>
