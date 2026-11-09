@@ -49,3 +49,23 @@
 .lifecycle i{padding:9px 3px;border-right-color:#e4e4e7;color:#52525b;font-size:7px;font-weight:600}
 .featureAction{margin-top:15px;padding-top:14px;border-top-color:#d4d4d8;color:#27272a;font-size:9px;font-weight:650;letter-spacing:.035em;text-transform:none}
 .featureAction b{color:#1559a6;font-size:13px}
+
+/* Services uses the same restrained two-column mega-menu treatment as Solutions. */
+.servicesMenu{position:relative;height:74px;display:flex;align-items:center}
+.servicesMenu>a{display:flex;align-items:center;gap:5px}
+.servicesMenu>a span{font-size:12px;line-height:1}
+.servicesMenu:hover .servicesDropdown,.servicesMenu:focus-within .servicesDropdown{opacity:1;visibility:visible;transform:translate(-50%,0);pointer-events:auto}
+.servicesDropdown{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(250px,.65fr);padding:8px;gap:8px}
+@media(max-width:1120px){.servicesMenu{display:none}}
+
+/* Native mobile disclosure: remains functional before or without client hydration. */
+.mobileNavigation{display:none}
+@media(max-width:1120px){
+  .mobileNavigation{grid-column:2;display:block}
+  .mobileNavigation .menuButton{list-style:none}
+  .mobileNavigation .menuButton::-webkit-details-marker{display:none}
+  .mobileNavigation[open] .menuButton span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .mobileNavigation[open] .menuButton span:nth-child(2){opacity:0}
+  .mobileNavigation[open] .menuButton span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobileNavigation[open] .mobileMenu{visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto}
+}

@@ -56,27 +56,35 @@ const stages = [
     "Prove exit readiness, complete service transitions and close TSA obligations.",
   ],
 ];
-const outcomes = [
-  [
-    "Establish the baseline faster",
-    "Import applications, infrastructure, sites, users, contracts and licenses into a deal-specific data model.",
-    "Reduce weeks of reconciliation",
-  ],
-  [
-    "Protect Day 1",
-    "Connect dependencies, separation activities, readiness gates and critical decisions across every workstream.",
-    "Maintain business continuity",
-  ],
-  [
-    "Control TSA delivery",
-    "Manage services, obligations, performance, costs, issues and exit criteria in one operating view.",
-    "Make every service accountable",
-  ],
-  [
-    "Accelerate migration and exit",
-    "Coordinate buyer-led migrations while tracking the evidence required to retire each TSA service.",
-    "Exit sooner with less risk",
-  ],
+const valueOpportunities = [
+  {
+    metric: "30–50%",
+    qualifier: "coordination effort reduction",
+    title: "Create earlier visibility and clear accountability",
+    text: "Expose missing data, dependencies and ownership gaps while they can still be resolved—and keep buyer–seller requests, responses and decisions connected.",
+    driver: "Less chasing, reconciliation and status coordination",
+  },
+  {
+    metric: "20–40%",
+    qualifier: "less avoidable rework",
+    title: "Control changes before they become execution surprises",
+    text: "Preserve governing baselines, assumptions, approvals and exceptions so teams know what changed, why it changed and who authorized it.",
+    driver: "Defensible decisions and fewer late-cycle corrections",
+  },
+  {
+    metric: "10–15%",
+    qualifier: "faster execution timelines",
+    title: "Move from baseline to execution without restarting",
+    text: "Carry the governed technology baseline directly into Day 1, target-state, separation, integration and migration planning.",
+    driver: "Faster planning with dependencies already connected",
+  },
+  {
+    metric: "1–3 months",
+    qualifier: "potential earlier TSA exit",
+    title: "Protect value through evidence-based service exit",
+    text: "Link every temporary service to consumption, milestones, exit criteria, acceptance and retained evidence before an exit is claimed complete.",
+    driver: "Lower extension cost and future-claim risk",
+  },
 ];
 const audiences = [
   [
@@ -345,40 +353,60 @@ export default function MarketingHome() {
 
       <section
         id="outcomes"
-        className="mx-auto max-w-[1560px] scroll-mt-20 px-5 py-20 lg:px-8 lg:py-28"
+        className="scroll-mt-20 border-b border-zinc-200 bg-zinc-50"
       >
-        <div className="grid gap-14 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
-          <div>
-            <Badge>ONE SYSTEM OF EXECUTION</Badge>
-            <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
-              Turn fragmented IT tracking into measurable deal outcomes.
+        <div className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
+          <div className="mx-auto max-w-4xl text-center">
+            <Badge className="bg-white">VALUE BEYOND PRODUCTIVITY</Badge>
+            <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-6xl">
+              Protect transaction value while improving execution economics.
             </h2>
-            <p className="mt-5 leading-7 text-zinc-600">
-              Move from disconnected spreadsheets and status meetings to a
-              connected operating model that protects Day 1 and accelerates
-              migration and TSA exit.
+            <p className="mx-auto mt-6 max-w-3xl leading-7 text-zinc-600">
+              MergeVista connects decisions to the evidence, owners and
+              dependencies that determine whether Day 1 and the transition
+              succeed—reducing coordination, avoidable rework, delay and
+              value leakage.
             </p>
           </div>
-          <div className="w-full max-w-[760px] lg:justify-self-end">
-            <ProductFrame
-              src="/product/redesign-application-inventory-landing.png"
-              alt="MergeVista governed application inventory with ownership and data quality controls"
-              label="GOVERNED INVENTORY"
-            />
+          <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {valueOpportunities.map((item, index) => (
+              <Card key={item.title} className="flex min-h-[390px] flex-col overflow-hidden bg-white">
+                <div className={`border-b p-7 ${index === 3 ? "border-blue-900 bg-[#0d2d57] text-white" : "border-blue-100 bg-[#edf5fd]"}`}>
+                  <p className={`text-[clamp(2.5rem,4vw,4.25rem)] font-medium leading-none tracking-[-0.055em] ${index === 3 ? "text-white" : "text-[#1559a6]"}`}>
+                    {item.metric}
+                  </p>
+                  <p className={`mt-3 text-xs font-semibold uppercase tracking-[0.12em] ${index === 3 ? "text-blue-200" : "text-[#1559a6]"}`}>
+                    {item.qualifier}
+                  </p>
+                </div>
+                <div className="flex flex-1 flex-col p-7">
+                  <h3 className="text-xl font-medium tracking-[-0.025em]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-6 text-zinc-600">
+                    {item.text}
+                  </p>
+                  <div className="mt-auto pt-8">
+                    <Separator className="mb-5" />
+                    <p className="flex items-center gap-2 text-xs font-medium text-zinc-700">
+                      <Check className="size-3.5 text-[#1559a6]" />
+                      {item.driver}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
           </div>
-        </div>
-        <div className="mt-14 grid gap-4 md:grid-cols-2">
-          {outcomes.map(([a, b, c]) => (
-            <Card key={a} className="p-8">
-              <h3 className="text-2xl font-medium">{a}</h3>
-              <p className="mt-4 text-sm leading-6 text-zinc-600">{b}</p>
-              <Separator className="my-6" />
-              <p className="flex items-center gap-2 text-xs font-medium">
-                <Check className="size-3.5 text-[#1559a6]" />
-                {c}
-              </p>
-            </Card>
-          ))}
+          <div className="mt-8 flex flex-col gap-4 border-t border-zinc-200 pt-6 text-xs leading-5 text-zinc-500 sm:flex-row sm:items-start sm:justify-between">
+            <p className="max-w-4xl">
+              Illustrative value potential—not guaranteed results. Actual
+              impact depends on transaction scale, baseline maturity, TSA
+              exposure, data quality and internal execution capacity.
+            </p>
+            <Link href="/services" className="shrink-0 font-semibold text-[#1559a6] hover:underline">
+              Explore platform-enabled services →
+            </Link>
+          </div>
         </div>
       </section>
 

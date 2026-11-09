@@ -75,6 +75,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: canonicalUrl("/services"),
+      lastModified: new Date("2026-11-09"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     ...solutions.map(({ slug }) => ({
       url: canonicalUrl(`/solutions/${slug}`),
       lastModified: new Date("2026-10-04"),

@@ -8,6 +8,7 @@ const expectedPages = [
   "index.html",
   "platform.html",
   "solutions.html",
+  "services.html",
   "use-cases.html",
   "ai-capabilities.html",
   "insights.html",
@@ -63,9 +64,28 @@ test("keeps key site navigation consistent across page families", async () => {
   for (const page of pages) {
     const html = await readFile(new URL(page, outputRoot), "utf8");
     assert.match(html, /aria-label="Primary navigation"/i, page);
+    assert.match(html, /href="\/services"[^>]*>Services/i, page);
     assert.match(html, /href="\/guided-trial"[^>]*>Guided Trial/i, page);
     assert.match(html, /aria-label="Footer navigation"/i, page);
     assert.match(html, /href="\/privacy"/i, page);
     assert.match(html, /href="\/terms"/i, page);
   }
+});
+
+test("exports the services page with complete SEO signals", async () => {
+  const html = await readFile(new URL("services.html", outputRoot), "utf8");
+  const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
+
+  assert.match(html, /<title>Platform-Enabled IT M&amp;A Services \| MergeVista<\/title>/i);
+  assert.match(html, /name="description" content="Accelerate IT M&amp;A execution/i);
+  assert.match(html, /<link rel="canonical" href="https:\/\/www\.mergevista\.com\/services"\s*\/>/i);
+  assert.match(html, /property="og:url" content="https:\/\/www\.mergevista\.com\/services"/i);
+  assert.match(html, /name="robots" content="index, follow/i);
+  assert.match(html, /application\/ld\+json/i);
+  assert.match(html, /Platform-Enabled IT M&amp;A Services/i);
+  assert.match(html, /MergeVista platform-enabled services/i);
+  assert.match(html, /Transaction Launch/i);
+  assert.match(html, /Execution Support/i);
+  assert.match(html, /Managed Technology Transition/i);
+  assert.match(sitemap, /<loc>https:\/\/www\.mergevista\.com\/services<\/loc>/i);
 });

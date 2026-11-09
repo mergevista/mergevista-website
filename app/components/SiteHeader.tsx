@@ -2,16 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./site-header.module.css";
 
 type SiteHeaderProps = { variant?: "full" | "focused" };
 
 export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
   const focused = variant === "focused";
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [suppressedMenu, setSuppressedMenu] = useState<"platform" | "solutions" | "use-cases" | "ai" | null>(null);
-  const closeMenu = () => setMenuOpen(false);
+  const mobileNavigationRef = useRef<HTMLDetailsElement>(null);
+  const [suppressedMenu, setSuppressedMenu] = useState<"platform" | "solutions" | "services" | "use-cases" | "ai" | null>(null);
+  const closeMenu = () => mobileNavigationRef.current?.removeAttribute("open");
 
   return <header className={styles.header}>
     <Link className={styles.brand} href="/" aria-label="MergeVista home">
@@ -81,6 +81,55 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
         </div>
       </div>
       <div
+        className={`${styles.servicesMenu} ${suppressedMenu === "services" ? styles.menuSuppressed : ""}`}
+        onClickCapture={() => setSuppressedMenu("services")}
+        onFocusCapture={() => setSuppressedMenu(null)}
+        onMouseLeave={() => setSuppressedMenu(null)}
+      >
+        <Link href="/services">Services <span aria-hidden="true">⌄</span></Link>
+        <div className={`${styles.megaMenu} ${styles.servicesDropdown}`}>
+          <div className={styles.solutionGroups}>
+            <p className={styles.megaEyebrow}>Platform-enabled services</p>
+            <Link href="/services#transaction-launch"><b>Transaction Launch</b><small>Configure the workspace and establish the initial execution baseline.</small></Link>
+            <Link href="/services#execution-support"><b>Execution Support</b><small>Maintain data, governance, reporting and transaction control.</small></Link>
+            <Link href="/services#managed-transition"><b>Managed Technology Transition</b><small>Lead Day 1, integration, separation, migration and TSA exit.</small></Link>
+            <Link href="/services#specialist-advisory"><b>Specialist Advisory</b><small>Add focused expertise for complex strategy and program decisions.</small></Link>
+            <Link className={styles.viewAllUseCases} href="/services">Explore all services <b>→</b></Link>
+          </div>
+          <Link className={styles.solutionFeature} href="/services">
+            <span className={styles.featureEyebrow}>Software at the center</span>
+            <strong>Expert execution when it accelerates the outcome.</strong>
+            <p>Optional services delivered through MergeVista, with one connected transaction record throughout.</p>
+            <span className={styles.lifecycle} aria-hidden="true"><i>Launch</i><i>Plan</i><i>Govern</i><i>Exit</i></span>
+            <span className={styles.featureAction}>Explore platform-enabled services <b>→</b></span>
+          </Link>
+        </div>
+      </div>
+      <div
+        className={`${styles.aiMenu} ${suppressedMenu === "ai" ? styles.menuSuppressed : ""}`}
+        onClickCapture={() => setSuppressedMenu("ai")}
+        onFocusCapture={() => setSuppressedMenu(null)}
+        onMouseLeave={() => setSuppressedMenu(null)}
+      >
+        <Link href="/ai-capabilities">AI Capabilities <span aria-hidden="true">⌄</span></Link>
+        <div className={`${styles.megaMenu} ${styles.aiDropdown}`}>
+          <div className={styles.solutionGroups}>
+            <p className={styles.megaEyebrow}>MergeVista Intelligence</p>
+            <Link href="/ai-capabilities/contract-commercial-intelligence"><b>Contract &amp; Commercial Intelligence</b><small>Extract commercial evidence, normalize products and establish governed entitlements.</small></Link>
+            <Link href="/ai-capabilities/inventory-reconciliation-exceptions"><b>Inventory Reconciliation &amp; Exception Detection</b><small>Connect commercial rights to technology and expose coverage gaps.</small></Link>
+            <Link href="/ai-capabilities/human-governed-ai"><b>Human-Governed AI</b><small>Keep evidence, validation and accountable review behind every proposal.</small></Link>
+            <Link className={styles.viewAllUseCases} href="/ai-capabilities">View all AI capabilities <b>→</b></Link>
+          </div>
+          <Link className={styles.solutionFeature} href="/ai-capabilities">
+            <span className={styles.featureEyebrow}>One intelligence chain</span>
+            <strong>From contract evidence to execution intelligence.</strong>
+            <p>Carry approved intelligence into products, rights, inventories, readiness and transaction decisions.</p>
+            <span className={styles.lifecycle} aria-hidden="true"><i>Evidence</i><i>Rights</i><i>Inventory</i><i>Action</i></span>
+            <span className={styles.featureAction}>Explore MergeVista Intelligence <b>→</b></span>
+          </Link>
+        </div>
+      </div>
+      <div
         className={`${styles.useCasesMenu} ${suppressedMenu === "use-cases" ? styles.menuSuppressed : ""}`}
         onClickCapture={() => setSuppressedMenu("use-cases")}
         onFocusCapture={() => setSuppressedMenu(null)}
@@ -113,60 +162,32 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
           </Link>
         </div>
       </div>
-      <div
-        className={`${styles.aiMenu} ${suppressedMenu === "ai" ? styles.menuSuppressed : ""}`}
-        onClickCapture={() => setSuppressedMenu("ai")}
-        onFocusCapture={() => setSuppressedMenu(null)}
-        onMouseLeave={() => setSuppressedMenu(null)}
-      >
-        <Link href="/ai-capabilities">AI Capabilities <span aria-hidden="true">⌄</span></Link>
-        <div className={`${styles.megaMenu} ${styles.aiDropdown}`}>
-          <div className={styles.solutionGroups}>
-            <p className={styles.megaEyebrow}>MergeVista Intelligence</p>
-            <Link href="/ai-capabilities/contract-commercial-intelligence"><b>Contract &amp; Commercial Intelligence</b><small>Extract commercial evidence, normalize products and establish governed entitlements.</small></Link>
-            <Link href="/ai-capabilities/inventory-reconciliation-exceptions"><b>Inventory Reconciliation &amp; Exception Detection</b><small>Connect commercial rights to technology and expose coverage gaps.</small></Link>
-            <Link href="/ai-capabilities/human-governed-ai"><b>Human-Governed AI</b><small>Keep evidence, validation and accountable review behind every proposal.</small></Link>
-            <Link className={styles.viewAllUseCases} href="/ai-capabilities">View all AI capabilities <b>→</b></Link>
-          </div>
-          <Link className={styles.solutionFeature} href="/ai-capabilities">
-            <span className={styles.featureEyebrow}>One intelligence chain</span>
-            <strong>From contract evidence to execution intelligence.</strong>
-            <p>Carry approved intelligence into products, rights, inventories, readiness and transaction decisions.</p>
-            <span className={styles.lifecycle} aria-hidden="true"><i>Evidence</i><i>Rights</i><i>Inventory</i><i>Action</i></span>
-            <span className={styles.featureAction}>Explore MergeVista Intelligence <b>→</b></span>
-          </Link>
-        </div>
-      </div>
       <Link href="/insights">Insights</Link><Link href="/about">About</Link><Link className={styles.guidedTrial} href="/guided-trial">Guided Trial</Link>
     </nav>}
     <div className={styles.actions}>{focused && <Link className={styles.back} href="/">Back to homepage</Link>}<Link className={styles.contact} href="/contact">Contact</Link>{!focused && <Link className={styles.demo} href="/book-a-demo">Book a demo</Link>}</div>
-    {!focused && <button
-      className={`${styles.menuButton} ${menuOpen ? styles.menuButtonOpen : ""}`}
-      type="button"
-      aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-      aria-expanded={menuOpen}
-      aria-controls="mobile-navigation"
-      onClick={() => setMenuOpen((open) => !open)}
-    ><span/><span/><span/></button>}
-    {!focused && <nav
-      id="mobile-navigation"
-      className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}
-      aria-label="Mobile navigation"
-      aria-hidden={!menuOpen}
-    >
+    {!focused && <details ref={mobileNavigationRef} className={styles.mobileNavigation}>
+      <summary
+        className={styles.menuButton}
+        aria-label="Open navigation menu"
+        aria-controls="mobile-navigation"
+      ><span/><span/><span/></summary>
+      <nav id="mobile-navigation" className={styles.mobileMenu} aria-label="Mobile navigation">
       <Link href="/platform" onClick={closeMenu}>Platform</Link>
       <div className={styles.mobileSubmenu}><Link href="/platform" onClick={closeMenu}>MergeVista Complete</Link><Link href="/capabilities/migration-tsa-exit" onClick={closeMenu}>MergeVista Migration &amp; TSA Exit</Link><Link href="/capabilities/day-1-readiness" onClick={closeMenu}>MergeVista Day 1 Readiness</Link><Link href="/capabilities/transaction-control" onClick={closeMenu}>MergeVista Transaction Control</Link><Link href="/capabilities/transaction-baseline" onClick={closeMenu}>MergeVista Transaction Baseline</Link></div>
       <Link href="/solutions" onClick={closeMenu}>Solutions</Link>
       <div className={styles.mobileSubmenu}><Link href="/solutions/divestitures-separations" onClick={closeMenu}>Divestitures &amp; Separations</Link><Link href="/solutions/acquisitions-integrations" onClick={closeMenu}>Acquisitions &amp; Integrations</Link><Link href="/solutions/day-1-readiness" onClick={closeMenu}>Day 1 Readiness for Carve-Outs</Link><Link href="/solutions/tsa-management-exit" onClick={closeMenu}>Post-Close Migration &amp; TSA Exit</Link></div>
-      <Link href="/use-cases" onClick={closeMenu}>Use Cases</Link>
-      <div className={styles.mobileSubmenu}><Link href="/use-cases/seller-transaction-readiness" onClick={closeMenu}>Seller &amp; Transaction Readiness</Link><Link href="/use-cases/first-time-occasional-acquirers" onClick={closeMenu}>First-Time &amp; Occasional Acquirers</Link><Link href="/use-cases/serial-acquirers" onClick={closeMenu}>Serial Acquirers</Link><Link href="/use-cases/private-equity-portfolio-operations" onClick={closeMenu}>Private Equity &amp; Portfolio Operations</Link><Link href="/use-cases/enterprise-acquisitions-integrations" onClick={closeMenu}>Enterprise Acquisitions &amp; Integrations</Link><Link href="/use-cases/carve-outs-separation-tsa-exit" onClick={closeMenu}>Carve-Outs, Separation &amp; TSA Exit</Link><Link href="/use-cases/consulting-delivery-partners" onClick={closeMenu}>Consulting &amp; Delivery Partners</Link><Link href="/use-cases/specialist-boutique-ma-firms" onClick={closeMenu}>Specialist &amp; Boutique M&amp;A Firms</Link></div>
+      <Link href="/services" onClick={closeMenu}>Services</Link>
+      <div className={styles.mobileSubmenu}><Link href="/services#transaction-launch" onClick={closeMenu}>Transaction Launch</Link><Link href="/services#execution-support" onClick={closeMenu}>Execution Support</Link><Link href="/services#managed-transition" onClick={closeMenu}>Managed Technology Transition</Link><Link href="/services#specialist-advisory" onClick={closeMenu}>Specialist Advisory</Link></div>
       <Link href="/ai-capabilities" onClick={closeMenu}>AI Capabilities</Link>
       <div className={styles.mobileSubmenu}><Link href="/ai-capabilities/contract-commercial-intelligence" onClick={closeMenu}>Contract &amp; Commercial Intelligence</Link><Link href="/ai-capabilities/inventory-reconciliation-exceptions" onClick={closeMenu}>Inventory Reconciliation &amp; Exception Detection</Link><Link href="/ai-capabilities/human-governed-ai" onClick={closeMenu}>Human-Governed AI</Link></div>
+      <Link href="/use-cases" onClick={closeMenu}>Use Cases</Link>
+      <div className={styles.mobileSubmenu}><Link href="/use-cases/seller-transaction-readiness" onClick={closeMenu}>Seller &amp; Transaction Readiness</Link><Link href="/use-cases/first-time-occasional-acquirers" onClick={closeMenu}>First-Time &amp; Occasional Acquirers</Link><Link href="/use-cases/serial-acquirers" onClick={closeMenu}>Serial Acquirers</Link><Link href="/use-cases/private-equity-portfolio-operations" onClick={closeMenu}>Private Equity &amp; Portfolio Operations</Link><Link href="/use-cases/enterprise-acquisitions-integrations" onClick={closeMenu}>Enterprise Acquisitions &amp; Integrations</Link><Link href="/use-cases/carve-outs-separation-tsa-exit" onClick={closeMenu}>Carve-Outs, Separation &amp; TSA Exit</Link><Link href="/use-cases/consulting-delivery-partners" onClick={closeMenu}>Consulting &amp; Delivery Partners</Link><Link href="/use-cases/specialist-boutique-ma-firms" onClick={closeMenu}>Specialist &amp; Boutique M&amp;A Firms</Link></div>
       <Link href="/insights" onClick={closeMenu}>Insights</Link>
       <Link href="/about" onClick={closeMenu}>About</Link>
       <Link href="/guided-trial" onClick={closeMenu}>Guided Trial</Link>
       <Link href="/contact" onClick={closeMenu}>Contact</Link>
       <Link className={styles.mobileDemo} href="/book-a-demo" onClick={closeMenu}>Book a demo <span>→</span></Link>
-    </nav>}
+      </nav>
+    </details>}
   </header>;
 }
