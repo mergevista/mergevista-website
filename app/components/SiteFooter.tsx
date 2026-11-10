@@ -72,6 +72,7 @@ export default function SiteFooter({ theme = "light", bordered = true }: SiteFoo
             <Link href="/solutions">Solutions</Link>
             <Link href="/services">Services</Link>
             <Link href="/ai-capabilities">AI Capabilities</Link>
+            <Link href="/pricing">Pricing</Link>
           </div>
           <div className={styles.linkGroup}>
             <h2>Explore</h2>

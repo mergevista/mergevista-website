@@ -9,6 +9,7 @@ const expectedPages = [
   "platform.html",
   "solutions.html",
   "services.html",
+  "pricing.html",
   "use-cases.html",
   "ai-capabilities.html",
   "insights.html",
@@ -65,11 +66,28 @@ test("keeps key site navigation consistent across page families", async () => {
     const html = await readFile(new URL(page, outputRoot), "utf8");
     assert.match(html, /aria-label="Primary navigation"/i, page);
     assert.match(html, /href="\/services"[^>]*>Services/i, page);
+    assert.match(html, /href="\/pricing"[^>]*>Pricing/i, page);
     assert.match(html, /href="\/guided-trial"[^>]*>Guided Trial/i, page);
     assert.match(html, /aria-label="Footer navigation"/i, page);
     assert.match(html, /href="\/privacy"/i, page);
     assert.match(html, /href="\/terms"/i, page);
   }
+});
+
+test("exports the pricing page with complete SEO signals", async () => {
+  const html = await readFile(new URL("pricing.html", outputRoot), "utf8");
+  const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
+
+  assert.match(html, /<title>IT M&amp;A Platform Pricing Structure \| MergeVista<\/title>/i);
+  assert.match(html, /name="description" content="Understand MergeVista pricing/i);
+  assert.match(html, /<link rel="canonical" href="https:\/\/www\.mergevista\.com\/pricing"\s*\/>/i);
+  assert.match(html, /property="og:url" content="https:\/\/www\.mergevista\.com\/pricing"/i);
+  assert.match(html, /name="robots" content="index, follow/i);
+  assert.match(html, /application\/ld\+json/i);
+  assert.match(html, /Annual platform subscription/i);
+  assert.match(html, /Transaction execution fee/i);
+  assert.match(html, /Onboarding &amp; configuration/i);
+  assert.match(sitemap, /<loc>https:\/\/www\.mergevista\.com\/pricing<\/loc>/i);
 });
 
 test("exports the services page with complete SEO signals", async () => {

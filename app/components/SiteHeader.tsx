@@ -162,7 +162,7 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
           </Link>
         </div>
       </div>
-      <Link href="/insights">Insights</Link><Link href="/about">About</Link><Link className={styles.guidedTrial} href="/guided-trial">Guided Trial</Link>
+      <Link href="/pricing">Pricing</Link><Link href="/insights">Insights</Link><Link href="/about">About</Link><Link className={styles.guidedTrial} href="/guided-trial">Guided Trial</Link>
     </nav>}
     <div className={styles.actions}>{focused && <Link className={styles.back} href="/">Back to homepage</Link>}<Link className={styles.contact} href="/contact">Contact</Link>{!focused && <Link className={styles.demo} href="/book-a-demo">Book a demo</Link>}</div>
     {!focused && <details ref={mobileNavigationRef} className={styles.mobileNavigation}>
@@ -182,6 +182,7 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
       <div className={styles.mobileSubmenu}><Link href="/ai-capabilities/contract-commercial-intelligence" onClick={closeMenu}>Contract &amp; Commercial Intelligence</Link><Link href="/ai-capabilities/inventory-reconciliation-exceptions" onClick={closeMenu}>Inventory Reconciliation &amp; Exception Detection</Link><Link href="/ai-capabilities/human-governed-ai" onClick={closeMenu}>Human-Governed AI</Link></div>
       <Link href="/use-cases" onClick={closeMenu}>Use Cases</Link>
       <div className={styles.mobileSubmenu}><Link href="/use-cases/seller-transaction-readiness" onClick={closeMenu}>Seller &amp; Transaction Readiness</Link><Link href="/use-cases/first-time-occasional-acquirers" onClick={closeMenu}>First-Time &amp; Occasional Acquirers</Link><Link href="/use-cases/serial-acquirers" onClick={closeMenu}>Serial Acquirers</Link><Link href="/use-cases/private-equity-portfolio-operations" onClick={closeMenu}>Private Equity &amp; Portfolio Operations</Link><Link href="/use-cases/enterprise-acquisitions-integrations" onClick={closeMenu}>Enterprise Acquisitions &amp; Integrations</Link><Link href="/use-cases/carve-outs-separation-tsa-exit" onClick={closeMenu}>Carve-Outs, Separation &amp; TSA Exit</Link><Link href="/use-cases/consulting-delivery-partners" onClick={closeMenu}>Consulting &amp; Delivery Partners</Link><Link href="/use-cases/specialist-boutique-ma-firms" onClick={closeMenu}>Specialist &amp; Boutique M&amp;A Firms</Link></div>
+      <Link href="/pricing" onClick={closeMenu}>Pricing</Link>
       <Link href="/insights" onClick={closeMenu}>Insights</Link>
       <Link href="/about" onClick={closeMenu}>About</Link>
       <Link href="/guided-trial" onClick={closeMenu}>Guided Trial</Link>

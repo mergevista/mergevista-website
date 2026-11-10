@@ -56,6 +56,7 @@
 .servicesMenu>a span{font-size:12px;line-height:1}
 .servicesMenu:hover .servicesDropdown,.servicesMenu:focus-within .servicesDropdown{opacity:1;visibility:visible;transform:translate(-50%,0);pointer-events:auto}
 .servicesDropdown{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(250px,.65fr);padding:8px;gap:8px}
+@media(max-width:1380px) and (min-width:1121px){.header{padding:0 24px;gap:18px}.brand{width:160px}.links{gap:18px}.actions{gap:12px}}
 @media(max-width:1120px){.servicesMenu{display:none}}
 
 /* Native mobile disclosure: remains functional before or without client hydration. */
