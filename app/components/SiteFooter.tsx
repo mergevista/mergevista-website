@@ -56,7 +56,7 @@ export default function SiteFooter({ theme = "light", bordered = true }: SiteFoo
         <div className={styles.intro}>
           <Link className={styles.brand} href="/" aria-label="MergeVista home">
             {dark
-              ? <Image src="/brand/mergevista-primary-matched-dark.png" alt="MergeVista" width={609} height={180}/>
+              ? <Image src="/brand/mergevista-primary-dark-exact.png" alt="MergeVista" width={675} height={212}/>
               : <Image src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212}/>
             }
             <small>AI-Powered IT M&amp;A Execution Platform</small>
