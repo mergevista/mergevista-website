@@ -5,16 +5,28 @@ import { brand } from "../lib/brand";
 
 type SiteFooterProps = { theme?: "light" | "dark"; bordered?: boolean };
 
-const LinkedInLink = () => <a
-  className={styles.linkedin}
+const SocialLinks = () => <div className={styles.socialLinks} aria-label="MergeVista social profiles">
+  <a
+  className={styles.socialLink}
   href="https://www.linkedin.com/company/mergevista/"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="MergeVista on LinkedIn (opens in a new tab)"
 >
   <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.5 8.3H3.2V19h3.3V8.3ZM4.9 3A1.9 1.9 0 1 0 4.9 6.8 1.9 1.9 0 0 0 4.9 3ZM19.8 12.9c0-3.2-1.7-4.8-4.1-4.8-1.9 0-2.8 1-3.2 1.8V8.3H9.2V19h3.3v-5.3c0-1.4.3-2.8 2-2.8 1.7 0 1.7 1.6 1.7 2.9V19h3.3l.3-6.1Z"/></svg>
-  <span>Follow MergeVista</span>
-</a>;
+  <span>LinkedIn</span>
+  </a>
+  <a
+    className={styles.socialLink}
+    href="https://x.com/MergeVista"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="MergeVista on X (opens in a new tab)"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.2 2H21l-6.1 7 7.2 13h-5.6l-4.4-5.8L7 22H4.2l6.6-7.5L3.9 2h5.7l4 5.3L18.2 2Zm-1 17.7h1.5L8.8 4.2H7.2l10 15.5Z"/></svg>
+    <span>X</span>
+  </a>
+</div>;
 
 export default function SiteFooter({ theme = "light", bordered = true }: SiteFooterProps) {
   const dark = theme === "dark";
@@ -30,7 +42,7 @@ export default function SiteFooter({ theme = "light", bordered = true }: SiteFoo
             <small>AI-Powered IT M&amp;A Execution Platform</small>
           </Link>
           <p>Connect the technology baseline, transition plan and execution evidence in one governed platform.</p>
-          <LinkedInLink />
+          <SocialLinks />
         </div>
 
         <nav className={styles.navigation} aria-label="Footer navigation">
