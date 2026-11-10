@@ -26,6 +26,16 @@ const SocialLinks = () => <div className={styles.socialLinks} aria-label="MergeV
     <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.2 2H21l-6.1 7 7.2 13h-5.6l-4.4-5.8L7 22H4.2l6.6-7.5L3.9 2h5.7l4 5.3L18.2 2Zm-1 17.7h1.5L8.8 4.2H7.2l10 15.5Z"/></svg>
     <span>X</span>
   </a>
+  <a
+    className={styles.socialLink}
+    href="https://www.youtube.com/@MergeVista"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="MergeVista on YouTube (opens in a new tab)"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+    <span>YouTube</span>
+  </a>
 </div>;
 
 export default function SiteFooter({ theme = "light", bordered = true }: SiteFooterProps) {
