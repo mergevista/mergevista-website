@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fcfcfc"/>
+  <g stroke="#e4e4e7" stroke-width="1"><path d="M0 126h1200M0 252h1200M0 378h1200M0 504h1200"/><path d="M240 0v630M480 0v630M720 0v630M960 0v630"/></g>
+  <g transform="translate(68 60)">
+    <g fill="none" stroke="#1559a6" stroke-width="4"><circle cx="25" cy="25" r="12"/><path d="M25 13V0M36 18l12-7M36 32l12 7M25 37v13M14 32L2 39M14 18L2 11"/></g>
+    <g fill="#1559a6"><circle cx="25" cy="0" r="5"/><circle cx="48" cy="11" r="5"/><circle cx="48" cy="39" r="5"/><circle cx="25" cy="50" r="5"/><circle cx="2" cy="39" r="5"/></g><circle cx="2" cy="11" r="5" fill="#0a183d"/>
+    <text x="68" y="34" fill="#0a183d" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700">Merge<tspan fill="#1559a6">Vista</tspan></text>
+  </g>
+  <text x="68" y="185" fill="#1559a6" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" letter-spacing="2">MERGEVISTA INSIGHTS · PROGRAM CAPACITY</text>
+  <g fill="#18181b" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="600"><text x="68" y="245">The Separation Plan</text><text x="68" y="297">Assumes SME Capacity</text><text x="68" y="349">That Does Not Exist</text></g>
+  <g fill="#52525b" font-family="Arial,Helvetica,sans-serif" font-size="21"><text x="68" y="445">The task may be on the plan.</text><text x="68" y="477">The scarce knowledge required to complete it usually is not.</text></g>
+  <g transform="translate(930 305) scale(.82)">
+    <g fill="none" stroke="#1559a6" stroke-width="4"><path d="M-115-80L-50-35M115-80L50-35M-135 0H-58M135 0H58M-115 80L-50 35M115 80L50 35"/></g>
+    <g fill="#fff" stroke="#1559a6" stroke-width="3"><rect x="-185" y="-110" width="110" height="54" rx="10"/><rect x="75" y="-110" width="110" height="54" rx="10"/><rect x="-205" y="-27" width="110" height="54" rx="10"/><rect x="95" y="-27" width="110" height="54" rx="10"/><rect x="-185" y="56" width="110" height="54" rx="10"/><rect x="75" y="56" width="110" height="54" rx="10"/></g>
+    <g fill="#27272a" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" text-anchor="middle"><text x="-130" y="-77">APPLICATIONS</text><text x="130" y="-77">INFRASTRUCTURE</text><text x="-150" y="4">SITES</text><text x="150" y="4">DATA</text><text x="-130" y="89">TESTING</text><text x="130" y="89">MIGRATION</text></g>
+    <circle r="65" fill="#0a183d"/><circle cy="-16" r="16" fill="#fff"/><path d="M-32 30C-23 7-10 0 0 0s23 7 32 30" fill="#fff"/><text y="51" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" text-anchor="middle">SME</text>
+    <g transform="translate(-92 130)"><rect width="184" height="42" rx="21" fill="#1559a6"/><text x="92" y="26" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" text-anchor="middle">CAPACITY CONSTRAINED</text></g>
+  </g>
+  <rect x="68" y="552" width="1064" height="2" fill="#1559a6"/>
+  <text x="68" y="590" fill="#71717a" font-family="Arial,Helvetica,sans-serif" font-size="17">www.mergevista.com</text>
+</svg>

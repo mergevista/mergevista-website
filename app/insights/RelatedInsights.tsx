@@ -3,6 +3,11 @@ import styles from "./related-insights.module.css";
 
 const articles = [
   {
+    slug: "separation-plan-assumes-sme-capacity-does-not-exist",
+    category: "Program capacity",
+    title: "The Separation Plan Assumes SME Capacity That Does Not Exist",
+  },
+  {
     slug: "application-not-separation-boundary-interface-is",
     category: "Application dependencies",
     title: "The Application Is Not the Separation Boundary. The Interface Is.",
@@ -77,6 +82,11 @@ const articles = [
 ];
 
 const recommendations: Record<string, string[]> = {
+  "separation-plan-assumes-sme-capacity-does-not-exist": [
+    "application-not-separation-boundary-interface-is",
+    "why-day-1-readiness-fails",
+    "hidden-cost-disconnected-it-inventories",
+  ],
   "application-not-separation-boundary-interface-is": [
     "migration-wave-readiness",
     "application-disposition-separation-strategy-execution",

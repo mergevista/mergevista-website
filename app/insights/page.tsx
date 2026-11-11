@@ -47,6 +47,17 @@ const topics = [
 ];
 const articles = [
   [
+    "APPLICATION DEPENDENCIES",
+    "The application is not the separation boundary. The interface is.",
+    "Why application migration alone does not create operational independence—and how interfaces, dependencies and business flows determine separation readiness.",
+    "11 min read",
+    "navy",
+    "/insights/application-not-separation-boundary-interface-is",
+    "Nov 4, 2026",
+    "/insights/editorial-line-interface-boundary-transparent.png",
+    "Application connected through interfaces to dependencies across a seller-buyer separation boundary",
+  ],
+  [
     "SEPARATION EXECUTION",
     "The exception list is the real separation plan",
     "Why exceptions—not standard migration paths—determine whether an IT separation will work, and how connected management helps the program finish.",
@@ -254,29 +265,28 @@ export default function InsightsPage() {
       <section className="mx-auto max-w-[1560px] px-5 py-12 lg:px-8 lg:py-16">
         <article className="grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
           <Image
-            src="/insights/editorial-line-interface-boundary-transparent.png"
-            alt="Application connected through interfaces to dependencies across a seller-buyer separation boundary"
-            width={1586}
-            height={992}
+            src="/insights/editorial-sme-capacity.svg"
+            alt="A critical subject-matter expert constrained by competing separation workstreams"
+            width={1600}
+            height={900}
             priority
             className="h-[260px] w-full object-contain sm:h-[340px] lg:order-2 lg:h-full lg:max-h-[470px]"
           />
           <div className="flex flex-col p-7 sm:p-10 lg:p-14">
             <Badge className="w-fit">
-              FEATURED INSIGHT · APPLICATION DEPENDENCIES
+              FEATURED INSIGHT · PROGRAM CAPACITY
             </Badge>
             <h2 className="mt-7 max-w-xl text-4xl font-medium leading-[1.05] tracking-[-.045em] sm:text-5xl">
-              The application is not the separation boundary. The interface is.
+              The separation plan assumes SME capacity that does not exist.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-600">
-              An application can move successfully and still leave the business
-              process behind. Operational independence begins where its dependencies do.
+              The task may be on the plan. The scarce knowledge required to complete it usually is not.
             </p>
             <div className="mt-6 text-xs text-zinc-500">
-              Nov 4, 2026 · 11 min read
+              Nov 11, 2026 · 12 min read
             </div>
             <Button asChild className="mt-auto self-start pt-9" variant="ghost">
-              <Link href="/insights/application-not-separation-boundary-interface-is">
+              <Link href="/insights/separation-plan-assumes-sme-capacity-does-not-exist">
                 Read the insight
                 <ArrowRight />
               </Link>

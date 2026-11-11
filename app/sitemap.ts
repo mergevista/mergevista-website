@@ -124,6 +124,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: canonicalUrl("/insights/separation-plan-assumes-sme-capacity-does-not-exist"),
+      lastModified: new Date("2026-11-11"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: canonicalUrl("/insights/application-not-separation-boundary-interface-is"),
       lastModified: new Date("2026-11-04"),
       changeFrequency: "monthly",

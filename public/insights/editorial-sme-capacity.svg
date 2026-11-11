@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">SME capacity constrained by competing separation workstreams</title>
+  <desc id="desc">A central subject-matter expert connected to six separation workstreams, with constrained capacity shown beneath the expert.</desc>
+  <rect width="1600" height="900" fill="#fcfcfc"/>
+  <g stroke="#e4e4e7" stroke-width="2"><path d="M0 180h1600M0 360h1600M0 540h1600M0 720h1600"/><path d="M320 0v900M640 0v900M960 0v900M1280 0v900"/></g>
+  <g fill="none" stroke="#1559a6" stroke-width="5" stroke-linecap="round"><path d="M455 205L700 380M1145 205L900 380M420 450H675M1180 450H925M455 695L700 520M1145 695L900 520"/></g>
+  <g fill="#fff" stroke="#1559a6" stroke-width="4"><rect x="165" y="140" width="330" height="130" rx="18"/><rect x="1105" y="140" width="330" height="130" rx="18"/><rect x="125" y="385" width="330" height="130" rx="18"/><rect x="1145" y="385" width="330" height="130" rx="18"/><rect x="165" y="630" width="330" height="130" rx="18"/><rect x="1105" y="630" width="330" height="130" rx="18"/></g>
+  <g fill="#27272a" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle"><text x="330" y="213">APPLICATIONS</text><text x="1270" y="213">INFRASTRUCTURE</text><text x="290" y="458">SITES</text><text x="1310" y="458">DATA &amp; SECURITY</text><text x="330" y="703">TESTING</text><text x="1270" y="703">MIGRATION</text></g>
+  <circle cx="800" cy="450" r="130" fill="#0a183d"/><circle cx="800" cy="410" r="34" fill="#fff"/><path d="M732 500c16-49 45-69 68-69s52 20 68 69" fill="#fff"/>
+  <text x="800" y="548" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="2" text-anchor="middle">SME</text>
+  <g transform="translate(625 610)"><rect width="350" height="76" rx="38" fill="#1559a6"/><text x="175" y="47" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" letter-spacing="1" text-anchor="middle">CAPACITY CONSTRAINED</text></g>
+</svg>
