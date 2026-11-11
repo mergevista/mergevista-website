@@ -2,16 +2,82 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./site-header.module.css";
 
 type SiteHeaderProps = { variant?: "full" | "focused" };
+type MenuName = "platform" | "solutions" | "services" | "use-cases" | "ai";
+
+const menuSuppressionKey = "mergevista-pending-menu-close";
 
 export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
   const focused = variant === "focused";
+  const pathname = usePathname();
   const mobileNavigationRef = useRef<HTMLDetailsElement>(null);
-  const [suppressedMenu, setSuppressedMenu] = useState<"platform" | "solutions" | "services" | "use-cases" | "ai" | null>(null);
+  const menuSuppressionLock = useRef(false);
+  const pendingSuppressionFrame = useRef<number | null>(null);
+  const suppressionCleanupTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [suppressedMenu, setSuppressedMenu] = useState<MenuName | null>(null);
   const closeMenu = () => mobileNavigationRef.current?.removeAttribute("open");
+  const suppressMenu = useCallback((menu: MenuName) => {
+    menuSuppressionLock.current = true;
+    setSuppressedMenu(menu);
+    sessionStorage.setItem(menuSuppressionKey, menu);
+    if (suppressionCleanupTimer.current) clearTimeout(suppressionCleanupTimer.current);
+    suppressionCleanupTimer.current = setTimeout(() => sessionStorage.removeItem(menuSuppressionKey), 1200);
+  }, []);
+  const resetMenu = () => {
+    menuSuppressionLock.current = false;
+    sessionStorage.removeItem(menuSuppressionKey);
+    setSuppressedMenu(null);
+  };
+  const restoreMenuOnPointerEntry = () => {
+    if (!menuSuppressionLock.current) setSuppressedMenu(null);
+  };
+  const restoreMenuForKeyboard = () => {
+    if (!menuSuppressionLock.current) setSuppressedMenu(null);
+  };
+  const closeDesktopMenuLink = (menu: MenuName) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const link = event.currentTarget;
+    suppressMenu(menu);
+    link.blur();
+    requestAnimationFrame(() => {
+      link.blur();
+      setSuppressedMenu(menu);
+    });
+  };
+  const closeServiceSectionLink = (sectionId: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+    closeDesktopMenuLink("services")(event);
+    if (window.location.pathname === "/services") {
+      event.preventDefault();
+      window.location.hash = sectionId;
+    }
+  };
+
+  useEffect(() => {
+    const pendingMenu = sessionStorage.getItem(menuSuppressionKey) as MenuName | null;
+    if (pendingMenu) {
+      menuSuppressionLock.current = true;
+      sessionStorage.removeItem(menuSuppressionKey);
+      pendingSuppressionFrame.current = requestAnimationFrame(() => setSuppressedMenu(pendingMenu));
+    }
+
+    const closeMenuForDestination = () => {
+      if (pathname.startsWith("/platform") || pathname.startsWith("/capabilities")) suppressMenu("platform");
+      else if (pathname.startsWith("/solutions")) suppressMenu("solutions");
+      else if (pathname.startsWith("/services")) suppressMenu("services");
+      else if (pathname.startsWith("/ai-capabilities")) suppressMenu("ai");
+      else if (pathname.startsWith("/use-cases")) suppressMenu("use-cases");
+    };
+
+    window.addEventListener("hashchange", closeMenuForDestination);
+    return () => {
+      window.removeEventListener("hashchange", closeMenuForDestination);
+      if (pendingSuppressionFrame.current) cancelAnimationFrame(pendingSuppressionFrame.current);
+      if (suppressionCleanupTimer.current) clearTimeout(suppressionCleanupTimer.current);
+    };
+  }, [pathname, suppressMenu]);
 
   return <header className={styles.header}>
     <Link className={styles.brand} href="/" aria-label="MergeVista home">
@@ -21,9 +87,10 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
     {!focused && <nav className={styles.links} aria-label="Primary navigation">
       <div
         className={`${styles.platformMenu} ${suppressedMenu === "platform" ? styles.menuSuppressed : ""}`}
-        onClickCapture={() => setSuppressedMenu("platform")}
-        onFocusCapture={() => setSuppressedMenu(null)}
-        onMouseLeave={() => setSuppressedMenu(null)}
+        onClickCapture={() => suppressMenu("platform")}
+        onFocusCapture={restoreMenuForKeyboard}
+        onMouseEnter={restoreMenuOnPointerEntry}
+        onMouseLeave={resetMenu}
       >
         <Link href="/platform">Platform <span aria-hidden="true">⌄</span></Link>
         <div className={`${styles.megaMenu} ${styles.platformDropdown}`}>
@@ -57,9 +124,10 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
       </div>
       <div
         className={`${styles.solutionsMenu} ${suppressedMenu === "solutions" ? styles.menuSuppressed : ""}`}
-        onClickCapture={() => setSuppressedMenu("solutions")}
-        onFocusCapture={() => setSuppressedMenu(null)}
-        onMouseLeave={() => setSuppressedMenu(null)}
+        onClickCapture={() => suppressMenu("solutions")}
+        onFocusCapture={restoreMenuForKeyboard}
+        onMouseEnter={restoreMenuOnPointerEntry}
+        onMouseLeave={resetMenu}
       >
         <Link href="/solutions">Solutions <span aria-hidden="true">⌄</span></Link>
         <div className={`${styles.megaMenu} ${styles.solutionsDropdown}`}>
@@ -82,21 +150,22 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
       </div>
       <div
         className={`${styles.servicesMenu} ${suppressedMenu === "services" ? styles.menuSuppressed : ""}`}
-        onClickCapture={() => setSuppressedMenu("services")}
-        onFocusCapture={() => setSuppressedMenu(null)}
-        onMouseLeave={() => setSuppressedMenu(null)}
+        onClickCapture={() => suppressMenu("services")}
+        onFocusCapture={restoreMenuForKeyboard}
+        onMouseEnter={restoreMenuOnPointerEntry}
+        onMouseLeave={resetMenu}
       >
-        <Link href="/services">Services <span aria-hidden="true">⌄</span></Link>
+        <Link href="/services" onClick={closeDesktopMenuLink("services")}>Services <span aria-hidden="true">⌄</span></Link>
         <div className={`${styles.megaMenu} ${styles.servicesDropdown}`}>
           <div className={styles.solutionGroups}>
             <p className={styles.megaEyebrow}>Platform-enabled services</p>
-            <Link href="/services#transaction-launch"><b>Transaction Launch</b><small>Configure the workspace and establish the initial execution baseline.</small></Link>
-            <Link href="/services#execution-support"><b>Execution Support</b><small>Maintain data, governance, reporting and transaction control.</small></Link>
-            <Link href="/services#managed-transition"><b>Managed Technology Transition</b><small>Lead Day 1, integration, separation, migration and TSA exit.</small></Link>
-            <Link href="/services#specialist-advisory"><b>Specialist Advisory</b><small>Add focused expertise for complex strategy and program decisions.</small></Link>
-            <Link className={styles.viewAllUseCases} href="/services">Explore all services <b>→</b></Link>
+            <Link href="/services#transaction-launch" onClick={closeServiceSectionLink("transaction-launch")}><b>Transaction Launch</b><small>Configure the workspace and establish the initial execution baseline.</small></Link>
+            <Link href="/services#execution-support" onClick={closeServiceSectionLink("execution-support")}><b>Execution Support</b><small>Maintain data, governance, reporting and transaction control.</small></Link>
+            <Link href="/services#managed-transition" onClick={closeServiceSectionLink("managed-transition")}><b>Managed Technology Transition</b><small>Lead Day 1, integration, separation, migration and TSA exit.</small></Link>
+            <Link href="/services#specialist-advisory" onClick={closeServiceSectionLink("specialist-advisory")}><b>Specialist Advisory</b><small>Add focused expertise for complex strategy and program decisions.</small></Link>
+            <Link className={styles.viewAllUseCases} href="/services" onClick={closeDesktopMenuLink("services")}>Explore all services <b>→</b></Link>
           </div>
-          <Link className={styles.solutionFeature} href="/services">
+          <Link className={styles.solutionFeature} href="/services" onClick={closeDesktopMenuLink("services")}>
             <span className={styles.featureEyebrow}>Software at the center</span>
             <strong>Expert execution when it accelerates the outcome.</strong>
             <p>Optional services delivered through MergeVista, with one connected transaction record throughout.</p>
@@ -107,9 +176,10 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
       </div>
       <div
         className={`${styles.aiMenu} ${suppressedMenu === "ai" ? styles.menuSuppressed : ""}`}
-        onClickCapture={() => setSuppressedMenu("ai")}
-        onFocusCapture={() => setSuppressedMenu(null)}
-        onMouseLeave={() => setSuppressedMenu(null)}
+        onClickCapture={() => suppressMenu("ai")}
+        onFocusCapture={restoreMenuForKeyboard}
+        onMouseEnter={restoreMenuOnPointerEntry}
+        onMouseLeave={resetMenu}
       >
         <Link href="/ai-capabilities">AI Capabilities <span aria-hidden="true">⌄</span></Link>
         <div className={`${styles.megaMenu} ${styles.aiDropdown}`}>
@@ -131,9 +201,10 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
       </div>
       <div
         className={`${styles.useCasesMenu} ${suppressedMenu === "use-cases" ? styles.menuSuppressed : ""}`}
-        onClickCapture={() => setSuppressedMenu("use-cases")}
-        onFocusCapture={() => setSuppressedMenu(null)}
-        onMouseLeave={() => setSuppressedMenu(null)}
+        onClickCapture={() => suppressMenu("use-cases")}
+        onFocusCapture={restoreMenuForKeyboard}
+        onMouseEnter={restoreMenuOnPointerEntry}
+        onMouseLeave={resetMenu}
       >
         <Link href="/use-cases">Use Cases <span aria-hidden="true">⌄</span></Link>
         <div className={`${styles.megaMenu} ${styles.useCasesDropdown}`}>

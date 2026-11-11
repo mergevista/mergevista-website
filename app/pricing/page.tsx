@@ -19,7 +19,7 @@ import { pageMetadata } from "../lib/seo";
 
 export const metadata = pageMetadata(
   "IT M&A Platform Pricing Structure | MergeVista",
-  "Understand MergeVista pricing: an annual platform subscription, transaction execution pricing, one-time onboarding and optional services aligned to deal complexity.",
+  "Understand MergeVista pricing: an annual platform subscription, transaction execution pricing, one-time customer implementation and optional services aligned to deal complexity.",
   "/pricing",
 );
 
@@ -41,9 +41,9 @@ const model = [
   {
     number: "03",
     icon: Settings2,
-    title: "Onboarding & configuration",
-    text: "Establish the initial workspace, data structures, workflows, access model and transaction-specific configuration through a one-time setup engagement.",
-    note: "One-time per new transaction",
+    title: "Platform implementation & enablement",
+    text: "Establish the customer’s MergeVista environment, access and governance model, reusable workflows, reporting standards, administrator enablement and initial user training.",
+    note: "One-time per customer",
   },
   {
     number: "04",
@@ -111,6 +111,10 @@ const faqs = [
     "Transaction structure, technology footprint, the number of people affected, geographic scope, TSA requirements and migration complexity all help determine the appropriate scope.",
   ],
   [
+    "Is setup charged for every transaction?",
+    "No. Platform implementation and enablement is a one-time customer engagement. New transactions carry their applicable execution fee, while Transaction Launch services are optional and separately scoped when additional support is required.",
+  ],
+  [
     "Are services included in the platform subscription?",
     "Optional services are separately scoped. This keeps the software commercial model clear while allowing teams to add expert capacity where it accelerates the outcome.",
   ],
@@ -126,7 +130,7 @@ const structuredData = {
   name: "MergeVista pricing structure",
   url: canonicalUrl("/pricing"),
   description:
-    "How MergeVista combines an annual platform subscription with transaction execution pricing, onboarding and optional services.",
+    "How MergeVista combines an annual platform subscription with transaction execution pricing, one-time customer implementation and optional services.",
   mainEntity: faqs.map(([question, answer]) => ({
     "@type": "Question",
     name: question,

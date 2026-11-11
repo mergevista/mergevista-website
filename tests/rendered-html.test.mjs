@@ -86,7 +86,8 @@ test("exports the pricing page with complete SEO signals", async () => {
   assert.match(html, /application\/ld\+json/i);
   assert.match(html, /Annual platform subscription/i);
   assert.match(html, /Transaction execution fee/i);
-  assert.match(html, /Onboarding &amp; configuration/i);
+  assert.match(html, /Platform implementation &amp; enablement/i);
+  assert.match(html, /One-time per customer/i);
   assert.match(sitemap, /<loc>https:\/\/www\.mergevista\.com\/pricing<\/loc>/i);
 });
 
