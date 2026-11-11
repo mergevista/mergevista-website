@@ -93,6 +93,7 @@ function ProductFrame({
 }) {
   return (
     <Card
+      data-motion="hero-visual"
       className="relative overflow-hidden shadow-[0_18px_48px_rgba(24,24,27,0.08)]"
       aria-label="MergeVista transition readiness"
     >
@@ -148,12 +149,12 @@ export default function PlatformPage() {
       <section className="relative overflow-hidden border-b border-zinc-200 bg-[#fcfcfc]">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] bg-[size:72px_72px] opacity-[0.28] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
         <div className="relative mx-auto grid max-w-[1560px] gap-14 px-5 py-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8 lg:py-28">
-          <div>
+          <div data-motion="hero-copy">
             <Badge className="gap-2 bg-white">
               <Sparkles className="size-3.5 text-[#1559a6]" />
               The MergeVista platform
             </Badge>
-            <h1 className="mt-7 text-[clamp(3rem,5.2vw,5.25rem)] font-medium leading-[1.01] tracking-[-0.05em]">
+            <h1 className="mt-7 text-[2.75rem] font-medium leading-[1.01] tracking-[-0.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
               One operating system for the{" "}
               <span className="font-normal text-[#1559a6]">
                 complete IT M&amp;A journey.

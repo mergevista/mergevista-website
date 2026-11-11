@@ -24,7 +24,7 @@ function ProductVisual({
   label: string;
 }) {
   return (
-    <Card className="overflow-hidden shadow-[0_18px_48px_rgba(24,24,27,0.08)]">
+    <Card data-motion="hero-visual" className="overflow-hidden shadow-[0_18px_48px_rgba(24,24,27,0.08)]">
       <div className="flex h-9 items-center border-b border-zinc-800 bg-zinc-950 px-3.5 text-white">
         <div className="flex gap-1.5">
           <i className="size-1.5 rounded-full bg-red-400" />
@@ -92,12 +92,12 @@ export default async function SolutionDetailPage({ params }: PageProps) {
       <section className="relative overflow-hidden border-b border-zinc-200 bg-[#fcfcfc]">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] bg-[size:72px_72px] opacity-[0.28] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
         <div className="relative mx-auto grid max-w-[1560px] gap-14 px-5 py-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8 lg:py-28">
-          <div>
+          <div data-motion="hero-copy">
             <Badge className="gap-2 bg-white">
               <Sparkles className="size-3.5 text-[#1559a6]" />
               {solution.eyebrow}
             </Badge>
-            <h1 className="mt-7 max-w-[720px] text-[clamp(2.75rem,4.45vw,4.6rem)] font-medium leading-[1.01] tracking-[-0.048em]">
+            <h1 className="mt-7 max-w-[760px] text-[2.75rem] font-medium leading-[1.01] tracking-[-0.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
               {solution.name}
               <span className="mt-5 block max-w-[650px] text-[.55em] font-normal leading-[1.18] tracking-[-0.035em] text-[#1559a6]">
                 {solution.headline}

@@ -113,7 +113,7 @@ export default function ServicesPage() {
         <div className="relative mx-auto grid max-w-[1560px] gap-14 px-5 py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-end lg:px-8 lg:py-28">
           <div>
             <Badge className="gap-2 bg-white"><Sparkles className="size-3.5 text-[#1559a6]" />PLATFORM-ENABLED SERVICES</Badge>
-            <h1 className="mt-7 max-w-5xl text-[clamp(3rem,5.8vw,5.9rem)] font-medium leading-[.98] tracking-[-.055em]">Expert execution,<span className="block font-normal text-[#1559a6]">enabled by MergeVista.</span></h1>
+            <h1 className="mt-7 max-w-5xl text-[2.75rem] font-medium leading-[1.01] tracking-[-.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">Expert execution,<span className="block font-normal text-[#1559a6]">enabled by MergeVista.</span></h1>
           </div>
           <div className="lg:pb-2">
             <p className="max-w-2xl text-lg leading-8 text-zinc-600">Establish a reliable transaction baseline, configure the right operating model and maintain execution control with experienced IT M&amp;A practitioners—all delivered through the MergeVista platform.</p>

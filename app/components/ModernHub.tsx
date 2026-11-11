@@ -64,12 +64,12 @@ export default function ModernHub({
       <section className="relative overflow-hidden border-b border-zinc-200 bg-[#fcfcfc]">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] bg-[size:72px_72px] opacity-[0.28] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
         <div className="relative mx-auto grid max-w-[1560px] gap-14 px-5 py-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8 lg:py-28">
-          <div>
+          <div data-motion="hero-copy">
             <Badge className="gap-2 bg-white">
               <Sparkles className="size-3.5 text-[#1559a6]" />
               {eyebrow}
             </Badge>
-            <h1 className="mt-7 max-w-[720px] text-[clamp(2.75rem,4.45vw,4.6rem)] font-medium leading-[1.01] tracking-[-0.048em]">
+            <h1 className="mt-7 max-w-[760px] text-[2.75rem] font-medium leading-[1.01] tracking-[-0.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
               {title}
               <span className="mt-5 block text-[.62em] font-normal leading-[1.12] tracking-[-0.035em] text-[#1559a6]">
                 {accent}
@@ -92,6 +92,7 @@ export default function ModernHub({
           </div>
           <Card
             aria-label={imageAlt}
+            data-motion="hero-visual"
             className="overflow-hidden shadow-[0_18px_48px_rgba(24,24,27,.08)] lg:-mr-20"
           >
             <div className="flex h-9 items-center border-b border-zinc-800 bg-zinc-950 px-3.5 text-white">
@@ -133,6 +134,7 @@ export default function ModernHub({
           {cards.map((card) => (
             <Card
               key={`${card.href}:${card.title}`}
+              data-motion="card"
               className="flex min-h-[310px] flex-col p-8 sm:p-10"
             >
               <Badge className="w-fit">{card.eyebrow}</Badge>

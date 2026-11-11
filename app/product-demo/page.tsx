@@ -82,7 +82,7 @@ export default function ProductDemoPage() {
         <div className="mx-auto max-w-[1440px] px-5 py-16 lg:px-8 lg:py-20">
           <div className="mx-auto max-w-4xl text-center">
             <Badge>MergeVista PRODUCT TOUR</Badge>
-            <h1 className="mt-6 text-[clamp(2.7rem,5vw,4.8rem)] font-medium leading-[1.02] tracking-[-0.05em]">
+            <h1 className="mt-6 text-[2.75rem] font-medium leading-[1.01] tracking-[-0.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
               See connected IT M&amp;A execution in action.
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-600">

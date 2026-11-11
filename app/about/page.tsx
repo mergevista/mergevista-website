@@ -40,7 +40,7 @@ export default function Page() {
             <Sparkles className="size-3.5 text-[#1559a6]" />
             About MergeVista
           </Badge>
-          <h1 className="mt-7 max-w-5xl text-[clamp(3rem,6vw,6rem)] font-medium leading-[.98] tracking-[-.055em]">
+          <h1 className="mt-7 max-w-5xl text-[2.75rem] font-medium leading-[1.01] tracking-[-.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
             Purpose-built for the
             <span className="block font-normal text-[#1559a6]">
               execution reality of IT M&amp;A.

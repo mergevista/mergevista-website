@@ -51,7 +51,7 @@ export default function Page() {
             <Sparkles className="size-3.5 text-[#1559a6]" />
             Start a conversation
           </Badge>
-          <h1 className="mt-7 text-[clamp(3rem,6vw,6rem)] font-medium leading-none tracking-[-.055em]">
+          <h1 className="mt-7 text-[2.75rem] font-medium leading-[1.01] tracking-[-.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
             How can we help?
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-600">

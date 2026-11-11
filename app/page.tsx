@@ -121,7 +121,7 @@ function ProductFrame({
   priority?: boolean;
 }) {
   return (
-    <Card className="overflow-hidden shadow-[0_18px_48px_rgba(24,24,27,0.08)]">
+    <Card data-motion="hero-visual" className="overflow-hidden shadow-[0_18px_48px_rgba(24,24,27,0.08)]">
       <div className="flex h-9 items-center border-b border-zinc-800 bg-zinc-950 px-3.5 text-white">
         <div className="flex gap-1.5">
           <i className="size-1.5 rounded-full bg-red-400" />
@@ -155,12 +155,12 @@ export default function MarketingHome() {
       <section className="relative overflow-hidden border-b border-zinc-200 bg-[#fcfcfc]">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] bg-[size:72px_72px] opacity-[0.28] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
         <div className="relative mx-auto grid max-w-[1560px] gap-14 px-5 py-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8 lg:py-28">
-          <div>
+          <div data-motion="hero-copy">
             <Badge className="gap-2 bg-white">
               <Sparkles className="size-3.5 text-[#1559a6]" />
               The AI-powered execution platform for IT M&amp;A
             </Badge>
-            <h1 className="mt-7 text-[clamp(3rem,5.2vw,5.25rem)] font-medium leading-[1.01] tracking-[-0.05em]">
+            <h1 className="mt-7 text-[2.75rem] font-medium leading-[1.01] tracking-[-0.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
               Run the complete IT M&amp;A journey with{" "}
               <span className="font-normal text-[#1559a6]">
                 clarity and control.

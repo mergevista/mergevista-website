@@ -159,7 +159,7 @@ export default function PricingPage() {
         <div className="relative mx-auto grid max-w-[1560px] gap-14 px-5 py-20 lg:grid-cols-[1.08fr_.92fr] lg:items-end lg:px-8 lg:py-28">
           <div>
             <Badge className="gap-2 bg-white"><Sparkles className="size-3.5 text-[#1559a6]" />PREDICTABLE BY DESIGN</Badge>
-            <h1 className="mt-7 max-w-5xl text-[clamp(3rem,5.8vw,5.9rem)] font-medium leading-[.98] tracking-[-.055em]">
+            <h1 className="mt-7 max-w-5xl text-[2.75rem] font-medium leading-[1.01] tracking-[-.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
               Pricing that scales with
               <span className="block font-normal text-[#1559a6]">transaction complexity.</span>
             </h1>
