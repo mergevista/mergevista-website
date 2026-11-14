@@ -215,6 +215,12 @@ export default function PlatformPage() {
           </div>
         </div>
       </section>
+      <section className="border-b border-zinc-200 bg-white">
+        <div className="mx-auto grid max-w-[1560px] gap-8 px-5 py-16 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:px-8">
+          <div><Badge>FUNCTIONAL WORKSTREAMS</Badge><h2 className="mt-5 text-3xl font-medium tracking-[-0.04em] sm:text-4xl">One governed environment for the complete transition.</h2></div>
+          <div><p className="max-w-3xl leading-7 text-zinc-600">MergeVista runs IT M&amp;A and brings People, Finance, Legal, EHS, Procurement, Real Estate, Operations and Communications into the same governed execution environment.</p><Button asChild variant="ghost" className="mt-4 -ml-4"><Link href="/functional-workstreams">Explore functional workstreams <ArrowRight /></Link></Button></div>
+        </div>
+      </section>
       <section className="border-b border-zinc-200 bg-[#fcfcfc]">
         <div className="mx-auto grid max-w-[1560px] gap-10 px-5 py-20 lg:grid-cols-[0.58fr_1.42fr] lg:items-center lg:px-8 lg:py-24">
           <div>

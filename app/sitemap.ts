@@ -58,6 +58,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: canonicalUrl("/functional-workstreams"),
+      lastModified: new Date("2026-11-14"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: canonicalUrl("/product-demo"),
       lastModified: new Date("2026-10-29"),
       changeFrequency: "monthly",

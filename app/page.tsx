@@ -235,6 +235,68 @@ export default function MarketingHome() {
         </div>
       </section>
 
+      <section className="border-b border-zinc-200 bg-[#071b42] text-white">
+        <div className="mx-auto grid max-w-[1560px] gap-12 px-5 py-20 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:px-8 lg:py-24">
+          <div>
+            <Badge className="border-white/20 bg-white/5 text-blue-200">
+              CONNECTED TRANSACTION EXECUTION
+            </Badge>
+            <h2 className="mt-5 text-4xl font-medium leading-tight tracking-[-0.04em] sm:text-5xl">
+              Connect IT execution with the complete business transition.
+            </h2>
+            <p className="mt-5 max-w-xl leading-7 text-zinc-300">
+              MergeVista runs IT M&amp;A and brings every functional workstream
+              into the same governed execution environment.
+            </p>
+            <p className="mt-5 text-sm font-medium text-blue-200">
+              One transaction record. Coordinated workstreams. Shared readiness.
+            </p>
+            <Button
+              asChild
+              variant="outline"
+              className="mt-7 border-white/25 bg-transparent text-white hover:bg-white hover:text-zinc-950"
+            >
+              <Link href="/functional-workstreams">
+                Explore functional workstreams <ArrowRight />
+              </Link>
+            </Button>
+          </div>
+          <div className="overflow-hidden rounded-xl border border-white/15 bg-white/10">
+            <div className="grid gap-px bg-white/15 md:grid-cols-2">
+              <div className="bg-white p-6 text-zinc-950">
+                <span className="text-[10px] font-semibold tracking-[0.14em] text-[#1559a6]">
+                  COMPLETE IT M&amp;A LIFECYCLE
+                </span>
+                <h3 className="mt-2 text-2xl font-medium">Technology execution</h3>
+                <p className="mt-3 text-sm leading-6 text-zinc-600">
+                  Discovery · Assessment · Separation · Day 1 · TSA Operations ·
+                  Migration · TSA Exit
+                </p>
+              </div>
+              <div className="bg-white p-6 text-zinc-950">
+                <span className="text-[10px] font-semibold tracking-[0.14em] text-[#1559a6]">
+                  CONNECTED FUNCTIONAL WORKSTREAMS
+                </span>
+                <h3 className="mt-2 text-2xl font-medium">Business transition</h3>
+                <p className="mt-3 text-sm leading-6 text-zinc-600">
+                  People &amp; HR · Finance · Legal &amp; Compliance · EHS ·
+                  Procurement · Real Estate · Operations · Communications
+                </p>
+              </div>
+            </div>
+            <div className="border-t border-white/15 px-6 py-6">
+              <span className="text-[10px] font-semibold tracking-[0.14em] text-blue-200">
+                SHARED GOVERNED EXECUTION ENVIRONMENT
+              </span>
+              <p className="mt-3 text-sm leading-6 text-zinc-200">
+                Plans · Milestones · Ownership · Dependencies · Risks · Decisions ·
+                Readiness · Evidence
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section
         id="product-demo"
         className="scroll-mt-20 border-b border-zinc-200 bg-[#fcfcfc]"

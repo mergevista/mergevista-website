@@ -69,6 +69,7 @@ export default function SiteFooter({ theme = "light", bordered = true }: SiteFoo
           <div className={styles.linkGroup}>
             <h2>Product</h2>
             <Link href="/platform">Platform</Link>
+            <Link href="/functional-workstreams">Functional Workstreams</Link>
             <Link href="/solutions">Solutions</Link>
             <Link href="/services">Services</Link>
             <Link href="/ai-capabilities">AI Capabilities</Link>

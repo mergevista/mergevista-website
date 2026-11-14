@@ -148,6 +148,7 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
           </Link>
         </div>
       </div>
+      <Link href="/functional-workstreams">Functional Workstreams</Link>
       <div
         className={`${styles.servicesMenu} ${suppressedMenu === "services" ? styles.menuSuppressed : ""}`}
         onClickCapture={() => suppressMenu("services")}
@@ -247,6 +248,7 @@ export default function SiteHeader({ variant = "full" }: SiteHeaderProps) {
       <div className={styles.mobileSubmenu}><Link href="/platform" onClick={closeMenu}>MergeVista Complete</Link><Link href="/capabilities/migration-tsa-exit" onClick={closeMenu}>MergeVista Migration &amp; TSA Exit</Link><Link href="/capabilities/day-1-readiness" onClick={closeMenu}>MergeVista Day 1 Readiness</Link><Link href="/capabilities/transaction-control" onClick={closeMenu}>MergeVista Transaction Control</Link><Link href="/capabilities/transaction-baseline" onClick={closeMenu}>MergeVista Transaction Baseline</Link></div>
       <Link href="/solutions" onClick={closeMenu}>Solutions</Link>
       <div className={styles.mobileSubmenu}><Link href="/solutions/divestitures-separations" onClick={closeMenu}>Divestitures &amp; Separations</Link><Link href="/solutions/acquisitions-integrations" onClick={closeMenu}>Acquisitions &amp; Integrations</Link><Link href="/solutions/day-1-readiness" onClick={closeMenu}>Day 1 Readiness for Carve-Outs</Link><Link href="/solutions/tsa-management-exit" onClick={closeMenu}>Post-Close Migration &amp; TSA Exit</Link></div>
+      <Link href="/functional-workstreams" onClick={closeMenu}>Functional Workstreams</Link>
       <Link href="/services" onClick={closeMenu}>Services</Link>
       <div className={styles.mobileSubmenu}><Link href="/services#transaction-launch" onClick={closeMenu}>Transaction Launch</Link><Link href="/services#execution-support" onClick={closeMenu}>Execution Support</Link><Link href="/services#managed-transition" onClick={closeMenu}>Managed Technology Transition</Link><Link href="/services#specialist-advisory" onClick={closeMenu}>Specialist Advisory</Link></div>
       <Link href="/ai-capabilities" onClick={closeMenu}>AI Capabilities</Link>
