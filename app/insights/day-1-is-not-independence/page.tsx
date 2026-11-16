@@ -8,6 +8,7 @@ import RelatedInsights from "../RelatedInsights";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Day 1 Is Not Independence: What Happens After Legal Close?";
+const seoTitle = "Day 1 Readiness vs. Operational Independence | MergeVista";
 const description = "Why a successful legal close proves continuity—not operational independence—and how transaction teams can turn Day 1 dependencies into evidence-based TSA exits.";
 const path = "/insights/day-1-is-not-independence";
 const image = "/insights/editorial-line-day-one-independence-transparent.png";
@@ -15,7 +16,7 @@ const socialImage = "/insights/social-day-one-independence.png";
 const imageAlt = "Business crossing legal close while temporary seller dependencies remain";
 
 export const metadata: Metadata = {
-  title: `${title} | MergeVista Insights`, description,
+  title: seoTitle, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
   openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-09-02", images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
   twitter: { card: "summary_large_image", title, description, images: [socialImage] },

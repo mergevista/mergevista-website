@@ -8,6 +8,7 @@ import RelatedInsights from "../RelatedInsights";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Application Disposition: Where Separation Strategy Becomes Execution";
+const seoTitle = "Application Disposition in IT Separation | MergeVista";
 const description = "Why application disposition is more than an inventory field—and how it shapes data, infrastructure, contracts, TSAs, migration waves and operational readiness.";
 const path = "/insights/application-disposition-separation-strategy-execution";
 const image = "/insights/editorial-line-application-disposition-transparent.png";
@@ -15,7 +16,7 @@ const socialImage = "/insights/social-application-disposition.png";
 const imageAlt = "Enterprise application connected to multiple governed disposition pathways";
 
 export const metadata: Metadata = {
-  title: `${title} | MergeVista Insights`, description,
+  title: seoTitle, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
   openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-09-07", images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
   twitter: { card: "summary_large_image", title, description, images: [socialImage] },

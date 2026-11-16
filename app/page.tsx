@@ -22,13 +22,13 @@ import { Separator } from "./components/poc/separator";
 const stages = [
   [
     "01",
-    "Discovery",
-    "Build a reliable IT baseline from inventories, source systems and transaction documents.",
+    "Mobilization",
+    "Establish the transaction environment, accountable workstreams and initial operational baseline.",
   ],
   [
     "02",
-    "Assessment",
-    "Expose dependencies, contract obligations, dispositions, TSA needs and execution risks.",
+    "Day 1 Planning",
+    "Translate transaction requirements into plans, milestones, dependencies and readiness criteria.",
   ],
   [
     "03",
@@ -158,18 +158,18 @@ export default function MarketingHome() {
           <div data-motion="hero-copy">
             <Badge className="gap-2 bg-white">
               <Sparkles className="size-3.5 text-[#1559a6]" />
-              The AI-powered execution platform for IT M&amp;A
+              M&amp;A integration, separation and TSA execution
             </Badge>
             <h1 className="mt-7 text-[2.75rem] font-medium leading-[1.01] tracking-[-0.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
-              Run the complete IT M&amp;A journey with{" "}
+              Execute M&amp;A transitions with{" "}
               <span className="font-normal text-[#1559a6]">
                 clarity and control.
               </span>
             </h1>
             <p className="mt-7 max-w-[620px] text-lg leading-8 text-zinc-600">
-              MergeVista connects sellers and buyers across discovery,
-              separation, Day 1, TSA operations, migration and TSA exit—all in
-              one AI-powered execution platform.
+              MergeVista connects functional and technology workstreams,
+              operational inventories, dependencies and governance—from Day 1
+              planning through separation, integration, stabilization and TSA exit.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg">
@@ -239,14 +239,14 @@ export default function MarketingHome() {
         <div className="mx-auto grid max-w-[1560px] gap-12 px-5 py-20 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:px-8 lg:py-24">
           <div>
             <Badge className="border-white/20 bg-white/5 text-blue-200">
-              CONNECTED TRANSACTION EXECUTION
+              ONE GOVERNED EXECUTION MODEL
             </Badge>
             <h2 className="mt-5 text-4xl font-medium leading-tight tracking-[-0.04em] sm:text-5xl">
-              Connect IT execution with the complete business transition.
+              Connect every workstream to what must happen next.
             </h2>
             <p className="mt-5 max-w-xl leading-7 text-zinc-300">
-              MergeVista runs IT M&amp;A and brings every functional workstream
-              into the same governed execution environment.
+              Functional and technology teams manage execution through shared
+              plans, operational inventories, dependencies and governance.
             </p>
             <p className="mt-5 text-sm font-medium text-blue-200">
               One transaction record. Coordinated workstreams. Shared readiness.
@@ -265,31 +265,31 @@ export default function MarketingHome() {
             <div className="grid gap-px bg-white/15 md:grid-cols-2">
               <div className="bg-white p-6 text-zinc-950">
                 <span className="text-[10px] font-semibold tracking-[0.14em] text-[#1559a6]">
-                  COMPLETE IT M&amp;A LIFECYCLE
+                  FUNCTIONAL + TECHNOLOGY WORKSTREAMS
                 </span>
-                <h3 className="mt-2 text-2xl font-medium">Technology execution</h3>
+                <h3 className="mt-2 text-2xl font-medium">One coordinated transition</h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-600">
-                  Discovery · Assessment · Separation · Day 1 · TSA Operations ·
-                  Migration · TSA Exit
+                  People · Finance · Legal · EHS · Procurement · Real Estate ·
+                  Operations · Communications · Technology
                 </p>
               </div>
               <div className="bg-white p-6 text-zinc-950">
                 <span className="text-[10px] font-semibold tracking-[0.14em] text-[#1559a6]">
-                  CONNECTED FUNCTIONAL WORKSTREAMS
+                  OPERATIONAL INVENTORIES + DEPENDENCIES
                 </span>
-                <h3 className="mt-2 text-2xl font-medium">Business transition</h3>
+                <h3 className="mt-2 text-2xl font-medium">Connected operational context</h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-600">
-                  People &amp; HR · Finance · Legal &amp; Compliance · EHS ·
-                  Procurement · Real Estate · Operations · Communications
+                  Applications · Infrastructure · Data · Sites · Contracts ·
+                  Services · Suppliers · Obligations
                 </p>
               </div>
             </div>
             <div className="border-t border-white/15 px-6 py-6">
               <span className="text-[10px] font-semibold tracking-[0.14em] text-blue-200">
-                SHARED GOVERNED EXECUTION ENVIRONMENT
+                SHARED GOVERNANCE ENVIRONMENT
               </span>
               <p className="mt-3 text-sm leading-6 text-zinc-200">
-                Plans · Milestones · Ownership · Dependencies · Risks · Decisions ·
+                Plans · Milestones · Owners · Dependencies · Risks · Decisions ·
                 Readiness · Evidence
               </p>
             </div>
@@ -645,7 +645,7 @@ export default function MarketingHome() {
         <div className="mx-auto grid max-w-[1500px] gap-8 rounded-2xl bg-zinc-950 p-8 text-white sm:p-12 lg:grid-cols-[1fr_auto] lg:items-center lg:p-16">
           <div>
             <h2 className="max-w-3xl text-3xl font-medium tracking-[-0.035em] sm:text-5xl">
-              One platform from discovery to TSA exit.
+              One platform from Day 1 planning to TSA exit.
             </h2>
             <p className="mt-5 max-w-2xl text-sm leading-6 text-zinc-400">
               Give sellers and buyers a shared operating model for separation,

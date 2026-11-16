@@ -10,10 +10,10 @@ import { Button } from "../../components/poc/button";
 import { Card } from "../../components/poc/card";
 import { pageMetadata } from "../../lib/seo";
 import CapabilityStructuredData from "../CapabilityStructuredData";
-import { capabilityPackages, getCapabilityPackage } from "../data";
+import { capabilityAreas, getCapabilityArea } from "../data";
 
 type PageProps = { params: Promise<{ slug: string }> };
-type CapabilityItem = NonNullable<ReturnType<typeof getCapabilityPackage>>;
+type CapabilityItem = NonNullable<ReturnType<typeof getCapabilityArea>>;
 
 function ProductVisual({
   src,
@@ -57,7 +57,7 @@ function CapabilityConcept({
   related,
 }: {
   item: CapabilityItem;
-  related: typeof capabilityPackages;
+  related: typeof capabilityAreas;
 }) {
   const heroImage =
     item.slug === "transaction-baseline"
@@ -90,10 +90,6 @@ function CapabilityConcept({
             <p className="mt-7 max-w-[620px] text-lg leading-8 text-zinc-600">
               {item.introduction}
             </p>
-            <p className="mt-6 text-xs leading-6 text-zinc-500">
-              <strong className="font-semibold text-zinc-700">Best for:</strong>{" "}
-              {item.bestFor}
-            </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg">
                 <Link href="/book-a-demo">
@@ -120,12 +116,12 @@ function CapabilityConcept({
         <div className="mx-auto max-w-[1560px] px-5 py-7 lg:px-8">
           <div className="text-center">
             <p className="text-[10px] font-semibold tracking-[0.17em] text-zinc-400">
-              ONE MergeVista PLATFORM
+              ONE MERGEVISTA PLATFORM
             </p>
             <strong className="mt-3 block text-sm">{item.shortName}</strong>
             <p className="mt-2 text-sm text-zinc-600">
-              Start here today. Expand across the transaction lifecycle without
-              rebuilding your data, decisions or execution history.
+              This capability works with the same operational records, plans,
+              decisions and evidence used across the transition.
             </p>
           </div>
           <div className="mt-6 grid divide-y divide-zinc-200 sm:grid-cols-4 sm:divide-x sm:divide-y-0">
@@ -175,16 +171,16 @@ function CapabilityConcept({
         <div className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
           <div className="grid gap-14 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
             <div>
-              <Badge className="bg-white">WHAT THIS PACKAGE ENABLES</Badge>
+              <Badge className="bg-white">WHAT THIS CAPABILITY ENABLES</Badge>
               <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
-                Focused adoption. Connected execution.
+                Connected capability. Governed execution.
               </h2>
             </div>
             <div className="w-full max-w-[760px] lg:justify-self-end">
               <ProductVisual
-                src="/product/redesign-contracts-licenses.png"
-                alt="MergeVista connected execution workspace"
-                label="CONNECTED EXECUTION"
+                src={item.image}
+                alt={item.imageAlt}
+                label={item.imageLabel}
               />
             </div>
           </div>
@@ -221,7 +217,7 @@ function CapabilityConcept({
 
       <section className="border-y border-zinc-200 bg-zinc-50">
         <div className="mx-auto max-w-[1560px] px-5 py-16 lg:px-8">
-          <Badge className="bg-white">EXPAND WITHIN THE SAME PLATFORM</Badge>
+          <Badge className="bg-white">EXPLORE CONNECTED CAPABILITIES</Badge>
           <div className="mt-8 grid overflow-hidden rounded-xl border border-zinc-200 bg-white md:grid-cols-3">
             {related.map((candidate) => (
               <Link
@@ -236,7 +232,7 @@ function CapabilityConcept({
           </div>
           <Button asChild variant="ghost" className="mt-5 -ml-4">
             <Link href="/platform">
-              Explore the complete MergeVista platform
+              Back to the platform overview
               <ArrowRight />
             </Link>
           </Button>
@@ -247,11 +243,11 @@ function CapabilityConcept({
         <div className="mx-auto grid max-w-[1500px] gap-8 rounded-2xl bg-zinc-950 p-8 text-white sm:p-12 lg:grid-cols-[1fr_auto] lg:items-center lg:p-16">
           <div>
             <h2 className="max-w-3xl text-3xl font-medium tracking-[-0.035em] sm:text-5xl">
-              See {item.shortName} in your transaction context.
+              See how {item.shortName} supports your transition.
             </h2>
             <p className="mt-5 max-w-2xl text-sm leading-6 text-zinc-400">
-              Start with the capabilities you need today, with room to expand
-              across the complete lifecycle.
+              Explore this capability as part of one governed platform for
+              integration, separation and TSA execution.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -277,17 +273,17 @@ function CapabilityConcept({
 }
 
 export function generateStaticParams() {
-  return capabilityPackages.map(({ slug }) => ({ slug }));
+  return capabilityAreas.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const item = getCapabilityPackage(slug);
+  const item = getCapabilityArea(slug);
   if (!item) return {};
   return pageMetadata(
-    `${item.shortName} for IT M&A | MergeVista`,
+    `${item.shortName} | M&A Transition | MergeVista`,
     item.seoDescription,
     `/capabilities/${item.slug}`,
   );
@@ -295,9 +291,9 @@ export async function generateMetadata({
 
 export default async function CapabilityPage({ params }: PageProps) {
   const { slug } = await params;
-  const item = getCapabilityPackage(slug);
+  const item = getCapabilityArea(slug);
   if (!item) notFound();
-  const related = capabilityPackages.filter(
+  const related = capabilityAreas.filter(
     (candidate) => candidate.slug !== item.slug,
   );
   return <CapabilityConcept item={item} related={related} />;

@@ -40,7 +40,9 @@ export async function generateMetadata({
   const item = getUseCase((await params).slug);
   return item
     ? pageMetadata(
-        `${item.title} | MergeVista`,
+        item.slug === "serial-acquirers"
+          ? "Serial Acquirer M&A Use Case | MergeVista"
+          : `${item.title} | MergeVista`,
         item.seoDescription,
         `/use-cases/${item.slug}`,
       )

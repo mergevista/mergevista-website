@@ -9,7 +9,7 @@ import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "The Application Can Move. The License May Not.";
 const seoTitle = "Software Licensing in IT Separations | MergeVista";
-const description = "Why application migration readiness in an IT separation must include contracts, entitlements, vendor consent, deployment rights and evidence—not only technical readiness.";
+const description = "Why IT separation readiness must connect application migration with contracts, entitlements, vendor consent, deployment rights and evidence.";
 const path = "/insights/application-move-license-may-not";
 const published = "2026-10-07";
 const image = "/insights/editorial-line-license-mobility-transparent.png";

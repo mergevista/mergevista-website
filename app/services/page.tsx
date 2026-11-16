@@ -9,8 +9,8 @@ import { brand, canonicalUrl } from "../lib/brand";
 import { pageMetadata } from "../lib/seo";
 
 export const metadata = pageMetadata(
-  "Platform-Enabled IT M&A Services | MergeVista",
-  "Accelerate IT M&A execution with MergeVista platform-enabled services for transaction launch, execution support, Day 1, migration and TSA exit.",
+  "Platform-Enabled M&A Transition Services | MergeVista",
+  "Accelerate integration, separation and TSA execution with platform-enabled services for transaction launch, Day 1 readiness, stabilization and exit.",
   "/services",
 );
 
@@ -70,7 +70,7 @@ const commercial = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Platform-Enabled IT M&A Services",
+  name: "Platform-Enabled M&A Transition Services",
   description:
     "Platform-enabled services for transaction launch, execution support, Day 1, migration, separation, integration and TSA exit.",
   url: canonicalUrl("/services"),
@@ -81,7 +81,7 @@ const structuredData = {
     url: brand.websiteUrl,
   },
   areaServed: "Worldwide",
-  serviceType: "IT M&A execution services",
+  serviceType: "M&A integration, separation and TSA execution services",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "MergeVista platform-enabled services",
@@ -116,7 +116,7 @@ export default function ServicesPage() {
             <h1 className="mt-7 max-w-5xl text-[2.75rem] font-medium leading-[1.01] tracking-[-.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">Expert execution,<span className="block font-normal text-[#1559a6]">enabled by MergeVista.</span></h1>
           </div>
           <div className="lg:pb-2">
-            <p className="max-w-2xl text-lg leading-8 text-zinc-600">Establish a reliable transaction baseline, configure the right operating model and maintain execution control with experienced IT M&amp;A practitioners—all delivered through the MergeVista platform.</p>
+            <p className="max-w-2xl text-lg leading-8 text-zinc-600">Establish a reliable execution baseline, configure the right operating model and maintain control from Day 1 planning through stabilization and TSA exit—all delivered through the MergeVista platform.</p>
             <div className="mt-8 flex flex-wrap gap-3"><Button asChild size="lg"><Link href="/book-a-demo">Discuss your transaction <ArrowRight /></Link></Button><Button asChild size="lg" variant="outline"><Link href="/platform">Explore the platform</Link></Button></div>
             <p className="mt-6 text-xs text-zinc-500">Optional services · Separately scoped · One connected transaction record</p>
           </div>
@@ -124,7 +124,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="mx-auto grid max-w-[1560px] gap-12 px-5 py-20 lg:grid-cols-[.85fr_1.15fr] lg:px-8 lg:py-28">
-        <div><Badge>OUR SERVICE MODEL</Badge><h2 className="mt-5 text-4xl font-medium tracking-[-.04em] sm:text-5xl">Software at the center. Expertise where it accelerates the outcome.</h2><p className="mt-6 max-w-xl leading-7 text-zinc-600">MergeVista is an IT M&amp;A execution platform—not a traditional consulting model. Optional services help teams configure the platform, establish reliable data and maintain execution discipline.</p></div>
+        <div><Badge>OUR SERVICE MODEL</Badge><h2 className="mt-5 text-4xl font-medium tracking-[-.04em] sm:text-5xl">Software at the center. Expertise where it accelerates the outcome.</h2><p className="mt-6 max-w-xl leading-7 text-zinc-600">MergeVista is an M&amp;A integration, separation and TSA execution platform—not a traditional consulting model. Optional services help teams configure the platform, establish reliable data and maintain execution discipline.</p></div>
         <div className="grid gap-4 sm:grid-cols-3">
           {[
             { icon: Settings2, title: "Faster time to value", text: "Begin with a configured workspace and an actionable transaction baseline." },
@@ -145,7 +145,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
-        <Badge>COMPLETE LIFECYCLE SUPPORT</Badge><h2 className="mt-5 max-w-4xl text-4xl font-medium tracking-[-.04em] sm:text-5xl">Support across the complete IT M&amp;A journey.</h2>
+        <Badge>TRANSITION EXECUTION SUPPORT</Badge><h2 className="mt-5 max-w-4xl text-4xl font-medium tracking-[-.04em] sm:text-5xl">Support from Day 1 planning through stabilization and TSA exit.</h2>
         <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-zinc-200 bg-zinc-200 md:grid-cols-2 xl:grid-cols-4">{lifecycle.map((item) => <div key={item.title} className="bg-white p-7 sm:p-9"><item.icon className="size-5 text-[#1559a6]" /><small className="mt-8 block font-semibold tracking-[.1em] text-zinc-400">{item.label}</small><h3 className="mt-4 text-2xl font-medium tracking-[-.03em]">{item.title}</h3><p className="mt-4 text-sm leading-6 text-zinc-600">{item.text}</p><ul className="mt-7 space-y-2 text-xs text-zinc-500">{item.items.map((x) => <li key={x}>— {x}</li>)}</ul></div>)}</div>
       </section>
 

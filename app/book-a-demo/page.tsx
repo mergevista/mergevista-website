@@ -7,14 +7,14 @@ import { Badge } from "../components/poc/badge";
 import { Card } from "../components/poc/card";
 import { pageMetadata } from "../lib/seo";
 export const metadata = pageMetadata(
-  "Book a Demo | MergeVista",
-  "Book a focused demonstration of the MergeVista AI-powered IT M&A execution platform.",
+  "Book an M&A Transition Platform Demo | MergeVista",
+  "Book a focused MergeVista demonstration for connected M&A integration, separation, Day 1 readiness, stabilization and TSA exit execution.",
   "/book-a-demo",
 );
 const outcomes = [
-  "Explore the complete IT M&A lifecycle",
-  "See connected inventory and execution",
-  "Discuss your Day 1, TSA and exit priorities",
+  "Explore integration, separation and TSA execution",
+  "See connected workstreams and operational inventories",
+  "Discuss your Day 1, stabilization and exit priorities",
 ];
 export default function Page() {
   return (
@@ -32,7 +32,7 @@ export default function Page() {
               <span className="font-normal text-[#1559a6]">
                 clarity and control
               </span>{" "}
-              to IT M&amp;A execution.
+              to transition execution.
             </h1>
             <p className="mt-7 text-lg leading-8 text-zinc-600">
               Tell us what you are working through. We will tailor the

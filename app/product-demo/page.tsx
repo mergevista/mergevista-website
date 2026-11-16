@@ -8,7 +8,7 @@ import { Badge } from "../components/poc/badge";
 import { Button } from "../components/poc/button";
 import { brand } from "../lib/brand";
 
-const title = "MergeVista Product Demo | Connected IT M&A Execution";
+const title = "MergeVista Product Demo | M&A Transition Execution";
 const description =
   "Watch a concise product tour of MergeVista and see how teams connect inventory, contracts, TSA management, program execution, reporting, and readiness.";
 

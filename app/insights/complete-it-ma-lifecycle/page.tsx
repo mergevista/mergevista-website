@@ -8,7 +8,7 @@ import RelatedInsights from "../RelatedInsights";
 import styles from "./article.module.css";
 
 const title = "The Complete IT M&A Lifecycle";
-const description = "A practical framework connecting discovery, separation, Day 1, TSA operations, migration and TSA exit.";
+const description = "A practical IT M&A lifecycle connecting discovery, separation, Day 1 readiness, TSA operations, migration, stabilization and evidence-based TSA exit.";
 const path = "/insights/complete-it-ma-lifecycle";
 const image = "/insights/editorial-line-lifecycle-transparent.png";
 const socialImage = "/insights/social-lifecycle.png";

@@ -4,8 +4,8 @@ import { Card } from "../components/poc/card";
 import { pageMetadata } from "../lib/seo";
 
 export const metadata = pageMetadata(
-  "IT Separation & Integration Solutions | MergeVista",
-  "Explore MergeVista solutions for divestitures, acquisitions, carve-out Day 1 readiness, post-close migration and TSA exit.",
+  "M&A Integration, Separation & TSA Solutions | MergeVista",
+  "Explore MergeVista solutions for governed M&A integration, separation, Day 1 readiness, stabilization, migration and evidence-based TSA exit.",
   "/solutions",
 );
 
@@ -89,7 +89,7 @@ export default function Page() {
       eyebrow="Solutions for transaction execution"
       title="Control the moments that determine"
       accent="deal outcomes."
-      intro="Use one connected operating model to establish the baseline, protect Day 1, govern TSA delivery and accelerate migration and exit."
+      intro="Use one connected operating model to coordinate workstreams, protect Day 1, govern integration or separation and accelerate stabilization and TSA exit."
       primaryLabel="Book a demo"
       cards={cards}
       sectionLabel="BUILT FOR REAL TRANSACTION PRESSURE"

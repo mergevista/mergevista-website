@@ -4,8 +4,8 @@ import { Card } from "../components/poc/card";
 import { pageMetadata } from "../lib/seo";
 
 export const metadata = pageMetadata(
-  "AI for IT M&A | MergeVista Intelligence",
-  "Explore MergeVista Intelligence for source-grounded contract extraction, product and license normalization, inventory reconciliation, exception detection and human-governed IT M&A decisions.",
+  "AI for M&A Transition Execution | MergeVista",
+  "Explore source-grounded AI for contract extraction, inventory reconciliation, exception detection and human-governed M&A transition decisions.",
   "/ai-capabilities",
 );
 

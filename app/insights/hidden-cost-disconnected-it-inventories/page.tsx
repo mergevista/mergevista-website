@@ -8,6 +8,7 @@ import RelatedInsights from "../RelatedInsights";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "The Hidden Cost of Disconnected IT Inventories";
+const seoTitle = "Disconnected IT Inventories in M&A | MergeVista";
 const description = "Why complete asset lists still miss separation risk—and how dependency intelligence connects applications, infrastructure, data, sites, contracts and licenses.";
 const path = "/insights/hidden-cost-disconnected-it-inventories";
 const image = "/insights/editorial-line-disconnected-inventories-transparent.png";
@@ -15,7 +16,7 @@ const socialImage = "/insights/social-disconnected-inventories.png";
 const imageAlt = "Disconnected IT inventory towers producing conflicting transaction records";
 
 export const metadata: Metadata = {
-  title: `${title} | MergeVista Insights`, description,
+  title: seoTitle, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
   openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-06", images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
   twitter: { card: "summary_large_image", title, description, images: [socialImage] },

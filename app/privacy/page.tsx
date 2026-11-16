@@ -5,7 +5,7 @@ import BackToTop from "../components/BackToTop";
 import { brand, supportMailto } from "../lib/brand";
 import { pageMetadata } from "../lib/seo";
 
-export const metadata = pageMetadata("Privacy Notice | MergeVista", "Learn how MergeVista collects, uses, protects and shares information through its website and platform.", brand.legalPaths.privacy);
+export const metadata = pageMetadata("MergeVista Privacy Notice | Data Practices", "Learn how MergeVista collects, uses, protects, retains and shares personal information across its website, product demonstrations and platform.", brand.legalPaths.privacy);
 
 const sections = [
   ["information", "Information we collect"],

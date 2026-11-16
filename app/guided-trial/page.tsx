@@ -9,7 +9,7 @@ import { Card } from "../components/poc/card";
 import { pageMetadata } from "../lib/seo";
 export const metadata = pageMetadata(
   "Request a Guided Trial | MergeVista",
-  "Apply to evaluate MergeVista in a secure workspace configured around a representative IT M&A scenario.",
+  "Apply to evaluate MergeVista in a secure workspace configured around a representative M&A integration, separation or TSA execution scenario.",
   "/guided-trial",
 );
 const steps = [

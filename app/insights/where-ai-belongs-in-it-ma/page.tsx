@@ -8,7 +8,7 @@ import RelatedInsights from "../RelatedInsights";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Where AI Actually Belongs in IT M&A";
-const description = "Where AI adds practical value in IT M&A: organizing evidence, reconciling information and preparing decisions while keeping experienced practitioners accountable.";
+const description = "Where AI adds value in IT M&A by organizing evidence, reconciling information and preparing decisions while keeping practitioners accountable.";
 const path = "/insights/where-ai-belongs-in-it-ma";
 const published = "2026-09-17";
 const image = "/insights/editorial-line-human-governed-ai-transparent.png";

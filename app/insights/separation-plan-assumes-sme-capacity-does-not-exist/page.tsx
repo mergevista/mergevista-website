@@ -8,8 +8,8 @@ import RelatedInsights from "../RelatedInsights";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "The Separation Plan Assumes SME Capacity That Does Not Exist";
-const seoTitle = "SME Capacity Is a Critical IT Separation Dependency | MergeVista";
-const description = "Why IT separation plans fail when subject-matter expert capacity is assumed rather than planned—and how teams can capture knowledge once, reuse it and protect the critical path.";
+const seoTitle = "SME Capacity in IT Separation Planning | MergeVista";
+const description = "Why IT separation plans fail when expert capacity is assumed rather than planned, and how teams can capture knowledge and protect the critical path.";
 const path = "/insights/separation-plan-assumes-sme-capacity-does-not-exist";
 const published = "2026-11-11";
 const image = "/insights/editorial-sme-capacity.svg";

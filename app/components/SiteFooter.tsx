@@ -59,9 +59,9 @@ export default function SiteFooter({ theme = "light", bordered = true }: SiteFoo
               ? <Image src="/brand/mergevista-primary-dark-exact.png" alt="MergeVista" width={675} height={212}/>
               : <Image src="/brand/mergevista-primary-light.png" alt="MergeVista" width={675} height={212}/>
             }
-            <small>AI-Powered IT M&amp;A Execution Platform</small>
+            <small>M&amp;A Integration, Separation &amp; TSA Execution Platform</small>
           </Link>
-          <p>Connect the technology baseline, transition plan and execution evidence in one governed platform.</p>
+          <p>Connect functional and technology workstreams, operational inventories, dependencies and governance in one execution platform.</p>
           <SocialLinks />
         </div>
 
@@ -69,8 +69,8 @@ export default function SiteFooter({ theme = "light", bordered = true }: SiteFoo
           <div className={styles.linkGroup}>
             <h2>Product</h2>
             <Link href="/platform">Platform</Link>
-            <Link href="/functional-workstreams">Functional Workstreams</Link>
             <Link href="/solutions">Solutions</Link>
+            <Link href="/functional-workstreams">Workstreams</Link>
             <Link href="/services">Services</Link>
             <Link href="/ai-capabilities">AI Capabilities</Link>
             <Link href="/pricing">Pricing</Link>
@@ -95,7 +95,7 @@ export default function SiteFooter({ theme = "light", bordered = true }: SiteFoo
 
       <div className={styles.bottom}>
         <p>© {brand.copyrightYear} {brand.legalName}. All rights reserved.</p>
-        <span>Built for governed IT M&amp;A execution.</span>
+        <span>Built for integration, separation and TSA execution.</span>
       </div>
     </footer>
   </div>;

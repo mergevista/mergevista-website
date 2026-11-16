@@ -1,7 +1,7 @@
 export const brand = {
   productName: "MergeVista",
   legalName: "MergeVista LLC",
-  tagline: "AI-Powered IT M&A Execution Platform",
+  tagline: "M&A Integration, Separation and TSA Execution Platform",
   websiteUrl: "https://www.mergevista.com",
   supportEmail: "support@mergevista.com",
   copyrightYear: 2026,

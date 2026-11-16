@@ -31,7 +31,7 @@ export function pageMetadata(title: string, description: string, path: string): 
           url: "/og.png",
           width: 1200,
           height: 630,
-          alt: "MergeVista — AI-Powered IT M&A Execution Platform",
+          alt: "MergeVista — M&A Integration, Separation and TSA Execution Platform",
         },
       ],
     },

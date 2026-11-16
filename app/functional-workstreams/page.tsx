@@ -8,22 +8,13 @@ import { Card } from "../components/poc/card";
 import { pageMetadata } from "../lib/seo";
 
 export const metadata = pageMetadata(
-  "Functional M&A Workstreams | MergeVista",
-  "Connect IT M&A with People, Finance, Legal, EHS, Procurement, Real Estate, Operations and Communications in one governed execution environment.",
+  "Functional & Technology M&A Workstreams | MergeVista",
+  "Connect functional and technology workstreams through shared plans, operational inventories, dependencies, governance and readiness.",
   "/functional-workstreams",
 );
 
-const lifecycle = [
-  "Discovery",
-  "Assessment",
-  "Separation",
-  "Day 1",
-  "TSA Operations",
-  "Migration",
-  "TSA Exit",
-];
-
 const workstreams = [
+  ["Technology", "Applications, infrastructure, data, cybersecurity, service continuity, migration and TSA exit."],
   ["People & HR", "Workforce, organization, payroll, benefits, access, training and employee readiness."],
   ["Finance", "Close, controls, reporting, treasury, tax and finance-service dependencies."],
   ["Legal & Compliance", "Entities, obligations, consents, policies and regulatory actions."],
@@ -52,17 +43,18 @@ export default function FunctionalWorkstreamsPage() {
           <div data-motion="hero-copy">
             <Badge className="gap-2 bg-white">
               <Network className="size-3.5 text-[#1559a6]" />
-              FUNCTIONAL WORKSTREAMS
+              FUNCTIONAL + TECHNOLOGY WORKSTREAMS
             </Badge>
             <h1 className="mt-7 text-[2.75rem] font-medium leading-[1.01] tracking-[-0.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
-              Run IT M&amp;A.{" "}
+              Coordinate every workstream{" "}
               <span className="font-normal text-[#1559a6]">
-                Coordinate every functional workstream.
+                around one transaction plan.
               </span>
             </h1>
             <p className="mt-7 max-w-[650px] text-lg leading-8 text-zinc-600">
-              MergeVista runs IT M&amp;A and brings every functional workstream
-              into the same governed execution environment.
+              MergeVista connects functional and technology workstreams,
+              operational inventories, dependencies and governance—from Day 1
+              planning through stabilization and TSA exit.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg">
@@ -77,19 +69,19 @@ export default function FunctionalWorkstreamsPage() {
           <Card data-motion="hero-visual" className="overflow-hidden p-5 shadow-[0_18px_48px_rgba(24,24,27,0.08)] sm:p-7">
             <div className="grid gap-px overflow-hidden rounded-xl bg-zinc-200 md:grid-cols-2">
               <div className="bg-[#071b42] p-6 text-white">
-                <p className="text-[10px] font-semibold tracking-[0.16em] text-blue-300">COMPLETE IT M&amp;A LIFECYCLE</p>
-                <h2 className="mt-3 text-2xl font-medium tracking-[-0.03em]">Technology execution</h2>
-                <p className="mt-4 text-sm leading-6 text-zinc-300">{lifecycle.join(" · ")}</p>
+                <p className="text-[10px] font-semibold tracking-[0.16em] text-blue-300">FUNCTIONAL + TECHNOLOGY WORKSTREAMS</p>
+                <h2 className="mt-3 text-2xl font-medium tracking-[-0.03em]">One coordinated transition</h2>
+                <p className="mt-4 text-sm leading-6 text-zinc-300">People · Finance · Legal · EHS · Procurement · Real Estate · Operations · Communications · Technology</p>
               </div>
               <div className="bg-white p-6">
-                <p className="text-[10px] font-semibold tracking-[0.16em] text-[#1559a6]">CONNECTED FUNCTIONAL WORKSTREAMS</p>
-                <h2 className="mt-3 text-2xl font-medium tracking-[-0.03em]">Business transition</h2>
-                <p className="mt-4 text-sm leading-6 text-zinc-600">People · Finance · Legal · EHS · Procurement · Real Estate · Operations · Communications</p>
+                <p className="text-[10px] font-semibold tracking-[0.16em] text-[#1559a6]">OPERATIONAL INVENTORIES + DEPENDENCIES</p>
+                <h2 className="mt-3 text-2xl font-medium tracking-[-0.03em]">Connected operational context</h2>
+                <p className="mt-4 text-sm leading-6 text-zinc-600">Applications · Infrastructure · Data · Sites · Contracts · Services · Suppliers · Obligations</p>
               </div>
             </div>
             <div className="mt-3 rounded-xl border border-zinc-200 bg-[#f5f8fc] p-5">
-              <p className="text-[10px] font-semibold tracking-[0.16em] text-[#1559a6]">SHARED GOVERNED EXECUTION ENVIRONMENT</p>
-              <p className="mt-3 text-sm leading-6 text-zinc-600">Plans · Milestones · Ownership · Dependencies · Risks · Decisions · Readiness · Evidence</p>
+              <p className="text-[10px] font-semibold tracking-[0.16em] text-[#1559a6]">SHARED GOVERNANCE ENVIRONMENT</p>
+              <p className="mt-3 text-sm leading-6 text-zinc-600">Plans · Milestones · Owners · Dependencies · Risks · Decisions · Readiness · Evidence</p>
             </div>
           </Card>
         </div>
@@ -99,8 +91,8 @@ export default function FunctionalWorkstreamsPage() {
         <div className="mx-auto grid max-w-[1560px] gap-12 px-5 py-20 lg:grid-cols-[0.72fr_1.28fr] lg:px-8 lg:py-24">
           <div>
             <Badge>ONE TRANSACTION ENVIRONMENT</Badge>
-            <h2 className="mt-5 text-4xl font-medium leading-tight tracking-[-0.04em] sm:text-5xl">Give every function a clear role in execution.</h2>
-            <p className="mt-6 max-w-xl leading-7 text-zinc-600">Functional teams manage their own plans and commitments while the transaction team maintains a connected view of ownership, dependencies, decisions, risks and readiness.</p>
+            <h2 className="mt-5 text-4xl font-medium leading-tight tracking-[-0.04em] sm:text-5xl">Give every workstream a clear role in execution.</h2>
+            <p className="mt-6 max-w-xl leading-7 text-zinc-600">Functional and technology teams manage their own plans and commitments while the transaction team maintains a connected view of ownership, dependencies, decisions, risks and readiness.</p>
           </div>
           <div className="grid gap-px overflow-hidden rounded-xl border border-zinc-200 bg-zinc-200 sm:grid-cols-2">
             {executionCore.map(([title, description]) => (
@@ -121,11 +113,11 @@ export default function FunctionalWorkstreamsPage() {
       <section className="border-b border-zinc-200 bg-[#fcfcfc]">
         <div className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <Badge className="bg-white">FUNCTIONAL WORKSTREAMS</Badge>
+            <Badge className="bg-white">FUNCTIONAL + TECHNOLOGY WORKSTREAMS</Badge>
             <h2 className="mt-5 text-4xl font-medium leading-tight tracking-[-0.04em] sm:text-5xl">Connect the teams that determine transaction readiness.</h2>
-            <p className="mt-5 leading-7 text-zinc-600">Each function can manage its own execution detail while remaining connected to shared milestones, cross-functional dependencies and the complete transaction record.</p>
+            <p className="mt-5 leading-7 text-zinc-600">Each workstream can manage its own execution detail while remaining connected to shared milestones, cross-functional dependencies and the complete transaction record.</p>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {workstreams.map(([name, description], index) => (
               <Card key={name} className="p-5">
                 <span className="font-mono text-[10px] text-[#1559a6]">{String(index + 1).padStart(2, "0")}</span>
@@ -141,7 +133,7 @@ export default function FunctionalWorkstreamsPage() {
         <div className="mx-auto flex max-w-[1560px] flex-col justify-between gap-8 px-5 py-16 sm:flex-row sm:items-center lg:px-8">
           <div>
             <p className="text-[10px] font-semibold tracking-[0.16em] text-blue-300">ONE TRANSACTION RECORD</p>
-            <h2 className="mt-3 text-3xl font-medium tracking-[-0.04em] sm:text-4xl">Coordinate IT and every functional workstream with clarity.</h2>
+            <h2 className="mt-3 text-3xl font-medium tracking-[-0.04em] sm:text-4xl">Coordinate every workstream with clarity and control.</h2>
             <p className="mt-3 max-w-2xl text-zinc-300">See how MergeVista can support the execution model for your next acquisition, integration, divestiture or separation.</p>
           </div>
           <Button asChild size="lg" variant="outline" className="border-white/25 bg-transparent text-white hover:bg-white hover:text-zinc-950">

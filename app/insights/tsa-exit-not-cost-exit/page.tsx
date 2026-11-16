@@ -9,7 +9,7 @@ import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "TSA Exit Is Not Cost Exit: Where Stranded IT Costs Hide After Separation";
 const seoTitle = "Stranded IT Costs After TSA Exit | MergeVista";
-const description = "Why TSA exit does not automatically remove the seller’s underlying IT costs—and how separation teams can connect decommissioning, licenses, contracts, cloud resources and support changes to evidence-based cost exit.";
+const description = "Why TSA exit does not automatically remove stranded IT costs, and how teams can connect decommissioning, licenses, contracts and cloud resources to cost exit.";
 const path = "/insights/tsa-exit-not-cost-exit";
 const published = "2026-10-16";
 const image = "/insights/editorial-line-tsa-cost-exit-transparent.png";

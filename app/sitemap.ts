@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { brand, canonicalUrl } from "./lib/brand";
 import { useCases } from "./use-cases/data";
-import { capabilityPackages } from "./capabilities/data";
+import { capabilityAreas } from "./capabilities/data";
 import { solutions } from "./solutions/data";
 import { aiCapabilities } from "./ai-capabilities/data";
 
@@ -11,13 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: brand.websiteUrl,
-      lastModified: new Date(),
+      lastModified: new Date("2026-11-16"),
       changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: canonicalUrl("/book-a-demo"),
-      lastModified: new Date(),
+      lastModified: new Date("2026-11-16"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -29,25 +29,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: canonicalUrl("/contact"),
-      lastModified: new Date(),
+      lastModified: new Date("2026-11-16"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: canonicalUrl(brand.legalPaths.privacy),
-      lastModified: new Date(),
+      lastModified: new Date("2026-11-16"),
       changeFrequency: "yearly",
       priority: 0.5,
     },
     {
       url: canonicalUrl(brand.legalPaths.security),
-      lastModified: new Date(),
+      lastModified: new Date("2026-11-16"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: canonicalUrl("/about"),
-      lastModified: new Date(),
+      lastModified: new Date("2026-11-16"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -69,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    ...capabilityPackages.map(({ slug }) => ({
+    ...capabilityAreas.map(({ slug }) => ({
       url: canonicalUrl(`/capabilities/${slug}`),
       lastModified: new Date("2026-09-29"),
       changeFrequency: "monthly" as const,
@@ -221,13 +221,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: canonicalUrl(brand.legalPaths.terms),
-      lastModified: new Date(),
+      lastModified: new Date("2026-11-16"),
       changeFrequency: "yearly",
       priority: 0.5,
     },
     {
       url: canonicalUrl(brand.legalPaths.support),
-      lastModified: new Date(),
+      lastModified: new Date("2026-11-16"),
       changeFrequency: "monthly",
       priority: 0.6,
     },

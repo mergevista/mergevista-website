@@ -6,7 +6,7 @@ import { useCases } from "./data";
 import { UseCasesCollectionStructuredData } from "./UseCaseStructuredData";
 
 export const metadata = pageMetadata(
-  "IT M&A Use Cases | MergeVista",
+  "M&A Integration, Separation & TSA Use Cases | MergeVista",
   "See how MergeVista supports transaction readiness, acquirers, private equity, enterprise M&A, carve-outs, consulting partners and boutique M&A firms.",
   "/use-cases",
 );
@@ -37,7 +37,7 @@ export default function Page() {
         eyebrow="Use cases"
         title="One platform. Different"
         accent="M&A situations."
-        intro="Whether you are preparing a business for sale, making your first acquisition, scaling a repeatable acquisition program or executing a complex carve-out, MergeVista provides structure, visibility and governance from discovery through Day 1, migration and TSA exit."
+        intro="Whether you are preparing for integration, separation, Day 1, stabilization or TSA exit, MergeVista provides structure, visibility and governance across functional and technology workstreams."
         primaryLabel="Discuss your use case"
         cards={cards}
         sectionLabel="CHOOSE YOUR SITUATION"

@@ -8,14 +8,15 @@ import RelatedInsights from "../RelatedInsights";
 import localStyles from "./day-one.module.css";
 
 const title = "Why Day 1 Readiness Fails Despite Detailed Project Plans";
-const description = "Why detailed workstream plans do not guarantee Day 1 readiness—and how integrated inventories, dependencies, decisions and evidence create operational confidence.";
+const seoTitle = "Why M&A Day 1 Readiness Fails | MergeVista";
+const description = "Why detailed plans do not guarantee M&A Day 1 readiness, and how integrated inventories, dependencies, decisions and evidence create operational confidence.";
 const path = "/insights/why-day-1-readiness-fails";
 const image = "/insights/editorial-line-day-one-readiness-transparent.png";
 const socialImage = "/insights/social-day-one-readiness.png";
 const imageAlt = "Detailed project plans separated from the Day 1 operating checkpoint";
 
 export const metadata: Metadata = {
-  title: `${title} | MergeVista Insights`,
+  title: seoTitle,
   description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
   openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-20", images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },

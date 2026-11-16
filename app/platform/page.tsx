@@ -9,11 +9,10 @@ import { Button } from "../components/poc/button";
 import { Card } from "../components/poc/card";
 import { Separator } from "../components/poc/separator";
 import { pageMetadata } from "../lib/seo";
-import { capabilityPackages } from "../capabilities/data";
 
 export const metadata = pageMetadata(
-  "IT M&A Software Platform | MergeVista",
-  "Explore the MergeVista AI-powered platform for connected IT M&A inventories, governance, separation, Day 1 readiness, TSA operations, migration and exit.",
+  "M&A Integration, Separation & TSA Platform | MergeVista",
+  "Explore the MergeVista platform for connected functional and technology workstreams, operational inventories, dependencies, governance, readiness and TSA exit.",
   "/platform",
 );
 
@@ -21,9 +20,9 @@ const capabilities = [
   {
     label: "Baseline & governance",
     title: "Establish one governed source of truth",
-    text: "Bring applications, infrastructure, sites, users, contracts and licenses into a deal-specific model—then govern the baseline through accountable review.",
+    text: "Bring operational and technology inventories, services, contracts and obligations into a transaction-specific model—then govern the baseline through accountable review.",
     points: [
-      "Configurable import, mapping and validation",
+      "Configurable inventory import, mapping and validation",
       "Submit, review, approve, freeze and control exceptions",
     ],
     outcome: "Stop reconciling competing inventories",
@@ -31,10 +30,10 @@ const capabilities = [
   {
     label: "Dependency intelligence",
     title: "Make cross-workstream dependencies executable",
-    text: "Connect technology records to the business processes, locations, owners and transition decisions that determine how separation and migration must sequence.",
+    text: "Connect workstream plans to the operational records, locations, owners and transition decisions that determine how separation and integration must sequence.",
     points: [
-      "Cross-domain and cross-site relationship mapping",
-      "Risks, decisions and actions connected to affected inventory",
+      "Cross-functional and cross-site dependency mapping",
+      "Risks, decisions and actions connected to affected inventories",
     ],
     outcome: "See what must move together",
   },
@@ -77,6 +76,37 @@ const capabilities = [
       "Executive visibility into risk, decisions and missing evidence",
     ],
     outcome: "Turn status reporting into operational confidence",
+  },
+];
+
+const platformAreas = [
+  {
+    number: "01",
+    slug: "transaction-baseline",
+    title: "Operational baseline",
+    headline: "Build the governed foundation for the transition.",
+    text: "Bring operational and technology inventories, ownership, obligations and dependencies into one trusted transaction model.",
+  },
+  {
+    number: "02",
+    slug: "transaction-control",
+    title: "Plans & governance",
+    headline: "Coordinate execution around shared outcomes.",
+    text: "Connect workstream plans, milestones, owners, risks, decisions and evidence without separating status from operational context.",
+  },
+  {
+    number: "03",
+    slug: "day-1-readiness",
+    title: "Day 1 readiness",
+    headline: "Prepare the business to operate from legal close.",
+    text: "Define outcome-based readiness, expose cross-workstream dependencies and govern exceptions through accountable approval.",
+  },
+  {
+    number: "04",
+    slug: "migration-tsa-exit",
+    title: "Stabilization & TSA exit",
+    headline: "Move from continuity to operational independence.",
+    text: "Connect stabilization, migration, TSA obligations, exit criteria and evidence through final transition completion.",
   },
 ];
 
@@ -155,15 +185,15 @@ export default function PlatformPage() {
               The MergeVista platform
             </Badge>
             <h1 className="mt-7 text-[2.75rem] font-medium leading-[1.01] tracking-[-0.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
-              One operating system for the{" "}
+              One execution environment for{" "}
               <span className="font-normal text-[#1559a6]">
-                complete IT M&amp;A journey.
+                integration, separation and TSA exit.
               </span>
             </h1>
             <p className="mt-7 max-w-[620px] text-lg leading-8 text-zinc-600">
-              Connect the inventories, teams, plans, dependencies, decisions and
-              evidence required to move from discovery through separation, Day
-              1, TSA operations, migration and exit.
+              Connect functional and technology workstreams, operational
+              inventories, dependencies, decisions and evidence from Day 1
+              planning through stabilization and TSA exit.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg">
@@ -201,7 +231,7 @@ export default function PlatformPage() {
           <div className="mt-6 grid divide-y divide-zinc-200 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
             {[
               "Buyer + seller collaboration",
-              "Deal-level access control",
+              "Transaction-level access control",
               "End-to-end traceability",
               "Human-governed AI",
             ].map((x) => (
@@ -217,8 +247,8 @@ export default function PlatformPage() {
       </section>
       <section className="border-b border-zinc-200 bg-white">
         <div className="mx-auto grid max-w-[1560px] gap-8 px-5 py-16 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:px-8">
-          <div><Badge>FUNCTIONAL WORKSTREAMS</Badge><h2 className="mt-5 text-3xl font-medium tracking-[-0.04em] sm:text-4xl">One governed environment for the complete transition.</h2></div>
-          <div><p className="max-w-3xl leading-7 text-zinc-600">MergeVista runs IT M&amp;A and brings People, Finance, Legal, EHS, Procurement, Real Estate, Operations and Communications into the same governed execution environment.</p><Button asChild variant="ghost" className="mt-4 -ml-4"><Link href="/functional-workstreams">Explore functional workstreams <ArrowRight /></Link></Button></div>
+          <div><Badge>FUNCTIONAL + TECHNOLOGY WORKSTREAMS</Badge><h2 className="mt-5 text-3xl font-medium tracking-[-0.04em] sm:text-4xl">One governed model for transition execution.</h2></div>
+          <div><p className="max-w-3xl leading-7 text-zinc-600">People, Finance, Legal, EHS, Procurement, Real Estate, Operations, Communications and Technology manage plans, ownership, dependencies, risks and readiness in the same execution environment.</p><Button asChild variant="ghost" className="mt-4 -ml-4"><Link href="/functional-workstreams">Explore functional workstreams <ArrowRight /></Link></Button></div>
         </div>
       </section>
       <section className="border-b border-zinc-200 bg-[#fcfcfc]">
@@ -229,9 +259,9 @@ export default function PlatformPage() {
               See how the platform connects the transaction.
             </h2>
             <p className="mt-5 max-w-xl leading-7 text-zinc-600">
-              Take a concise tour from the deal dashboard and governed
-              inventory through commercial intelligence, execution and
-              readiness.
+              Take a concise tour from the transition dashboard and governed
+              operational inventories through dependencies, execution control
+              and readiness.
             </p>
           </div>
           <DemoVideoCard />
@@ -239,30 +269,27 @@ export default function PlatformPage() {
       </section>
       <section className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
         <div className="max-w-4xl">
-          <Badge>CONFIGURABLE CAPABILITY PACKAGES</Badge>
+          <Badge>PLATFORM CAPABILITIES</Badge>
           <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
-            Start with what you need today.
+            One platform across the transition.
           </h2>
           <p className="mt-5 max-w-3xl leading-7 text-zinc-600">
-            One connected platform, configured around your immediate transaction
-            priorities. Add capabilities as your requirements evolve—without
-            rebuilding your data, decisions or execution history.
+            MergeVista connects the operational baseline, workstream plans,
+            governance, readiness and transition evidence in one environment.
+            Explore the capability areas that work together across the lifecycle.
           </p>
         </div>
         <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {capabilityPackages.map((item) => (
+          {platformAreas.map((item) => (
             <Card key={item.slug} className="flex min-h-[300px] flex-col p-8">
               <small className="font-semibold tracking-[0.1em] text-[#1559a6]">
-                {item.name.toUpperCase()}
+                {item.number} · {item.title.toUpperCase()}
               </small>
               <h3 className="mt-8 text-xl font-medium leading-7">
                 {item.headline}
               </h3>
               <p className="mt-5 text-sm leading-6 text-zinc-600">
-                <strong className="font-semibold text-zinc-700">
-                  Best for:
-                </strong>{" "}
-                {item.bestFor}
+                {item.text}
               </p>
               <Button
                 asChild
@@ -270,33 +297,13 @@ export default function PlatformPage() {
                 className="mt-auto -ml-4 self-start"
               >
                 <Link href={`/capabilities/${item.slug}`}>
-                  Explore {item.shortName}
+                  Explore this capability
                   <ArrowRight />
                 </Link>
               </Button>
             </Card>
           ))}
         </div>
-        <Card className="mt-10 grid gap-8 bg-zinc-950 p-8 text-white sm:p-12 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div>
-            <Badge className="border-zinc-700 bg-zinc-900 text-zinc-300">
-              MergeVista COMPLETE
-            </Badge>
-            <h3 className="mt-6 text-3xl font-medium tracking-[-0.035em]">
-              Need the complete operating model?
-            </h3>
-            <p className="mt-4 text-sm leading-6 text-zinc-400">
-              Connect readiness, program control, Day 1, migration and TSA exit
-              in one governed lifecycle.
-            </p>
-          </div>
-          <Button asChild size="lg" variant="inverse">
-            <Link href="#core-capabilities">
-              Explore the complete platform
-              <ArrowRight />
-            </Link>
-          </Button>
-        </Card>
       </section>
       <section
         id="core-capabilities"
@@ -306,12 +313,12 @@ export default function PlatformPage() {
           <div className="max-w-4xl">
             <Badge className="bg-white">CORE CAPABILITIES</Badge>
             <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
-              Control the complete execution system—not another set of trackers.
+              Control transition execution—not another set of trackers.
             </h2>
             <p className="mt-5 max-w-3xl leading-7 text-zinc-600">
-              MergeVista connects governed transaction data to the workflows,
-              decisions and evidence required to protect continuity and prove
-              progress across both sides of the deal.
+              MergeVista connects functional and technology workstreams to the
+              operational inventories, decisions and evidence required to protect
+              continuity and prove progress across the transition.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-xl border border-zinc-200 bg-white md:grid-cols-2">
@@ -352,15 +359,15 @@ export default function PlatformPage() {
       <section className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
         <div className="grid gap-14 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
           <div>
-            <Badge>CONNECTED BY DESIGN</Badge>
+            <Badge>CONNECTED OPERATIONAL CONTEXT</Badge>
             <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
               The relationships matter as much as the records.
             </h2>
             <p className="mt-5 leading-7 text-zinc-600">
-              An application is connected to infrastructure, users, data,
-              contracts, licenses, sites and TSA services. MergeVista keeps
-              those dependencies visible as plans and ownership change across
-              the deal.
+              Workstream plans remain connected to the operational records and
+              dependencies they affect. For example, an application can be
+              linked to infrastructure, users, data, contracts, sites and TSA
+              services as plans and ownership change.
             </p>
           </div>
           <div className="w-full max-w-[760px] lg:justify-self-end">
@@ -387,10 +394,10 @@ export default function PlatformPage() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              "Normalize inventories and identify gaps",
-              "Extract contract, license and TSA obligations",
-              "Surface cross-inventory dependencies and readiness risks",
-              "Generate separation, migration and exit actions for review",
+              "Normalize operational inventories and identify gaps",
+              "Extract contract, service and TSA obligations",
+              "Surface cross-workstream dependencies and readiness risks",
+              "Generate integration, separation and exit actions for review",
             ].map((x) => (
               <Card key={x} className="flex items-start gap-3 p-5">
                 <Sparkles className="mt-0.5 size-4 shrink-0 text-[#1559a6]" />
@@ -404,7 +411,7 @@ export default function PlatformPage() {
         <div className="mx-auto grid max-w-[1500px] gap-8 rounded-2xl bg-zinc-950 p-8 text-white sm:p-12 lg:grid-cols-[1fr_auto] lg:items-center lg:p-16">
           <div>
             <h2 className="max-w-3xl text-3xl font-medium tracking-[-0.035em] sm:text-5xl">
-              See the complete execution model in action.
+              See the governed transition model in action.
             </h2>
             <p className="mt-5 max-w-2xl text-sm leading-6 text-zinc-400">
               We will tailor the conversation to your transaction, operating

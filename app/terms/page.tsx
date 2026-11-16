@@ -5,7 +5,7 @@ import { brand, supportMailto } from "../lib/brand";
 import { pageMetadata } from "../lib/seo";
 import styles from "../privacy/privacy.module.css";
 
-export const metadata = pageMetadata("Terms of Service | MergeVista", "Terms governing access to the MergeVista website and platform.", brand.legalPaths.terms);
+export const metadata = pageMetadata("MergeVista Terms of Service | Platform Use", "Review the terms governing eligibility, accounts, customer data, acceptable use, intellectual property and access to the MergeVista website and platform.", brand.legalPaths.terms);
 
 const sections = [
   ["eligibility", "Eligibility and accounts"],

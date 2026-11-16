@@ -42,7 +42,7 @@ test("exports the primary public website routes", async () => {
 test("exports a complete, branded landing page", async () => {
   const html = await readFile(new URL("index.html", outputRoot), "utf8");
 
-  assert.match(html, /<title>MergeVista \| AI-Powered IT M&amp;A Execution Platform<\/title>/i);
+  assert.match(html, /<title>MergeVista \| M&amp;A Integration, Separation &amp; TSA Execution<\/title>/i);
   assert.match(html, /<link rel="canonical" href="https:\/\/www\.mergevista\.com"\s*\/>/i);
   assert.match(html, /One operating model/i);
   assert.match(html, /Guided Trial/i);
@@ -78,7 +78,7 @@ test("exports the pricing page with complete SEO signals", async () => {
   const html = await readFile(new URL("pricing.html", outputRoot), "utf8");
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
 
-  assert.match(html, /<title>IT M&amp;A Platform Pricing Structure \| MergeVista<\/title>/i);
+  assert.match(html, /<title>M&amp;A Transition Platform Pricing Structure \| MergeVista<\/title>/i);
   assert.match(html, /name="description" content="Understand MergeVista pricing/i);
   assert.match(html, /<link rel="canonical" href="https:\/\/www\.mergevista\.com\/pricing"\s*\/>/i);
   assert.match(html, /property="og:url" content="https:\/\/www\.mergevista\.com\/pricing"/i);
@@ -95,13 +95,13 @@ test("exports the services page with complete SEO signals", async () => {
   const html = await readFile(new URL("services.html", outputRoot), "utf8");
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
 
-  assert.match(html, /<title>Platform-Enabled IT M&amp;A Services \| MergeVista<\/title>/i);
-  assert.match(html, /name="description" content="Accelerate IT M&amp;A execution/i);
+  assert.match(html, /<title>Platform-Enabled M&amp;A Transition Services \| MergeVista<\/title>/i);
+  assert.match(html, /name="description" content="Accelerate integration, separation and TSA execution/i);
   assert.match(html, /<link rel="canonical" href="https:\/\/www\.mergevista\.com\/services"\s*\/>/i);
   assert.match(html, /property="og:url" content="https:\/\/www\.mergevista\.com\/services"/i);
   assert.match(html, /name="robots" content="index, follow/i);
   assert.match(html, /application\/ld\+json/i);
-  assert.match(html, /Platform-Enabled IT M&amp;A Services/i);
+  assert.match(html, /Platform-Enabled M&amp;A Transition Services/i);
   assert.match(html, /MergeVista platform-enabled services/i);
   assert.match(html, /Transaction Launch/i);
   assert.match(html, /Execution Support/i);

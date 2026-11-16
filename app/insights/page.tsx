@@ -9,7 +9,7 @@ import { Button } from "../components/poc/button";
 
 const pageTitle = "IT M&A Insights, Readiness & TSA Exit | MergeVista";
 const pageDescription =
-  "Practical perspectives on IT M&A execution, Day 1 readiness, TSA operations, separation and migration.";
+  "Practical insights on M&A integration, separation, Day 1 readiness, technology transitions, TSA operations, migration and evidence-based exit.";
 
 export const metadata: Metadata = {
   title: pageTitle,

@@ -5,9 +5,9 @@ import "./globals.css";
 import { brand } from "./lib/brand";
 
 const siteUrl = brand.websiteUrl;
-const title = "MergeVista | AI-Powered IT M&A Execution Platform";
+const title = "MergeVista | M&A Integration, Separation & TSA Execution";
 const description =
-  "MergeVista is an AI-powered IT M&A execution platform for acquisitions, divestitures, Day 1 readiness, TSA operations, migration, and TSA exit.";
+  "MergeVista connects functional and technology workstreams, inventories, dependencies and governance across separation, integration, stabilization and TSA exit.";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +23,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: {
     canonical: "/",
   },
@@ -37,7 +48,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "MergeVista — AI-Powered IT M&A Execution Platform",
+        alt: "MergeVista — M&A Integration, Separation and TSA Execution Platform",
       },
     ],
   },
@@ -108,7 +119,7 @@ const structuredData = {
       "@id": `${siteUrl}/#software`,
       name: brand.productName,
       applicationCategory: "BusinessApplication",
-      applicationSubCategory: "IT M&A execution platform",
+      applicationSubCategory: "M&A integration, separation and TSA execution platform",
       operatingSystem: "Web",
       url: siteUrl,
       description,

@@ -5,7 +5,7 @@ import styles from "../privacy/privacy.module.css";
 import { brand, supportMailto } from "../lib/brand";
 import { pageMetadata } from "../lib/seo";
 
-export const metadata = pageMetadata("Security & Trust | MergeVista", "Learn about the security controls MergeVista uses to protect transaction workspaces and customer data.", brand.legalPaths.security);
+export const metadata = pageMetadata("MergeVista Security & Trust | Platform Controls", "Review the identity, access, workspace isolation, data protection, audit and operational controls used to protect MergeVista customer data.", brand.legalPaths.security);
 
 const sections = [
   ["identity", "Identity and access"],

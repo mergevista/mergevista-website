@@ -7,8 +7,8 @@ import { Button } from "../components/poc/button";
 import { Card } from "../components/poc/card";
 import { pageMetadata } from "../lib/seo";
 export const metadata = pageMetadata(
-  "About MergeVista | IT M&A Execution Platform",
-  "Learn why MergeVista is building a new generation of IT M&A execution platform for acquisitions, divestitures, integrations and separations.",
+  "About MergeVista | M&A Transition Execution Platform",
+  "Learn why MergeVista is building a governed platform for M&A integration, separation, Day 1 readiness, stabilization and TSA exit.",
   "/about",
 );
 const principles = [
@@ -43,13 +43,13 @@ export default function Page() {
           <h1 className="mt-7 max-w-5xl text-[2.75rem] font-medium leading-[1.01] tracking-[-.05em] sm:text-[clamp(3rem,5.2vw,5.25rem)]">
             Purpose-built for the
             <span className="block font-normal text-[#1559a6]">
-              execution reality of IT M&amp;A.
+              execution reality of M&amp;A transitions.
             </span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-600">
-            MergeVista was created to bring structure, visibility and
-            accountability to one of the most complex dimensions of M&amp;A: IT
-            execution.
+            MergeVista was created to connect functional and technology
+            workstreams, operational inventories, dependencies and governance
+            through integration, separation and TSA execution.
           </p>
         </div>
       </section>
@@ -62,9 +62,10 @@ export default function Page() {
         </div>
         <Card className="bg-zinc-950 p-8 text-white sm:p-12">
           <p className="text-lg leading-8 text-zinc-300">
-            IT teams are expected to protect Day 1, manage separation, operate
-            TSAs, coordinate migration and prove exit—often across companies,
-            workstreams and timelines that were never designed to work together.
+            Transaction teams are expected to protect Day 1, manage integration
+            or separation, operate TSAs, coordinate stabilization and prove
+            exit—across functions, companies and timelines that were never
+            designed to work together.
           </p>
           <p className="mt-6 text-lg leading-8 text-zinc-300">
             Yet critical execution still depends on fragmented spreadsheets,
@@ -80,8 +81,8 @@ export default function Page() {
             OUR MISSION
           </Badge>
           <h2 className="mt-6 max-w-5xl text-4xl font-medium tracking-[-.04em] sm:text-5xl">
-            Give every transaction team one trusted environment—from discovery
-            through TSA exit.
+            Give every transaction team one trusted environment—from Day 1
+            planning through stabilization and TSA exit.
           </h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
             We believe better connected execution leads to clearer decisions,
@@ -117,9 +118,9 @@ export default function Page() {
           </h2>
         </div>
         <blockquote className="text-2xl leading-10 text-zinc-600">
-          MergeVista LLC is building the next generation of IT M&amp;A execution
-          platforms, shaped by the real-world needs of design partners and early
-          customers.
+          MergeVista LLC is building the next generation of M&amp;A integration,
+          separation and TSA execution platforms, shaped by the real-world needs
+          of design partners and early customers.
         </blockquote>
       </section>
       <section className="px-5 py-16 lg:px-8">
@@ -129,7 +130,7 @@ export default function Page() {
               START A CONVERSATION
             </Badge>
             <h2 className="text-3xl font-medium tracking-[-.035em] sm:text-5xl">
-              Help shape a better way to execute IT M&amp;A.
+              Help shape a better way to execute M&amp;A transitions.
             </h2>
             <p className="mt-5 text-zinc-400">
               Explore the platform and tell us what your transaction teams need

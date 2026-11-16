@@ -1,7 +1,7 @@
 import { brand, canonicalUrl } from "../lib/brand";
-import type { CapabilityPackage } from "./data";
+import type { CapabilityArea } from "./data";
 
-export default function CapabilityStructuredData({ item }: { item: CapabilityPackage }) {
+export default function CapabilityStructuredData({ item }: { item: CapabilityArea }) {
   const url = canonicalUrl(`/capabilities/${item.slug}`);
   const data = {
     "@context": "https://schema.org",
@@ -21,7 +21,7 @@ export default function CapabilityStructuredData({ item }: { item: CapabilityPac
         "@type": "Service",
         "@id": `${url}#service`,
         name: item.name,
-        serviceType: "IT M&A execution platform capability",
+        serviceType: "M&A integration, separation and TSA execution platform capability",
         description: item.seoDescription,
         url,
         provider: { "@id": `${brand.websiteUrl}/#organization` },

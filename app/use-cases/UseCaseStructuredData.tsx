@@ -48,7 +48,7 @@ export function UseCaseDetailStructuredData({ item }: { item: UseCase }) {
         "@type": "Service",
         "@id": `${url}#service`,
         name: item.title,
-        serviceType: "IT M&A execution platform use case",
+        serviceType: "M&A integration, separation and TSA execution platform use case",
         description: item.seoDescription,
         url,
         provider: { "@id": `${brand.websiteUrl}/#organization` },

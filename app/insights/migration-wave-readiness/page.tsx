@@ -8,14 +8,15 @@ import RelatedInsights from "../RelatedInsights";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "Everything Is Green—So Why Isn’t the Migration Wave Ready?";
-const description = "Why green workstream status does not guarantee migration-wave readiness—and how connected dependencies, business-process testing and evidence improve go/no-go decisions.";
+const seoTitle = "Migration Wave Readiness in IT M&A | MergeVista";
+const description = "Why green workstream status does not guarantee migration readiness, and how dependencies, business-process testing and evidence improve go/no-go decisions.";
 const path = "/insights/migration-wave-readiness";
 const image = "/insights/editorial-line-migration-readiness-transparent.png";
 const socialImage = "/insights/social-migration-readiness.png";
 const imageAlt = "Completed migration workstreams blocked by a hidden dependency";
 
 export const metadata: Metadata = {
-  title: `${title} | MergeVista Insights`, description,
+  title: seoTitle, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
   openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-09-11", images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
   twitter: { card: "summary_large_image", title, description, images: [socialImage] },

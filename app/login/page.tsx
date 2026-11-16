@@ -5,8 +5,8 @@ import styles from "./login.module.css";
 import { brand, supportMailto } from "../lib/brand";
 
 export const metadata: Metadata = {
-  title: "Sign in | MergeVista",
-  description: "Sign in to your secure MergeVista transaction workspace.",
+  title: "Secure Workspace Sign In | MergeVista",
+  description: "Sign in to your secure MergeVista workspace to access governed M&A transition records, operational inventories, workstream plans and readiness evidence.",
   alternates: { canonical: "https://www.mergevista.com/login" },
   robots: { index: false, follow: false },
 };
@@ -22,8 +22,8 @@ export default function LoginPage() {
         </Link>
         <div className={styles.storyCopy}>
           <div className={styles.eyebrow}><span/>Secure transaction workspace</div>
-          <h1>Run the complete IT M&amp;A journey with <em>clarity and control.</em></h1>
-          <p>One governed execution environment for discovery, separation, Day 1, TSA operations, migration and exit.</p>
+          <h1>Execute the transition with <em>clarity and control.</em></h1>
+          <p>One governed environment for integration, separation, stabilization and TSA exit.</p>
           <div className={styles.signals}><span>Deal-level access</span><span>Evidence and audit history</span><span>Human-governed AI</span></div>
         </div>
         <small>© {brand.copyrightYear} {brand.legalName}. All rights reserved.</small>
@@ -37,7 +37,7 @@ export default function LoginPage() {
           <div className={styles.lockMark} aria-hidden="true"><span>✓</span></div>
           <p className={styles.kicker}>Welcome back</p>
           <h2>Sign in to MergeVista</h2>
-          <p className={styles.intro}>Access your organization’s secure IT M&amp;A workspace.</p>
+          <p className={styles.intro}>Access your organization’s secure transaction execution workspace.</p>
 
           <form>
             <label htmlFor="email">Work email</label>

@@ -18,8 +18,8 @@ import { brand, canonicalUrl } from "../lib/brand";
 import { pageMetadata } from "../lib/seo";
 
 export const metadata = pageMetadata(
-  "IT M&A Platform Pricing Structure | MergeVista",
-  "Understand MergeVista pricing: an annual platform subscription, transaction execution pricing, one-time customer implementation and optional services aligned to deal complexity.",
+  "M&A Transition Platform Pricing Structure | MergeVista",
+  "Understand MergeVista pricing across annual platform access, transaction execution, one-time implementation and optional transition services.",
   "/pricing",
 );
 

@@ -8,14 +8,15 @@ import RelatedInsights from "../RelatedInsights";
 import localStyles from "../why-day-1-readiness-fails/day-one.module.css";
 
 const title = "From TSA Tracking to Evidence-Based TSA Exit";
-const description = "How transaction teams can preserve separation knowledge, connect TSA services to their dependencies and use objective evidence to prove operational independence.";
+const seoTitle = "Evidence-Based TSA Exit Planning | MergeVista";
+const description = "How transaction teams preserve separation knowledge, connect TSA services to dependencies and use objective evidence to prove operational independence.";
 const path = "/insights/evidence-based-tsa-exit";
 const image = "/insights/editorial-line-tsa-evidence-transparent.png";
 const socialImage = "/insights/social-tsa-evidence.png";
 const imageAlt = "TSA obligations and evidence connected to an approved exit";
 
 export const metadata: Metadata = {
-  title: `${title} | MergeVista Insights`, description,
+  title: seoTitle, description,
   alternates: { canonical: `https://www.mergevista.com${path}` },
   openGraph: { title, description, type: "article", url: `https://www.mergevista.com${path}`, publishedTime: "2026-08-13", images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
   twitter: { card: "summary_large_image", title, description, images: [socialImage] },

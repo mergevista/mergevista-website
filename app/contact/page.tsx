@@ -7,8 +7,8 @@ import { Button } from "../components/poc/button";
 import { Card } from "../components/poc/card";
 import { pageMetadata } from "../lib/seo";
 export const metadata = pageMetadata(
-  "Contact | MergeVista",
-  "Contact MergeVista for product demonstrations, customer support and general inquiries.",
+  "Contact MergeVista | M&A Transition Platform",
+  "Contact MergeVista for M&A transition platform demonstrations, guided trials, customer support, partnerships and general company inquiries.",
   "/contact",
 );
 const routes = [
