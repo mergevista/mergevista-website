@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">An in-flight business transaction crossing the cutover boundary</title>
+  <desc id="desc">A shipment begins in the seller environment before cutover and must be received and reconciled in the buyer environment after cutover.</desc>
+  <rect width="1600" height="900" fill="#fcfcfc"/>
+  <g stroke="#e4e4e7" stroke-width="2">
+    <path d="M0 180h1600M0 360h1600M0 540h1600M0 720h1600"/>
+    <path d="M320 0v900M640 0v900M960 0v900M1280 0v900"/>
+  </g>
+  <rect x="95" y="95" width="610" height="710" rx="28" fill="#fff" stroke="#d4d4d8" stroke-width="3"/>
+  <rect x="895" y="95" width="610" height="710" rx="28" fill="#fff" stroke="#d4d4d8" stroke-width="3"/>
+  <text x="145" y="165" fill="#1559a6" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="3">BEFORE CUTOVER</text>
+  <text x="945" y="165" fill="#1559a6" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="3">AFTER CUTOVER</text>
+  <text x="145" y="225" fill="#0a183d" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="700">Transaction begins</text>
+  <text x="945" y="225" fill="#0a183d" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="700">Transaction completes</text>
+  <g fill="#52525b" font-family="Arial,Helvetica,sans-serif" font-size="25">
+    <text x="155" y="660">Purchase order</text><text x="155" y="710">Legal entity</text><text x="155" y="760">Shipping documents</text>
+    <text x="955" y="660">Goods receipt</text><text x="955" y="710">Supplier invoice</text><text x="955" y="760">Financial reconciliation</text>
+  </g>
+  <path d="M360 400h880" fill="none" stroke="#1559a6" stroke-width="8" stroke-linecap="round"/>
+  <path d="m1210 372 45 28-45 28" fill="none" stroke="#1559a6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(595 315)">
+    <path d="M0 105h410l-58 92H92L40 165Z" fill="#0a183d"/>
+    <rect x="125" y="25" width="160" height="80" rx="8" fill="#1559a6"/>
+    <rect x="150" y="48" width="38" height="28" rx="4" fill="#fff" opacity=".9"/>
+    <rect x="222" y="48" width="38" height="28" rx="4" fill="#fff" opacity=".9"/>
+    <path d="M205 25V0" stroke="#0a183d" stroke-width="8"/>
+  </g>
+  <g transform="translate(600 535)">
+    <rect width="400" height="76" rx="38" fill="#fff" stroke="#1559a6" stroke-width="4"/>
+    <text x="200" y="47" fill="#1559a6" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" letter-spacing="1.5" text-anchor="middle">TRANSACTION IN FLIGHT</text>
+  </g>
+  <path d="M800 75v750" stroke="#0a183d" stroke-width="5" stroke-dasharray="14 14"/>
+  <g transform="translate(720 74)">
+    <rect width="160" height="55" rx="27.5" fill="#0a183d"/>
+    <text x="80" y="36" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">CUTOVER</text>
+  </g>
+</svg>

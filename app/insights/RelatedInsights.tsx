@@ -3,6 +3,11 @@ import styles from "./related-insights.module.css";
 
 const articles = [
   {
+    slug: "business-does-not-pause-for-cutover",
+    category: "Cutover readiness",
+    title: "The Business Does Not Pause for Cutover",
+  },
+  {
     slug: "separation-plan-assumes-sme-capacity-does-not-exist",
     category: "Program capacity",
     title: "The Separation Plan Assumes SME Capacity That Does Not Exist",
@@ -82,8 +87,13 @@ const articles = [
 ];
 
 const recommendations: Record<string, string[]> = {
+  "business-does-not-pause-for-cutover": [
+    "migration-wave-readiness",
+    "why-day-1-readiness-fails",
+    "exception-list-real-separation-plan",
+  ],
   "separation-plan-assumes-sme-capacity-does-not-exist": [
-    "application-not-separation-boundary-interface-is",
+    "business-does-not-pause-for-cutover",
     "why-day-1-readiness-fails",
     "hidden-cost-disconnected-it-inventories",
   ],

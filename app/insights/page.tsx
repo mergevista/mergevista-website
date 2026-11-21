@@ -47,6 +47,17 @@ const topics = [
 ];
 const articles = [
   [
+    "PROGRAM CAPACITY",
+    "The separation plan assumes SME capacity that does not exist",
+    "Why separation plans fail when expert capacity is assumed rather than planned—and how teams can protect the people and knowledge on the critical path.",
+    "12 min read",
+    "blue",
+    "/insights/separation-plan-assumes-sme-capacity-does-not-exist",
+    "Nov 11, 2026",
+    "/insights/editorial-sme-capacity.svg",
+    "A critical subject-matter expert constrained by competing separation workstreams",
+  ],
+  [
     "APPLICATION DEPENDENCIES",
     "The application is not the separation boundary. The interface is.",
     "Why application migration alone does not create operational independence—and how interfaces, dependencies and business flows determine separation readiness.",
@@ -265,8 +276,8 @@ export default function InsightsPage() {
       <section className="mx-auto max-w-[1560px] px-5 py-12 lg:px-8 lg:py-16">
         <article className="grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
           <Image
-            src="/insights/editorial-sme-capacity.svg"
-            alt="A critical subject-matter expert constrained by competing separation workstreams"
+            src="/insights/editorial-in-flight-transactions.svg"
+            alt="A shipment beginning before cutover and completing in the new environment afterward"
             width={1600}
             height={900}
             priority
@@ -274,19 +285,19 @@ export default function InsightsPage() {
           />
           <div className="flex flex-col p-7 sm:p-10 lg:p-14">
             <Badge className="w-fit">
-              FEATURED INSIGHT · PROGRAM CAPACITY
+              FEATURED INSIGHT · CUTOVER READINESS
             </Badge>
             <h2 className="mt-7 max-w-xl text-4xl font-medium leading-[1.05] tracking-[-.045em] sm:text-5xl">
-              The separation plan assumes SME capacity that does not exist.
+              The business does not pause for cutover.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-600">
-              The task may be on the plan. The scarce knowledge required to complete it usually is not.
+              How to manage orders, shipments, invoices, payments and other business transactions already in motion when the environment changes.
             </p>
             <div className="mt-6 text-xs text-zinc-500">
-              Nov 11, 2026 · 12 min read
+              Nov 21, 2026 · 15 min read
             </div>
             <Button asChild className="mt-auto self-start pt-9" variant="ghost">
-              <Link href="/insights/separation-plan-assumes-sme-capacity-does-not-exist">
+              <Link href="/insights/business-does-not-pause-for-cutover">
                 Read the insight
                 <ArrowRight />
               </Link>

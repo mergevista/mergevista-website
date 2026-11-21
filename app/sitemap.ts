@@ -125,9 +125,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     {
       url: canonicalUrl("/insights"),
-      lastModified: new Date("2026-10-26"),
+      lastModified: new Date("2026-11-21"),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: canonicalUrl("/insights/business-does-not-pause-for-cutover"),
+      lastModified: new Date("2026-11-21"),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: canonicalUrl("/insights/separation-plan-assumes-sme-capacity-does-not-exist"),
