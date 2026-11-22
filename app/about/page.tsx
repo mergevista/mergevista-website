@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 import SiteFooter from "../components/SiteFooter";
@@ -29,9 +30,48 @@ const principles = [
     "Use AI to accelerate understanding and action while keeping experienced people in control.",
   ],
 ];
+
+const leadershipStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      name: "Rajeev Shankar",
+      jobTitle: "Founder & CEO",
+      image: "https://www.mergevista.com/team/rajeev-shankar-clean.png",
+      sameAs: ["https://www.linkedin.com/in/rajeevps/"],
+      worksFor: {
+        "@type": "Organization",
+        name: "MergeVista LLC",
+        url: "https://www.mergevista.com",
+      },
+    },
+    {
+      "@type": "Person",
+      name: "Manoj Pillai",
+      jobTitle: "Co-Founder & Chief Growth Officer",
+      image: "https://www.mergevista.com/team/manoj-pillai-clean.png",
+      description:
+        "Global business leader and entrepreneur with 29 years of experience leading enterprise transformation, managing substantial P&L responsibility and scaling startups across international markets.",
+      sameAs: ["https://www.linkedin.com/in/manojgpillai/"],
+      worksFor: {
+        "@type": "Organization",
+        name: "MergeVista LLC",
+        url: "https://www.mergevista.com",
+      },
+    },
+  ],
+};
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-white text-zinc-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(leadershipStructuredData),
+        }}
+      />
       <SiteHeader />
       <section className="relative overflow-hidden border-b border-zinc-200 bg-[#fcfcfc]">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] bg-[size:72px_72px] opacity-[.28]" />
@@ -74,6 +114,120 @@ export default function Page() {
             execution.
           </p>
         </Card>
+      </section>
+      <section id="leadership" className="border-y border-zinc-200 bg-zinc-50">
+        <div className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
+          <div className="max-w-4xl">
+            <Badge className="bg-white">LEADERSHIP</Badge>
+            <h2 className="mt-5 text-4xl font-medium tracking-[-.04em] sm:text-5xl">
+              The team building MergeVista.
+            </h2>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-600">
+              MergeVista is being built by leaders focused on the practical
+              realities of integration, separation and TSA execution—and on
+              giving transaction teams a more connected way to work.
+            </p>
+          </div>
+          <div className="mt-14 grid gap-5 lg:grid-cols-2">
+            <Card className="overflow-hidden p-0">
+              <div className="grid h-full sm:grid-cols-[minmax(220px,.78fr)_1.22fr]">
+                <div className="relative min-h-[360px] overflow-hidden bg-zinc-200 sm:min-h-[520px]">
+                  <Image
+                    src="/team/rajeev-shankar-clean.png"
+                    alt="Rajeev Shankar, Founder and CEO of MergeVista"
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 42vw, 100vw"
+                    className="-translate-y-[3%] scale-[1.12] object-cover object-[50%_44%]"
+                  />
+                </div>
+                <div className="flex flex-col p-7 sm:p-9">
+                  <p className="text-sm font-semibold tracking-[.12em] text-[#1559a6]">
+                    FOUNDER &amp; CEO
+                  </p>
+                  <h3 className="mt-4 text-3xl font-medium tracking-[-.035em]">
+                    Rajeev Shankar
+                  </h3>
+                  <p className="mt-6 leading-7 text-zinc-600">
+                    Rajeev brings more than 25 years of experience in enterprise
+                    technology leadership, M&amp;A execution and complex business
+                    transitions. Across leadership roles at GE, Infosys and TCS,
+                    he has built and scaled technology practices, led global
+                    teams and helped organizations navigate high-stakes
+                    integration and separation programs. He previously
+                    co-founded and served as CEO of Datalakes, a big data
+                    analytics startup, scaling the business and its delivery
+                    capabilities from concept to commercial operation. His transaction
+                    experience includes leadership roles supporting the
+                    Dow–DuPont merger and subsequent spin-offs, Bed Bath &amp;
+                    Beyond divestitures, a FactSet acquisition, and acquisitions
+                    and separations at IFF and GE HealthCare. These experiences
+                    led him to found MergeVista and build a more connected,
+                    governed approach to M&amp;A transition execution.
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/rajeevps/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-medium text-[#1559a6] hover:text-[#0a183d]"
+                    aria-label="Rajeev Shankar on LinkedIn (opens in a new tab)"
+                  >
+                    <svg className="size-4" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill="currentColor" d="M6.5 8.3H3.2V19h3.3V8.3ZM4.9 3A1.9 1.9 0 1 0 4.9 6.8 1.9 1.9 0 0 0 4.9 3ZM19.8 12.9c0-3.2-1.7-4.8-4.1-4.8-1.9 0-2.8 1-3.2 1.8V8.3H9.2V19h3.3v-5.3c0-1.4.3-2.8 2-2.8 1.7 0 1.7 1.6 1.7 2.9V19h3.3l.3-6.1Z" />
+                    </svg>
+                    LinkedIn profile
+                  </a>
+                </div>
+              </div>
+            </Card>
+            <Card className="overflow-hidden p-0">
+              <div className="grid h-full sm:grid-cols-[minmax(220px,.78fr)_1.22fr]">
+                <div className="relative min-h-[360px] overflow-hidden bg-zinc-200 sm:min-h-[520px]">
+                  <Image
+                    src="/team/manoj-pillai-clean.png"
+                    alt="Manoj Pillai, Co-Founder and Chief Growth Officer of MergeVista"
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 42vw, 100vw"
+                    className="object-cover object-[50%_42%]"
+                  />
+                </div>
+                <div className="flex flex-col p-7 sm:p-9">
+                  <p className="text-sm font-semibold tracking-[.12em] text-[#1559a6]">
+                    CO-FOUNDER &amp; CHIEF GROWTH OFFICER
+                  </p>
+                  <h3 className="mt-4 text-3xl font-medium tracking-[-.035em]">
+                    Manoj Pillai
+                  </h3>
+                  <p className="mt-6 leading-7 text-zinc-600">
+                    Manoj Pillai, Co-Founder and Chief Growth Officer of
+                    MergeVista, is a global business leader and entrepreneur
+                    with 29 years of experience leading large-scale enterprise
+                    transformations and building and scaling startups. He has
+                    held P&amp;L responsibility of up to US$500 million and
+                    brings extensive telecommunications experience from work
+                    with T-Mobile, Nokia and Vodafone Idea. In EV
+                    infrastructure, he secured Tesla Supercharger construction
+                    business—turning an emerging opportunity into a commercial
+                    relationship and a committed delivery program. At
+                    MergeVista, Manoj leads growth strategy, market development
+                    and customer relationships.
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/manojgpillai/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-medium text-[#1559a6] hover:text-[#0a183d]"
+                    aria-label="Manoj Pillai on LinkedIn (opens in a new tab)"
+                  >
+                    <svg className="size-4" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill="currentColor" d="M6.5 8.3H3.2V19h3.3V8.3ZM4.9 3A1.9 1.9 0 1 0 4.9 6.8 1.9 1.9 0 0 0 4.9 3ZM19.8 12.9c0-3.2-1.7-4.8-4.1-4.8-1.9 0-2.8 1-3.2 1.8V8.3H9.2V19h3.3v-5.3c0-1.4.3-2.8 2-2.8 1.7 0 1.7 1.6 1.7 2.9V19h3.3l.3-6.1Z" />
+                    </svg>
+                    LinkedIn profile
+                  </a>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
       </section>
       <section className="border-y border-zinc-200 bg-zinc-950 text-white">
         <div className="mx-auto max-w-[1560px] px-5 py-20 lg:px-8 lg:py-28">
