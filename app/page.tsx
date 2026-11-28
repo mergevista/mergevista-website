@@ -167,9 +167,10 @@ export default function MarketingHome() {
               </span>
             </h1>
             <p className="mt-7 max-w-[620px] text-lg leading-8 text-zinc-600">
-              MergeVista connects functional and technology workstreams,
-              operational inventories, dependencies and governance—from Day 1
-              planning through separation, integration, stabilization and TSA exit.
+              MergeVista is an AI-powered M&amp;A execution platform that
+              orchestrates functional and technology workstreams, operational
+              dependencies and governance—accelerating integration and separation,
+              reducing transition risk and improving control.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg">
